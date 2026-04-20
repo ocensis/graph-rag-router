@@ -1,0 +1,2454 @@
+[
+  {
+    "id": "eng_simple_001",
+    "question": "What reinforcement learning framework does UniDoc-RL propose for visual document RAG?",
+    "answer": "Group Relative Policy Optimization (GRPO)-based unified reinforcement learning framework",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_14967v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_002",
+    "question": "What is the maximum performance gain UniDoc-RL achieves over prior RL-based visual RAG methods?",
+    "answer": "Up to 17.7% gains",
+    "difficulty": "simple",
+    "question_type": "result_extraction",
+    "gold_papers": [
+      "2604_14967v1"
+    ],
+    "type": "result_extraction"
+  },
+  {
+    "id": "eng_simple_003",
+    "question": "What two-stage retrieval system does the Agentic RAG for Ukrainian paper use?",
+    "answer": "BGE-M3 with BGE reranking",
+    "difficulty": "simple",
+    "question_type": "component_identification",
+    "gold_papers": [
+      "2604_14896v1"
+    ],
+    "type": "component_identification"
+  },
+  {
+    "id": "eng_simple_004",
+    "question": "What LLM backbone does the Agentic RAG for Ukrainian system use for generation?",
+    "answer": "Qwen2.5-3B-Instruct",
+    "difficulty": "simple",
+    "question_type": "component_identification",
+    "gold_papers": [
+      "2604_14896v1"
+    ],
+    "type": "component_identification"
+  },
+  {
+    "id": "eng_simple_005",
+    "question": "What two evaluation metrics does the Bangladesh mental health counseling paper use for automatic evaluation?",
+    "answer": "BERTScore F1 and SBERT cosine similarity",
+    "difficulty": "simple",
+    "question_type": "dataset_identification",
+    "gold_papers": [
+      "2604_14576v1"
+    ],
+    "type": "dataset_identification"
+  },
+  {
+    "id": "eng_simple_006",
+    "question": "What method does the paper 'Don't Retrieve, Navigate' propose to distill enterprise knowledge for agent navigation?",
+    "answer": "Corpus2Skill",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_14572v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_007",
+    "question": "What enterprise benchmark does Corpus2Skill evaluate on for RAG quality?",
+    "answer": "WixQA",
+    "difficulty": "simple",
+    "question_type": "dataset_identification",
+    "gold_papers": [
+      "2604_14572v1"
+    ],
+    "type": "dataset_identification"
+  },
+  {
+    "id": "eng_simple_008",
+    "question": "What framework does the Controlling Authority Retrieval paper formalize for authority-governed knowledge retrieval?",
+    "answer": "Controlling Authority Retrieval (CAR)",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_14488v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_009",
+    "question": "On SCOTUS overruling pairs, what TCA@5 score does the two-stage CAR approach achieve?",
+    "answer": "0.926",
+    "difficulty": "simple",
+    "question_type": "result_extraction",
+    "gold_papers": [
+      "2604_14488v1"
+    ],
+    "type": "result_extraction"
+  },
+  {
+    "id": "eng_simple_010",
+    "question": "What does the on-device RAG unified model achieve with 1/10 of the context compared to a traditional RAG reader?",
+    "answer": "Matches traditional RAG reader performance without increasing storage requirements",
+    "difficulty": "simple",
+    "question_type": "result_extraction",
+    "gold_papers": [
+      "2604_14403v1"
+    ],
+    "type": "result_extraction"
+  },
+  {
+    "id": "eng_simple_011",
+    "question": "What training regularizer does the RoPE-Perturbed Self-Distillation paper propose for long-context adaptation?",
+    "answer": "RoPE-Perturbed Self-Distillation",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_14339v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_012",
+    "question": "What improvement does RoPE-Perturbed Self-Distillation achieve on RULER-64K for Llama-3-8B?",
+    "answer": "Up to 12.04% improvement",
+    "difficulty": "simple",
+    "question_type": "result_extraction",
+    "gold_papers": [
+      "2604_14339v1"
+    ],
+    "type": "result_extraction"
+  },
+  {
+    "id": "eng_simple_013",
+    "question": "What benchmark does RoPE-Perturbed Self-Distillation evaluate on for long-context performance?",
+    "answer": "RULER-64K and RULER-256K",
+    "difficulty": "simple",
+    "question_type": "dataset_identification",
+    "gold_papers": [
+      "2604_14339v1"
+    ],
+    "type": "dataset_identification"
+  },
+  {
+    "id": "eng_simple_014",
+    "question": "What agentic OCR-free framework does the Doc-V* paper propose for multi-page document VQA?",
+    "answer": "Doc-V* (OCR-free agentic framework for multi-page DocVQA)",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_13731v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_015",
+    "question": "What optimization method is used in Doc-V* after imitation learning from expert trajectories?",
+    "answer": "Group Relative Policy Optimization (GRPO)",
+    "difficulty": "simple",
+    "question_type": "component_identification",
+    "gold_papers": [
+      "2604_13731v1"
+    ],
+    "type": "component_identification"
+  },
+  {
+    "id": "eng_simple_016",
+    "question": "By how much does Doc-V* improve out-of-domain performance over RAG baseline?",
+    "answer": "Up to 47.9%",
+    "difficulty": "simple",
+    "question_type": "result_extraction",
+    "gold_papers": [
+      "2604_13731v1"
+    ],
+    "type": "result_extraction"
+  },
+  {
+    "id": "eng_simple_017",
+    "question": "What novel benchmark does the FRESCO paper introduce for evaluating re-rankers in RAG?",
+    "answer": "FRESCO (Factual Recency and Evolving Semantic COnflict)",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_14227v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_018",
+    "question": "What data source does FRESCO use to test factual recency in re-ranker evaluation?",
+    "answer": "Historical Wikipedia revisions",
+    "difficulty": "simple",
+    "question_type": "component_identification",
+    "gold_papers": [
+      "2604_14227v1"
+    ],
+    "type": "component_identification"
+  },
+  {
+    "id": "eng_simple_019",
+    "question": "What gain on Evolving Knowledge tasks does FRESCO's instruction optimization achieve?",
+    "answer": "Up to 27% gains",
+    "difficulty": "simple",
+    "question_type": "result_extraction",
+    "gold_papers": [
+      "2604_14227v1"
+    ],
+    "type": "result_extraction"
+  },
+  {
+    "id": "eng_simple_020",
+    "question": "What two-stage training framework does DocSeeker propose for long document understanding?",
+    "answer": "SFT via knowledge distillation followed by Evidence-aware Group Relative Policy Optimization",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_12812v2"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_021",
+    "question": "What active knowledge navigation framework is proposed in the NaviRAG paper?",
+    "answer": "NaviRAG",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_12766v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_022",
+    "question": "What structured triplet format does Tri-RAG use to represent external knowledge?",
+    "answer": "Condition, Proof, and Conclusion triplets",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_12610v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_023",
+    "question": "What overall score does Tree Reasoning achieve in the Adaptive Query Routing paper on FinanceBench?",
+    "answer": "0.938",
+    "difficulty": "simple",
+    "question_type": "result_extraction",
+    "gold_papers": [
+      "2604_14222v1"
+    ],
+    "type": "result_extraction"
+  },
+  {
+    "id": "eng_simple_024",
+    "question": "What benchmark does the Adaptive Query Routing paper use for validation with expert-annotated questions?",
+    "answer": "FinanceBench (150 expert-annotated questions on SEC 10-K and 10-Q filings)",
+    "difficulty": "simple",
+    "question_type": "dataset_identification",
+    "gold_papers": [
+      "2604_14222v1"
+    ],
+    "type": "dataset_identification"
+  },
+  {
+    "id": "eng_simple_025",
+    "question": "What multimodal chunking pipeline does the MultiDocFusion paper propose for industrial RAG?",
+    "answer": "MultiDocFusion",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_12352v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_026",
+    "question": "By how much does MultiDocFusion improve retrieval precision over baselines on industrial benchmarks?",
+    "answer": "8-15% improvement in retrieval precision",
+    "difficulty": "simple",
+    "question_type": "result_extraction",
+    "gold_papers": [
+      "2604_12352v1"
+    ],
+    "type": "result_extraction"
+  },
+  {
+    "id": "eng_simple_027",
+    "question": "What knowledge graph approach does the Knowledge Graph RAG paper propose for enterprise documents?",
+    "answer": "Agentic Knowledge Graphs with Recursive Crawling",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_14220v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_028",
+    "question": "What accuracy improvement does the Knowledge Graph RAG approach achieve over vector-based RAG on CFR documents?",
+    "answer": "70% accuracy improvement",
+    "difficulty": "simple",
+    "question_type": "result_extraction",
+    "gold_papers": [
+      "2604_14220v1"
+    ],
+    "type": "result_extraction"
+  },
+  {
+    "id": "eng_simple_029",
+    "question": "What benchmark corpus does the Knowledge Graph RAG paper use for evaluation?",
+    "answer": "Code of Federal Regulations (CFR)",
+    "difficulty": "simple",
+    "question_type": "dataset_identification",
+    "gold_papers": [
+      "2604_14220v1"
+    ],
+    "type": "dataset_identification"
+  },
+  {
+    "id": "eng_simple_030",
+    "question": "What single-document poisoning attack does AdversarialCoT propose against RAG systems?",
+    "answer": "AdversarialCoT (query-specific adversarial chain-of-thought single document poisoning)",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_12201v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_031",
+    "question": "What hypergraph RAG framework does the OKH-RAG paper propose to model ordered knowledge?",
+    "answer": "Order-Aware Knowledge Hypergraph RAG (OKH-RAG)",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_12185v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_032",
+    "question": "What opinion-aware RAG architecture does the paper 'Beyond Factual Grounding' introduce?",
+    "answer": "Opinion-Aware RAG with entity-linked opinion graphs and opinion-enriched document indexing",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_12138v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_033",
+    "question": "What improvement in sentiment diversity does the Opinion-Aware RAG achieve over the traditional baseline?",
+    "answer": "+26.8% sentiment diversity",
+    "difficulty": "simple",
+    "question_type": "result_extraction",
+    "gold_papers": [
+      "2604_12138v1"
+    ],
+    "type": "result_extraction"
+  },
+  {
+    "id": "eng_simple_034",
+    "question": "What two benchmarks does the PDF parsing and chunking paper use for financial question answering evaluation?",
+    "answer": "TableQuest and one other financial domain benchmark",
+    "difficulty": "simple",
+    "question_type": "dataset_identification",
+    "gold_papers": [
+      "2604_12047v1"
+    ],
+    "type": "dataset_identification"
+  },
+  {
+    "id": "eng_simple_035",
+    "question": "What framework does the 'Memory as Metabolism' paper propose for companion knowledge systems?",
+    "answer": "Five operations: TRIAGE, DECAY, CONTEXTUALIZE, CONSOLIDATE, AUDIT with memory gravity",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_12034v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_036",
+    "question": "What organizational knowledge framework does the OIDA paper introduce to represent epistemic structure?",
+    "answer": "OIDA (Organizational Intelligence and Decision Architecture)",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_11759v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_037",
+    "question": "What few-shot retrieval framework does Legal2LogicICL propose for legal reasoning?",
+    "answer": "Legal2LogicICL (few-shot retrieval framework balancing diversity and similarity of exemplars)",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_11699v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_038",
+    "question": "What new dataset does Legal2LogicICL construct for evaluating legal semantic parsing?",
+    "answer": "Legal2Proleg",
+    "difficulty": "simple",
+    "question_type": "dataset_identification",
+    "gold_papers": [
+      "2604_11699v1"
+    ],
+    "type": "dataset_identification"
+  },
+  {
+    "id": "eng_simple_039",
+    "question": "What architecture does the Context Kubernetes paper introduce for orchestrating enterprise knowledge in agentic AI?",
+    "answer": "Context Kubernetes with YAML-based declarative manifest and three-tier agent permission model",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_11623v3"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_040",
+    "question": "By how many percentage points does intent routing reduce noise in the Context Kubernetes architecture?",
+    "answer": "19 percentage points",
+    "difficulty": "simple",
+    "question_type": "result_extraction",
+    "gold_papers": [
+      "2604_11623v3"
+    ],
+    "type": "result_extraction"
+  },
+  {
+    "id": "eng_simple_041",
+    "question": "What persona memory system does the Synthius-Mem paper propose for hallucination-resistant agent memory?",
+    "answer": "Synthius-Mem (brain-inspired structured persona memory using CategoryRAG)",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_11563v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_042",
+    "question": "What memory accuracy does Synthius-Mem achieve on the LoCoMo benchmark?",
+    "answer": "94.37% accuracy",
+    "difficulty": "simple",
+    "question_type": "result_extraction",
+    "gold_papers": [
+      "2604_11563v1"
+    ],
+    "type": "result_extraction"
+  },
+  {
+    "id": "eng_simple_043",
+    "question": "What benchmark does Synthius-Mem evaluate on for memory capability?",
+    "answer": "LoCoMo benchmark (ACL 2024, 10 conversations, 1,813 questions)",
+    "difficulty": "simple",
+    "question_type": "dataset_identification",
+    "gold_papers": [
+      "2604_11563v1"
+    ],
+    "type": "dataset_identification"
+  },
+  {
+    "id": "eng_simple_044",
+    "question": "How many CTI question-answer pairs are used in the systematic evaluation of RAG architectures for cyber threat intelligence?",
+    "answer": "3,300 CTI question-answer pairs",
+    "difficulty": "simple",
+    "question_type": "result_extraction",
+    "gold_papers": [
+      "2604_11419v1"
+    ],
+    "type": "result_extraction"
+  },
+  {
+    "id": "eng_simple_045",
+    "question": "By how much does the hybrid graph-text approach improve answer quality over vector RAG on multi-hop CTI questions?",
+    "answer": "Up to 35 percent",
+    "difficulty": "simple",
+    "question_type": "result_extraction",
+    "gold_papers": [
+      "2604_11419v1"
+    ],
+    "type": "result_extraction"
+  },
+  {
+    "id": "eng_simple_046",
+    "question": "What unified RAG framework with self-triggered information planning does the GRIP paper propose?",
+    "answer": "GRIP (Generation-guided Retrieval with Information Planning)",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_11407v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_047",
+    "question": "What benchmark does the ConflictQA paper introduce to study knowledge conflicts in RAG?",
+    "answer": "ConflictQA",
+    "difficulty": "simple",
+    "question_type": "dataset_identification",
+    "gold_papers": [
+      "2604_11209v1"
+    ],
+    "type": "dataset_identification"
+  },
+  {
+    "id": "eng_simple_048",
+    "question": "What two-stage reasoning framework does the ConflictQA paper propose for heterogeneous conflicting evidence?",
+    "answer": "XoT (explanation-based thinking framework)",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_11209v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_049",
+    "question": "What benchmark does the LifeDialBench paper introduce for evaluating memory in continuous lifelog scenarios?",
+    "answer": "LifeDialBench (with EgoMem and LifeMem subsets)",
+    "difficulty": "simple",
+    "question_type": "dataset_identification",
+    "gold_papers": [
+      "2604_11182v1"
+    ],
+    "type": "dataset_identification"
+  },
+  {
+    "id": "eng_simple_050",
+    "question": "What RAG-based knowledge tracing paradigm does RAG-KT propose for cross-platform educational settings?",
+    "answer": "RAG-KT (retrieval-augmented paradigm using Question Group abstractions for cross-platform KT)",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_10960v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_051",
+    "question": "What RAG framework does AOP-Smart propose for adverse outcome pathway analysis?",
+    "answer": "AOP-Smart (AOP-oriented Retrieval-Augmented Generation framework using AOP-Wiki XML data)",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_10874v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_052",
+    "question": "What accuracy does DeepSeek achieve with AOP-Smart RAG on AOP-related QA tasks?",
+    "answer": "100.0% accuracy",
+    "difficulty": "simple",
+    "question_type": "result_extraction",
+    "gold_papers": [
+      "2604_10874v1"
+    ],
+    "type": "result_extraction"
+  },
+  {
+    "id": "eng_simple_053",
+    "question": "What robustness gap does the paper 'How You Ask Matters' discover in Adaptive RAG systems?",
+    "answer": "Small surface-level query changes dramatically alter retrieval behavior and accuracy",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_10745v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_054",
+    "question": "What context selection formulation does Self-Correcting RAG use to maximize information density?",
+    "answer": "Multi-dimensional multiple-choice knapsack problem (MMKP)",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_10734v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_055",
+    "question": "What output-side mechanism does Self-Correcting RAG use to validate faithfulness of generated answers?",
+    "answer": "NLI-guided Monte Carlo Tree Search (MCTS)",
+    "difficulty": "simple",
+    "question_type": "component_identification",
+    "gold_papers": [
+      "2604_10734v1"
+    ],
+    "type": "component_identification"
+  },
+  {
+    "id": "eng_simple_056",
+    "question": "What runtime defense mechanism does CanaryRAG propose to detect RAG knowledge base leakage?",
+    "answer": "CanaryRAG (dual-path runtime integrity game using embedded canary tokens)",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_10717v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_057",
+    "question": "What training framework does CARO propose for content moderation using RAG?",
+    "answer": "Chain-of-Analogy Reasoning Optimization (CARO) two-stage framework with SFT and DPO",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_10504v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_058",
+    "question": "What average F1 score improvement does CARO achieve over state-of-the-art on ambiguous moderation benchmarks?",
+    "answer": "24.9% average F1 score improvement",
+    "difficulty": "simple",
+    "question_type": "result_extraction",
+    "gold_papers": [
+      "2604_10504v1"
+    ],
+    "type": "result_extraction"
+  },
+  {
+    "id": "eng_simple_059",
+    "question": "What moderation framework does CHAIRO propose using analogical examples and RAG?",
+    "answer": "Contextual Hierarchical Analogical Induction and Reasoning Optimization (CHAIRO)",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_10502v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_060",
+    "question": "What benchmark does CodaRAG evaluate on to show improvements in retrieval and generation?",
+    "answer": "GraphRAG-Bench",
+    "difficulty": "simple",
+    "question_type": "dataset_identification",
+    "gold_papers": [
+      "2604_10426v1"
+    ],
+    "type": "dataset_identification"
+  },
+  {
+    "id": "eng_simple_061",
+    "question": "What absolute gain in retrieval recall does CodaRAG achieve on GraphRAG-Bench?",
+    "answer": "7-10% absolute gains in retrieval recall",
+    "difficulty": "simple",
+    "question_type": "result_extraction",
+    "gold_papers": [
+      "2604_10426v1"
+    ],
+    "type": "result_extraction"
+  },
+  {
+    "id": "eng_simple_062",
+    "question": "What RAG framework inspired by Complementary Learning Systems does the CodaRAG paper propose?",
+    "answer": "CodaRAG (three-stage: Knowledge Consolidation, Associative Navigation, Interference Elimination)",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_10426v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_063",
+    "question": "What multi-agent debate framework does BLUEmed propose for clinical error detection?",
+    "answer": "BLUEmed (multi-agent debate with hybrid RAG combining dense, sparse, and online retrieval)",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_10389v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_064",
+    "question": "What accuracy does BLUEmed achieve on the clinical terminology substitution detection benchmark under few-shot prompting?",
+    "answer": "69.13% accuracy",
+    "difficulty": "simple",
+    "question_type": "result_extraction",
+    "gold_papers": [
+      "2604_10389v1"
+    ],
+    "type": "result_extraction"
+  },
+  {
+    "id": "eng_simple_065",
+    "question": "What neuro-symbolic framework does CircuitSynth propose for reliable synthetic data generation?",
+    "answer": "CircuitSynth using Probabilistic Sentential Decision Diagram (PSDD)",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_10114v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_066",
+    "question": "What Schema Validity does CircuitSynth achieve on complex logic puzzle benchmarks?",
+    "answer": "100% Schema Validity",
+    "difficulty": "simple",
+    "question_type": "result_extraction",
+    "gold_papers": [
+      "2604_10114v1"
+    ],
+    "type": "result_extraction"
+  },
+  {
+    "id": "eng_simple_067",
+    "question": "What vector space transformation method does Trans-RAG propose for secure cross-organizational retrieval?",
+    "answer": "vector2Trans (multi-stage query-centric vector space transformation)",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_09541v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_068",
+    "question": "What vector space isolation rate does Trans-RAG achieve between organizational vector spaces?",
+    "answer": "99.81% isolation rate",
+    "difficulty": "simple",
+    "question_type": "result_extraction",
+    "gold_papers": [
+      "2604_09541v1"
+    ],
+    "type": "result_extraction"
+  },
+  {
+    "id": "eng_simple_069",
+    "question": "What agentic visual RAG framework does VISOR propose for long-horizon visual reasoning?",
+    "answer": "VISOR (Visual Retrieval-Augmented Generation via Iterative Search and Over-horizon Reasoning)",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_09508v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_070",
+    "question": "What three benchmarks does VISOR evaluate on for long-horizon visual reasoning?",
+    "answer": "ViDoSeek, SlideVQA, and MMLongBench",
+    "difficulty": "simple",
+    "question_type": "dataset_identification",
+    "gold_papers": [
+      "2604_09508v1"
+    ],
+    "type": "dataset_identification"
+  },
+  {
+    "id": "eng_simple_071",
+    "question": "What training algorithm does VISOR use for its reinforcement learning pipeline?",
+    "answer": "Group Relative Policy Optimization (GRPO)-based Reinforcement Learning with state masking",
+    "difficulty": "simple",
+    "question_type": "component_identification",
+    "gold_papers": [
+      "2604_09508v1"
+    ],
+    "type": "component_identification"
+  },
+  {
+    "id": "eng_simple_072",
+    "question": "What framework does the aviation safety paper propose combining LLMs and knowledge graphs?",
+    "answer": "Dual-phase pipeline: LLM-based Aviation Safety Knowledge Graph (ASKG) construction + RAG grounding",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_13101v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_073",
+    "question": "What novel RL algorithm does MM-Doc-R1 propose to address baseline estimation bias in multi-turn RL?",
+    "answer": "Similarity-based Policy Optimization (SPO)",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_13579v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_074",
+    "question": "By how much does MM-Doc-R1 outperform previous baselines on MMLongbench-Doc?",
+    "answer": "10.4% improvement over previous baselines",
+    "difficulty": "simple",
+    "question_type": "result_extraction",
+    "gold_papers": [
+      "2604_13579v1"
+    ],
+    "type": "result_extraction"
+  },
+  {
+    "id": "eng_simple_075",
+    "question": "What benchmark does MM-Doc-R1 evaluate on for long document visual question answering?",
+    "answer": "MMLongbench-Doc",
+    "difficulty": "simple",
+    "question_type": "dataset_identification",
+    "gold_papers": [
+      "2604_13579v1"
+    ],
+    "type": "dataset_identification"
+  },
+  {
+    "id": "eng_simple_076",
+    "question": "What backbone model does MM-Doc-R1 use to boost results by 5.0% with SPO over GRPO?",
+    "answer": "Qwen3-8B",
+    "difficulty": "simple",
+    "question_type": "component_identification",
+    "gold_papers": [
+      "2604_13579v1"
+    ],
+    "type": "component_identification"
+  },
+  {
+    "id": "eng_simple_077",
+    "question": "What systems engineering framework does the Cognitive Circuit Breaker paper propose for intrinsic AI reliability?",
+    "answer": "Cognitive Circuit Breaker using Cognitive Dissonance Delta via linear probes on hidden states",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_13417v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_simple_078",
+    "question": "What RAG improvement in report generation does CT enterography vision-language modeling show over chance baseline?",
+    "answer": "7-14 percentage points above chance baseline",
+    "difficulty": "simple",
+    "question_type": "result_extraction",
+    "gold_papers": [
+      "2604_13021v1"
+    ],
+    "type": "result_extraction"
+  },
+  {
+    "id": "eng_simple_079",
+    "question": "What two classification approaches does the Van Hiele geometric reasoning paper implement using LLMs?",
+    "answer": "Retrieval-Augmented Generation (RAG) and multi-task learning (MTL)",
+    "difficulty": "simple",
+    "question_type": "component_identification",
+    "gold_papers": [
+      "2604_13666v1"
+    ],
+    "type": "component_identification"
+  },
+  {
+    "id": "eng_simple_080",
+    "question": "What Platonic representation hypothesis does the table reasoning paper introduce for permutation-invariant retrieval?",
+    "answer": "Platonic Representation Hypothesis (PRH) for tables with Permutation Invariant (PI) latent space",
+    "difficulty": "simple",
+    "question_type": "method_identification",
+    "gold_papers": [
+      "2604_12133v1"
+    ],
+    "type": "method_identification"
+  },
+  {
+    "id": "eng_medium_001",
+    "question": "How do UniDoc-RL and VISOR differ in their approach to visual RAG training with reinforcement learning?",
+    "answer": "UniDoc-RL uses a hierarchical action space with coarse-to-fine document retrieval, image selection, and region cropping, trained via Group Relative Policy Optimization (GRPO) with a dense multi-reward scheme that provides task-aware supervision for each action. VISOR instead uses a GRPO-based RL pipeline with state masking and credit assignment tailored for dynamic context reconstruction, adding a Dynamic Trajectory with Sliding Window and Intent Injection to prevent context overload and search drift across long-horizon visual reasoning.",
+    "difficulty": "medium",
+    "question_type": "method_comparison",
+    "gold_papers": [
+      "2604_14967v1",
+      "2604_09508v1"
+    ],
+    "type": "method_comparison"
+  },
+  {
+    "id": "eng_medium_002",
+    "question": "How do UniDoc-RL and MM-Doc-R1 differ in their approach to multi-turn reinforcement learning for document visual question answering?",
+    "answer": "UniDoc-RL formulates visual information acquisition as a single sequential decision-making problem with a hierarchical action space, training an LVLM agent to jointly perform retrieval, reranking, region cropping, and reasoning via GRPO with a dense multi-reward scheme. MM-Doc-R1 specifically addresses multi-turn RL by proposing Similarity-based Policy Optimization (SPO), which corrects baseline estimation bias in GRPO by using similarity-weighted averaging of rewards across trajectories, providing a more stable learning signal for iterative information discovery across multiple turns.",
+    "difficulty": "medium",
+    "question_type": "method_comparison",
+    "gold_papers": [
+      "2604_14967v1",
+      "2604_13579v1"
+    ],
+    "type": "method_comparison"
+  },
+  {
+    "id": "eng_medium_003",
+    "question": "How do Doc-V* and MM-Doc-R1 each address the challenge of multi-hop evidence aggregation in long document visual question answering?",
+    "answer": "Doc-V* casts multi-page DocVQA as sequential evidence aggregation using an OCR-free agentic workflow, maintaining a structured working memory to accumulate evidence across pages via imitation learning from expert trajectories plus GRPO optimization. MM-Doc-R1 addresses the same challenge through a vision-aware multi-turn RL framework combined with Similarity-based Policy Optimization (SPO), which stabilizes baseline estimation during iterative information discovery to enable more reliable evidence synthesis across multi-hop queries.",
+    "difficulty": "medium",
+    "question_type": "shared_problem_different_solutions",
+    "gold_papers": [
+      "2604_13731v1",
+      "2604_13579v1"
+    ],
+    "type": "shared_problem_different_solutions"
+  },
+  {
+    "id": "eng_medium_004",
+    "question": "How do DocSeeker and Doc-V* differ in their approach to handling long document understanding with visual evidence grounding?",
+    "answer": "DocSeeker uses a structured Analysis-Localization-Reasoning workflow trained in two stages: first supervised fine-tuning on knowledge-distilled data, then Evidence-aware Group Relative Policy Optimization that jointly optimizes evidence localization and answer accuracy, with an Evidence-Guided Resolution Allocation strategy to manage memory. Doc-V* instead operates as an OCR-free agentic framework that navigates documents via semantic retrieval and targeted page fetching, accumulating evidence in a working memory and training via imitation learning from expert trajectories followed by GRPO.",
+    "difficulty": "medium",
+    "question_type": "method_comparison",
+    "gold_papers": [
+      "2604_12812v2",
+      "2604_13731v1"
+    ],
+    "type": "method_comparison"
+  },
+  {
+    "id": "eng_medium_005",
+    "question": "How do Corpus2Skill and NaviRAG each address the limitation of flat, passive retrieval in RAG systems?",
+    "answer": "Corpus2Skill addresses flat retrieval by distilling the entire document corpus offline into a hierarchical skill directory as a tree of navigable skill files, then letting the LLM agent navigate this bird's-eye hierarchy at serve time, drilling into topic branches and backtracking from unproductive paths. NaviRAG instead structures knowledge documents into a hierarchical form at query time, then uses an LLM agent to actively navigate records by iteratively identifying information gaps and retrieving content from the most appropriate granularity level, from coarse-grained topics down to specific evidence.",
+    "difficulty": "medium",
+    "question_type": "shared_problem_different_solutions",
+    "gold_papers": [
+      "2604_14572v1",
+      "2604_12766v1"
+    ],
+    "type": "shared_problem_different_solutions"
+  },
+  {
+    "id": "eng_medium_006",
+    "question": "How do Corpus2Skill and OKH-RAG differ in their approach to structuring knowledge for improved RAG reasoning?",
+    "answer": "Corpus2Skill represents knowledge as a static hierarchical skill directory built offline through iterative document clustering and LLM-written summaries, enabling the agent to reason about the corpus structure and navigate it at serve time. OKH-RAG instead represents knowledge as higher-order hypergraph interactions augmented with a precedence structure, reformulating retrieval as sequence inference over hyperedges so that the system recovers coherent interaction trajectories that reflect the underlying temporal or causal order of events.",
+    "difficulty": "medium",
+    "question_type": "method_comparison",
+    "gold_papers": [
+      "2604_14572v1",
+      "2604_12185v1"
+    ],
+    "type": "method_comparison"
+  },
+  {
+    "id": "eng_medium_007",
+    "question": "How do BLUEmed and Self-Correcting RAG each mitigate hallucination and low faithfulness in RAG outputs for complex reasoning tasks?",
+    "answer": "BLUEmed mitigates hallucination by using a multi-agent debate framework where two domain expert agents independently analyze clinical evidence from partitioned knowledge bases, with structured counter-argumentation and cross-source adjudication to resolve disagreements, plus a cascading safety layer filtering false-positive patterns. Self-Correcting RAG addresses faithfulness by formalizing context selection as a multi-dimensional multiple-choice knapsack problem (MMKP) to maximize information density, then using NLI-guided Monte Carlo Tree Search (MCTS) at inference time to explore and validate reasoning trajectories.",
+    "difficulty": "medium",
+    "question_type": "shared_problem_different_solutions",
+    "gold_papers": [
+      "2604_10389v1",
+      "2604_10734v1"
+    ],
+    "type": "shared_problem_different_solutions"
+  },
+  {
+    "id": "eng_medium_008",
+    "question": "How do AdversarialCoT and CanaryRAG differ in their approach to the security vulnerabilities of RAG systems?",
+    "answer": "AdversarialCoT is an offensive attack framework that poisons a single document in the retrieval corpus by extracting the LLM's reasoning framework to construct an adversarial chain-of-thought, then iteratively refining the document through LLM interactions to exploit reasoning vulnerabilities. CanaryRAG is a defensive mechanism inspired by software stack canaries that embeds canary tokens into retrieved chunks and uses a dual-path runtime integrity game to detect leakage in real time whenever either a target or oracle path violates expected canary behavior.",
+    "difficulty": "medium",
+    "question_type": "method_comparison",
+    "gold_papers": [
+      "2604_12201v1",
+      "2604_10717v1"
+    ],
+    "type": "method_comparison"
+  },
+  {
+    "id": "eng_medium_009",
+    "question": "How do Trans-RAG and CanaryRAG each address security risks in cross-organizational RAG deployments?",
+    "answer": "Trans-RAG addresses cross-organizational privacy by implementing a vector space language paradigm where each organization's knowledge exists in a mathematically isolated semantic space, using query-centric transformations (vector2Trans) that allow queries to dynamically adapt to each organization's vector space without exposing plaintext. CanaryRAG addresses the risk of knowledge base leakage by embedding canary tokens into retrieved chunks and running a dual-path runtime integrity game to detect when adversarial prompts are inducing the model to divulge proprietary retrieved content.",
+    "difficulty": "medium",
+    "question_type": "shared_problem_different_solutions",
+    "gold_papers": [
+      "2604_09541v1",
+      "2604_10717v1"
+    ],
+    "type": "shared_problem_different_solutions"
+  },
+  {
+    "id": "eng_medium_010",
+    "question": "How do AdversarialCoT and Trans-RAG differ in their focus on RAG system security?",
+    "answer": "AdversarialCoT focuses on the attack side: it studies corpus poisoning by injecting a single malicious document that exploits the target LLM's reasoning framework via an iteratively refined adversarial chain-of-thought, aiming to degrade reasoning accuracy. Trans-RAG focuses on the defense side for cross-organizational settings: it isolates each organization's vector space mathematically using query-centric transformations to prevent information leakage across boundaries, achieving near-orthogonal vector spaces with 89.90° angular separation.",
+    "difficulty": "medium",
+    "question_type": "method_comparison",
+    "gold_papers": [
+      "2604_12201v1",
+      "2604_09541v1"
+    ],
+    "type": "method_comparison"
+  },
+  {
+    "id": "eng_medium_011",
+    "question": "How do Synthius-Mem and Memory as Metabolism each address the problem of reliable long-term memory for LLM agents?",
+    "answer": "Synthius-Mem addresses long-term memory via a structured persona extraction pipeline that decomposes conversations into six cognitive domains (biography, experiences, preferences, social circle, work, psychometrics), consolidates and deduplicates per domain, and retrieves structured facts via CategoryRAG, achieving 94.37% accuracy and 99.55% adversarial robustness on LoCoMo. Memory as Metabolism proposes a normative companion-system framework with five operations (TRIAGE, DECAY, CONTEXTUALIZE, CONSOLIDATE, AUDIT) and a memory gravity mechanism with minority-hypothesis retention to prevent entrenchment under user-coupled drift.",
+    "difficulty": "medium",
+    "question_type": "shared_problem_different_solutions",
+    "gold_papers": [
+      "2604_11563v1",
+      "2604_12034v1"
+    ],
+    "type": "shared_problem_different_solutions"
+  },
+  {
+    "id": "eng_medium_012",
+    "question": "How do Synthius-Mem and LifeDialBench differ in their approach to evaluating long-term memory in conversational AI systems?",
+    "answer": "Synthius-Mem focuses on building and benchmarking a production memory architecture, using the LoCoMo benchmark to demonstrate that structured persona extraction with CategoryRAG surpasses all prior systems including human performance (87.9 F1) and achieves 99.55% adversarial robustness. LifeDialBench focuses on evaluation methodology, proposing a new hierarchical synthesis framework to create a benchmark with two subsets (EgoMem and LifeMem) for lifelog scenarios, and introducing an Online Evaluation protocol that enforces temporal causality to prevent temporal leakage in assessment.",
+    "difficulty": "medium",
+    "question_type": "method_comparison",
+    "gold_papers": [
+      "2604_11563v1",
+      "2604_11182v1"
+    ],
+    "type": "method_comparison"
+  },
+  {
+    "id": "eng_medium_013",
+    "question": "How do OIDA and Memory as Metabolism each address the limitation of retrieval fidelity in organizational or personal knowledge systems?",
+    "answer": "OIDA addresses organizational epistemic fidelity by structuring knowledge as typed Knowledge Objects with epistemic class, importance scores with class-specific decay, and signed contradiction edges, introducing QUESTION-as-modeled-ignorance as a primitive that surfaces what an organization does not know with increasing urgency. Memory as Metabolism addresses personal knowledge entrenchment through five operations and a memory gravity mechanism, specifically designing a structural path for accumulated contradictory evidence to update centrality-protected dominant interpretations via multi-cycle buffer pressure accumulation.",
+    "difficulty": "medium",
+    "question_type": "shared_problem_different_solutions",
+    "gold_papers": [
+      "2604_11759v1",
+      "2604_12034v1"
+    ],
+    "type": "shared_problem_different_solutions"
+  },
+  {
+    "id": "eng_medium_014",
+    "question": "How do Knowledge Graph RAG and Beyond RAG for Cyber Threat Intelligence differ in their use of knowledge graphs for complex multi-hop retrieval?",
+    "answer": "Knowledge Graph RAG builds an Agentic Knowledge Graph with Recursive Crawling specifically to navigate superseding logic and multi-hop references in regulatory enterprise documents (Code of Federal Regulations), achieving a 70% accuracy improvement over standard vector RAG. Beyond RAG for CTI evaluates four RAG architectures for CTI analysis, finding that a hybrid graph-text approach combining graph queries over a CTI knowledge graph with text retrieval improves answer quality by up to 35% on multi-hop questions, while also introducing an agentic variant that repairs failed graph queries.",
+    "difficulty": "medium",
+    "question_type": "method_comparison",
+    "gold_papers": [
+      "2604_14220v1",
+      "2604_11419v1"
+    ],
+    "type": "method_comparison"
+  },
+  {
+    "id": "eng_medium_015",
+    "question": "How do Aviation Safety KG framework and Beyond RAG for Cyber Threat Intelligence each use knowledge graphs to enhance RAG in safety-critical domains?",
+    "answer": "The Aviation Safety KG framework uses LLMs to automate construction and dynamic updating of an Aviation Safety Knowledge Graph (ASKG) from multimodal sources, then grounds LLM responses through a RAG architecture that validates and explains answers using the curated KG. Beyond RAG for CTI constructs a static CTI knowledge graph representing threat actors, malware, and vulnerabilities, evaluating graph-based, agentic, and hybrid retrieval paradigms to show that graph grounding improves structured factual queries and that hybrid graph-text retrieval is optimal for multi-hop relational questions.",
+    "difficulty": "medium",
+    "question_type": "shared_problem_different_solutions",
+    "gold_papers": [
+      "2604_13101v1",
+      "2604_11419v1"
+    ],
+    "type": "shared_problem_different_solutions"
+  },
+  {
+    "id": "eng_medium_016",
+    "question": "How do the Mental Health Counseling KG approach and Knowledge Graph RAG differ in their strategy for incorporating structured knowledge into retrieval pipelines?",
+    "answer": "The Mental Health Counseling KG approach manually constructs a clinically validated knowledge graph capturing causal relationships between stressors, interventions, and outcomes, comparing it against RAG to show that KG-based methods consistently improve contextual relevance and clinical appropriateness. Knowledge Graph RAG builds its knowledge graph automatically through agentic recursive crawling of enterprise documents to capture hierarchical and superseding relationships in regulatory corpora, showing a 70% accuracy improvement over vector-based RAG for complex regulatory queries.",
+    "difficulty": "medium",
+    "question_type": "method_comparison",
+    "gold_papers": [
+      "2604_14576v1",
+      "2604_14220v1"
+    ],
+    "type": "method_comparison"
+  },
+  {
+    "id": "eng_medium_017",
+    "question": "How do MultiDocFusion and Tri-RAG each address the problem of poor context quality from unstructured text retrieval in RAG pipelines?",
+    "answer": "MultiDocFusion addresses context quality by implementing a multimodal chunking pipeline that detects document regions via vision-based parsing, extracts text via OCR, and reconstructs hierarchical document structure using LLM-based hierarchical parsing (DSHP-LLM) followed by DFS-based grouping, improving retrieval precision by 8-15%. Tri-RAG addresses context quality by transforming external knowledge into standardized triplets consisting of Condition, Proof, and Conclusion, using the triplet head Condition as an explicit semantic anchor for retrieval and matching to reduce redundant context and improve reasoning alignment.",
+    "difficulty": "medium",
+    "question_type": "shared_problem_different_solutions",
+    "gold_papers": [
+      "2604_12352v1",
+      "2604_12610v1"
+    ],
+    "type": "shared_problem_different_solutions"
+  },
+  {
+    "id": "eng_medium_018",
+    "question": "How do MultiDocFusion and the PDF Parsing study differ in their approach to handling complex document structures for RAG-based QA?",
+    "answer": "MultiDocFusion focuses on industrial long documents by integrating vision-based region detection, OCR, and LLM-based hierarchical parsing (DSHP-LLM) to reconstruct document hierarchy into DFS-grouped hierarchical chunks, improving retrieval precision by 8-15% and QA scores by 2-3% over baselines. The PDF Parsing study conducts a systematic empirical evaluation of multiple PDF parsers and chunking strategies with varied overlap on financial QA benchmarks, investigating how different design choices and parser-chunker synergies affect RAG performance rather than proposing a single new architecture.",
+    "difficulty": "medium",
+    "question_type": "method_comparison",
+    "gold_papers": [
+      "2604_12352v1",
+      "2604_12047v1"
+    ],
+    "type": "method_comparison"
+  },
+  {
+    "id": "eng_medium_019",
+    "question": "How do On-Device RAG and Local-Splitter each address the problem of reducing computational overhead and resource consumption in RAG deployments?",
+    "answer": "On-Device RAG reduces overhead by proposing a unified model that compresses the RAG context and uses shared representations for both retrieval and generation, achieving 1/10 the context of traditional RAG while matching reader performance without increasing storage requirements, making the system suitable for privacy-sensitive personal device deployment. Local-Splitter targets cloud LLM token cost reduction through a systematic study of seven tactics including local routing, prompt compression, semantic caching, and local drafting with cloud review, achieving 45-79% cloud token savings on coding-agent workloads.",
+    "difficulty": "medium",
+    "question_type": "shared_problem_different_solutions",
+    "gold_papers": [
+      "2604_14403v1",
+      "2604_12301v1"
+    ],
+    "type": "shared_problem_different_solutions"
+  },
+  {
+    "id": "eng_medium_020",
+    "question": "How do FRESCO and Adaptive RAG Robustness (How You Ask Matters) differ in their identification of failure modes in existing RAG evaluation and deployment?",
+    "answer": "FRESCO identifies a temporal failure mode where existing re-rankers are evaluated only in static settings and exhibit a strong bias toward older, semantically rich but factually obsolete documents, introducing a benchmark with historical Wikipedia revisions to test recency-aware ranking and an instruction optimization framework to achieve up to 27% gains on evolving knowledge tasks. Adaptive RAG Robustness identifies a surface-form failure mode where small surface-level query variations dramatically alter retrieval behavior and accuracy in Adaptive RAG systems, showing through a large-scale benchmark of semantically identical rewrites that robustness does not improve even in larger models.",
+    "difficulty": "medium",
+    "question_type": "method_comparison",
+    "gold_papers": [
+      "2604_14227v1",
+      "2604_10745v1"
+    ],
+    "type": "method_comparison"
+  },
+  {
+    "id": "eng_medium_021",
+    "question": "How do GRIP and Self-Correcting RAG each address the limitation of single-pass, static retrieval in RAG systems for complex multi-hop reasoning?",
+    "answer": "GRIP embeds retrieval control directly into autoregressive token-level decoding through Self-Triggered Information Planning, enabling the model to decide when to retrieve, how to reformulate queries, and when to terminate within a single trajectory without external controllers, trained on structured data covering answerable, partially answerable, and multi-hop queries. Self-Correcting RAG separates the problem into two fronts: on the input side it formalizes context selection as an MMKP optimization problem, and on the output side it uses NLI-guided MCTS to explore and validate reasoning trajectories dynamically at test time.",
+    "difficulty": "medium",
+    "question_type": "shared_problem_different_solutions",
+    "gold_papers": [
+      "2604_11407v1",
+      "2604_10734v1"
+    ],
+    "type": "shared_problem_different_solutions"
+  },
+  {
+    "id": "eng_medium_022",
+    "question": "How do GRIP and NaviRAG differ in their approach to active and dynamic retrieval planning in RAG systems?",
+    "answer": "GRIP integrates retrieval planning entirely within the generation process, using control-token emission during autoregressive decoding to dynamically trigger retrieval, reformulate queries, and terminate search without any separate retrieval module or external controller. NaviRAG keeps retrieval as a distinct active step but enhances it by structuring knowledge into a hierarchical form and deploying an LLM agent that navigates this hierarchy, iteratively identifying information gaps and selecting the appropriate granularity level for each retrieval step.",
+    "difficulty": "medium",
+    "question_type": "method_comparison",
+    "gold_papers": [
+      "2604_11407v1",
+      "2604_12766v1"
+    ],
+    "type": "method_comparison"
+  },
+  {
+    "id": "eng_medium_023",
+    "question": "How do CARO and CHAIRO each address the challenge of robust content moderation using analogical reasoning and RAG?",
+    "answer": "CARO uses a two-stage training framework where it first bootstraps analogical reasoning chains via RAG on moderation data with supervised fine-tuning, then applies customized Direct Preference Optimization (DPO) to reinforce analogical reasoning behaviors, dynamically generating tailored analogical references during inference to avoid harmful decision shortcuts. CHAIRO proposes a framework that integrates end-to-end optimization of analogical retrieval, rule generation, and moderation classification, enabling dynamic adaptation of moderation rules to diverse content through analogical examples rather than relying on static RAG pipelines.",
+    "difficulty": "medium",
+    "question_type": "shared_problem_different_solutions",
+    "gold_papers": [
+      "2604_10504v1",
+      "2604_10502v1"
+    ],
+    "type": "shared_problem_different_solutions"
+  },
+  {
+    "id": "eng_medium_024",
+    "question": "How do CARO and CHAIRO differ in their training strategies for improving content moderation using retrieved analogical examples?",
+    "answer": "CARO uses a two-stage training pipeline: first supervised fine-tuning on RAG-generated analogical chains, then customized Direct Preference Optimization (DPO) to explicitly reinforce analogical reasoning behaviors, achieving 24.9% average F1 improvement over state-of-the-art methods. CHAIRO instead proposes end-to-end joint optimization of analogical retrieval, rule generation, and moderation classification simultaneously, enabling the dynamic adaptation of moderation rules to diverse content scenarios without separating the training into distinct retrieval and classification stages.",
+    "difficulty": "medium",
+    "question_type": "method_comparison",
+    "gold_papers": [
+      "2604_10504v1",
+      "2604_10502v1"
+    ],
+    "type": "method_comparison"
+  },
+  {
+    "id": "eng_medium_025",
+    "question": "How do ConflictQA/XoT and Self-Correcting RAG each address the problem of faithful reasoning in the presence of conflicting or noisy retrieved evidence?",
+    "answer": "ConflictQA/XoT introduces a benchmark (ConflictQA) specifically targeting conflicts between textual and knowledge graph evidence, then proposes XoT, a two-stage explanation-based thinking framework that makes the reasoning process over heterogeneous conflicting evidence explicit, helping the model identify reliable evidence rather than defaulting to one source type. Self-Correcting RAG addresses noise and low faithfulness by formalizing context selection as an MMKP optimization to maximize information density upfront, then using NLI-guided MCTS to validate generation faithfulness at test time.",
+    "difficulty": "medium",
+    "question_type": "shared_problem_different_solutions",
+    "gold_papers": [
+      "2604_11209v1",
+      "2604_10734v1"
+    ],
+    "type": "shared_problem_different_solutions"
+  },
+  {
+    "id": "eng_medium_026",
+    "question": "How do the Cognitive Circuit Breaker and Self-Correcting RAG differ in their approach to detecting and mitigating hallucination in LLM outputs?",
+    "answer": "The Cognitive Circuit Breaker is an intrinsic, white-box reliability framework that detects hallucination by extracting hidden states during a model's forward pass and computing the Cognitive Dissonance Delta—the gap between softmax semantic confidence and internal latent certainty via linear probes—adding negligible computational overhead. Self-Correcting RAG is an extrinsic, black-box faithfulness framework that uses NLI-guided Monte Carlo Tree Search at inference time to explore and validate reasoning trajectories dynamically, operating on the output side without accessing internal model states.",
+    "difficulty": "medium",
+    "question_type": "method_comparison",
+    "gold_papers": [
+      "2604_13417v1",
+      "2604_10734v1"
+    ],
+    "type": "method_comparison"
+  },
+  {
+    "id": "eng_medium_027",
+    "question": "How do AOP-Smart and RAG-KT each apply retrieval-augmented generation to specialized domain knowledge in scientific and educational settings?",
+    "answer": "AOP-Smart applies RAG to toxicological research by retrieving Key Events, Key Event Relationships, and AOP information from AOP-Wiki XML data to ground LLM responses, improving accuracy from 15-35% (without RAG) to 95-100% (with RAG) on AOP-related QA tasks across GPT, DeepSeek, and Gemini. RAG-KT applies RAG to educational knowledge tracing by building a unified multi-source structured context with cross-source alignment via Question Group abstractions, retrieving complementary reliable context for student performance prediction across heterogeneous platforms.",
+    "difficulty": "medium",
+    "question_type": "shared_problem_different_solutions",
+    "gold_papers": [
+      "2604_10874v1",
+      "2604_10960v1"
+    ],
+    "type": "shared_problem_different_solutions"
+  },
+  {
+    "id": "eng_medium_028",
+    "question": "How do Legal2LogicICL and Adaptive Query Routing differ in their approach to domain-specific RAG for legal and financial documents?",
+    "answer": "Legal2LogicICL focuses on few-shot retrieval diversity by balancing both latent semantic similarity and legal text structure similarity when selecting exemplars, while explicitly mitigating entity-induced retrieval bias where lengthy legal entity mentions dominate semantic representations, enabling accurate and stable logical rule generation without extra training. Adaptive Query Routing focuses on query routing at the system level, proposing a four-tier query complexity benchmark and a hybrid retrieval framework (AHR) that dynamically selects among vector RAG, tree reasoning, and hybrid strategies based on query complexity and document structure.",
+    "difficulty": "medium",
+    "question_type": "method_comparison",
+    "gold_papers": [
+      "2604_11699v1",
+      "2604_14222v1"
+    ],
+    "type": "method_comparison"
+  },
+  {
+    "id": "eng_medium_029",
+    "question": "How do Controlling Authority Retrieval (CAR) and Legal2LogicICL each address the specific challenges of authority-governed and legal knowledge retrieval?",
+    "answer": "CAR formalizes authority-governed retrieval as a mathematically distinct problem from semantic similarity search, proving theoretical bounds and showing that a two-stage retrieval approach achieves 0.975 TCA@5 on security advisories versus 0.270 for dense retrieval, specifically recovering the active frontier of superseding documents. Legal2LogicICL addresses legal retrieval by mitigating entity-induced retrieval bias in few-shot exemplar selection, balancing diversity and similarity at both semantic representation and legal text structure levels to enable accurate transformation of legal cases into logical formulas.",
+    "difficulty": "medium",
+    "question_type": "shared_problem_different_solutions",
+    "gold_papers": [
+      "2604_14488v1",
+      "2604_11699v1"
+    ],
+    "type": "shared_problem_different_solutions"
+  },
+  {
+    "id": "eng_medium_030",
+    "question": "How do Controlling Authority Retrieval (CAR) and Knowledge Graph RAG differ in their approaches to handling superseding and hierarchical relationships in regulatory documents?",
+    "answer": "CAR formalizes the retrieval problem theoretically as recovering the active frontier of the authority closure set, proving necessary-and-sufficient conditions for correctness (Theorem 4) and a scope identifiability upper bound (Proposition 2), then validating with a two-stage retrieval approach across security advisories, SCOTUS overruling pairs, and FDA drug records. Knowledge Graph RAG takes an agentic approach, building a knowledge graph with recursive crawling to navigate superseding logic and multi-hop references in the Code of Federal Regulations, achieving 70% accuracy improvement without formal theoretical guarantees.",
+    "difficulty": "medium",
+    "question_type": "method_comparison",
+    "gold_papers": [
+      "2604_14488v1",
+      "2604_14220v1"
+    ],
+    "type": "method_comparison"
+  },
+  {
+    "id": "eng_medium_031",
+    "question": "How do CodaRAG and OKH-RAG each address the problem of fragmented, disconnected evidence retrieval in knowledge-intensive tasks?",
+    "answer": "CodaRAG addresses fragmentation through a three-stage pipeline: Knowledge Consolidation to unify extractions into a stable memory substrate, Associative Navigation to traverse graphs via semantic, contextualized, and functional pathways to recover dispersed evidence chains, and Interference Elimination to prune hyper-associative noise for coherent reasoning context. OKH-RAG addresses disconnection by treating interaction order as a first-class structural property, representing knowledge as hyperedges with a precedence structure and reformulating retrieval as sequence inference over hyperedges to recover coherent interaction trajectories rather than selecting independent facts.",
+    "difficulty": "medium",
+    "question_type": "shared_problem_different_solutions",
+    "gold_papers": [
+      "2604_10426v1",
+      "2604_12185v1"
+    ],
+    "type": "shared_problem_different_solutions"
+  },
+  {
+    "id": "eng_medium_032",
+    "question": "How do CodaRAG and Tri-RAG differ in their approach to structuring retrieved knowledge for improved multi-hop reasoning?",
+    "answer": "CodaRAG structures knowledge as an associative graph and employs a three-stage pipeline (consolidation, associative navigation, interference elimination) to traverse multi-dimensional pathways that explicitly recover dispersed evidence chains, drawing inspiration from Complementary Learning Systems in cognitive science. Tri-RAG structures external knowledge as standardized triplets (Condition, Proof, Conclusion) using lightweight prompt-based adaptation, then uses the Condition head as an explicit semantic anchor for precise query-relevant knowledge matching without concatenating lengthy raw texts.",
+    "difficulty": "medium",
+    "question_type": "method_comparison",
+    "gold_papers": [
+      "2604_10426v1",
+      "2604_12610v1"
+    ],
+    "type": "method_comparison"
+  },
+  {
+    "id": "eng_medium_033",
+    "question": "How do Context Kubernetes and OIDA each address the governance and orchestration of knowledge for agentic AI systems?",
+    "answer": "Context Kubernetes addresses governance by formalizing enterprise knowledge orchestration as structurally analogous to container orchestration, introducing six core abstractions, a YAML declarative manifest, a reconciliation loop, and a three-tier agent permission model verified with TLA+ model-checking across 4.6 million states. OIDA addresses organizational epistemic governance by structuring knowledge as typed Knowledge Objects with epistemic class, importance decay, and contradiction edges, introducing the Knowledge Gravity Engine and the QUESTION primitive as modeled ignorance to surface organizational unknowns with increasing urgency.",
+    "difficulty": "medium",
+    "question_type": "shared_problem_different_solutions",
+    "gold_papers": [
+      "2604_11623v3",
+      "2604_11759v1"
+    ],
+    "type": "shared_problem_different_solutions"
+  },
+  {
+    "id": "eng_medium_034",
+    "question": "How do Context Kubernetes and Corpus2Skill differ in their approach to organizing external knowledge for LLM agent access in enterprise settings?",
+    "answer": "Context Kubernetes organizes knowledge through a declarative governance framework with a YAML-based manifest, reconciliation loop, and three-tier agent permission model, focusing on access control, freshness, and security across an organization rather than retrieval efficiency, blocking all five tested attack scenarios including confidential data leakage. Corpus2Skill organizes knowledge by distilling the document corpus offline into a hierarchical skill directory tree, focusing on enabling the LLM agent to reason about corpus structure, navigate topic branches, and combine scattered evidence efficiently for enterprise customer-support QA.",
+    "difficulty": "medium",
+    "question_type": "method_comparison",
+    "gold_papers": [
+      "2604_11623v3",
+      "2604_14572v1"
+    ],
+    "type": "method_comparison"
+  },
+  {
+    "id": "eng_medium_035",
+    "question": "How do Platonic Table RAG and Opinion-Aware RAG each address the limitation of current RAG systems that treat important semantic structure as noise?",
+    "answer": "Platonic Table RAG argues that linearizing tables discards their geometric and relational structure, introducing the Platonic Representation Hypothesis (PRH) and two metrics (Permutation Invariance and Spearman-based rho) to diagnose serialization bias, then proposing a structure-aware table encoder that enforces cell header alignment for permutation-invariant retrieval. Opinion-Aware RAG argues that current RAG systems exhibit a factual bias that treats opinions and diverse perspectives as noise, proposing an architecture with LLM-based opinion extraction, entity-linked opinion graphs, and opinion-enriched indexing to achieve +26.8% sentiment diversity and +42.7% entity match rate.",
+    "difficulty": "medium",
+    "question_type": "shared_problem_different_solutions",
+    "gold_papers": [
+      "2604_12133v1",
+      "2604_12138v1"
+    ],
+    "type": "shared_problem_different_solutions"
+  },
+  {
+    "id": "eng_medium_036",
+    "question": "How do the Quantum-Inspired Embeddings study and Platonic Table RAG differ in their analysis of representational limitations in RAG retrieval?",
+    "answer": "The Quantum-Inspired Embeddings study analyzes quantum-inspired 1024-dimensional embeddings, finding that standalone quantum-inspired embeddings exhibit distance compression and ranking instability compared to BM25 and teacher embeddings, concluding they serve as auxiliary rather than standalone retrieval representations. Platonic Table RAG analyzes classical LLM table embeddings, finding that even minor layout permutations induce significant semantic shifts, diagnosing serialization bias using CKA-based metrics and proposing a structure-aware encoder that enforces cell header alignment.",
+    "difficulty": "medium",
+    "question_type": "method_comparison",
+    "gold_papers": [
+      "2604_09430v1",
+      "2604_12133v1"
+    ],
+    "type": "method_comparison"
+  },
+  {
+    "id": "eng_medium_037",
+    "question": "How do RoPE-Perturbed Self-Distillation and FRESCO each address the brittleness of LLMs in processing retrieved context?",
+    "answer": "RoPE-Perturbed Self-Distillation addresses positional brittleness in long-context models by perturbing RoPE indices to create alternative views of training sequences and training the model to produce consistent predictions across views via self-distillation, reducing positional variance and improving performance by up to 12.04% on RULER-64K for Llama-3-8B. FRESCO addresses temporal brittleness in re-rankers by constructing a benchmark with historical Wikipedia revisions that reveals a consistent bias toward older semantically rich documents, then using instruction optimization to identify Pareto-optimal instructions that balance evolving and non-evolving knowledge retrieval.",
+    "difficulty": "medium",
+    "question_type": "shared_problem_different_solutions",
+    "gold_papers": [
+      "2604_14339v1",
+      "2604_14227v1"
+    ],
+    "type": "shared_problem_different_solutions"
+  },
+  {
+    "id": "eng_medium_038",
+    "question": "How do Agentic RAG for Ukrainian and GRIP differ in their approach to improving retrieval quality through agentic mechanisms?",
+    "answer": "Agentic RAG for Ukrainian implements a lightweight agentic layer on top of existing two-stage retrieval (BGE-M3 with BGE reranking) by adding query rephrasing and answer-retry loops, finding that retrieval quality remains the primary bottleneck and that agentic retries improve accuracy but are constrained by document/page identification. GRIP embeds retrieval control directly into generation by using Self-Triggered Information Planning within autoregressive token-level decoding to decide when to retrieve, how to reformulate queries, and when to terminate, tightly coupling retrieval and reasoning in an end-to-end unified framework.",
+    "difficulty": "medium",
+    "question_type": "method_comparison",
+    "gold_papers": [
+      "2604_14896v1",
+      "2604_11407v1"
+    ],
+    "type": "method_comparison"
+  },
+  {
+    "id": "eng_medium_039",
+    "question": "How do BLUEmed and the Aviation Safety KG framework each address the reliability requirements of RAG in safety-critical domains?",
+    "answer": "BLUEmed addresses clinical reliability by using a multi-agent debate structure where two domain expert agents independently analyze partitioned evidence bases and resolve disagreements through structured counter-argumentation and cross-source adjudication, plus a cascading safety layer filtering common false-positive patterns. The Aviation Safety KG framework addresses aviation reliability by combining a dynamically updated Knowledge Graph (ASKG) with a RAG architecture that grounds, validates, and explains all LLM responses through the curated KG, providing verifiable, context-aware safety insights with improved traceability over LLM-only approaches.",
+    "difficulty": "medium",
+    "question_type": "shared_problem_different_solutions",
+    "gold_papers": [
+      "2604_10389v1",
+      "2604_13101v1"
+    ],
+    "type": "shared_problem_different_solutions"
+  },
+  {
+    "id": "eng_medium_040",
+    "question": "How do the Van Hiele RAG classification and RAG-KT differ in their approach to applying RAG for educational assessment?",
+    "answer": "The Van Hiele RAG classification uses RAG as one of two classification approaches (alongside multi-task learning) to diagnose teachers' geometric reasoning levels, where the RAG variant retrieves exemplars from an annotated dataset of teacher responses paired with a structured skills dictionary to improve Van Hiele level prediction. RAG-KT applies RAG to student knowledge tracing by building a unified multi-source structured context with cross-source alignment via Question Group abstractions, framing cross-platform knowledge tracing as reliable context-constrained inference to predict future student performance.",
+    "difficulty": "medium",
+    "question_type": "method_comparison",
+    "gold_papers": [
+      "2604_13666v1",
+      "2604_10960v1"
+    ],
+    "type": "method_comparison"
+  },
+  {
+    "id": "eng_medium_041",
+    "question": "How do Fairness Multi-Agent RAG and BLUEmed each use multi-agent RAG frameworks to achieve outcomes that neither single agent can reach alone?",
+    "answer": "The Fairness Multi-Agent framework uses RAG to align one agent to a specific ethical framework, then has it negotiate with an unaligned or adversarially prompted counterpart over three structured debate rounds, finding that the joint final allocation can satisfy fairness criteria that neither individual agent's allocation achieves, positioning fairness as an emergent property of multi-agent deliberation. BLUEmed uses a two-agent debate structure where each agent analyzes partitioned knowledge bases independently, then resolves disagreements through structured counter-argumentation and cross-source adjudication, achieving clinical error detection accuracy that exceeds both single-agent RAG and debate-only baselines.",
+    "difficulty": "medium",
+    "question_type": "shared_problem_different_solutions",
+    "gold_papers": [
+      "2604_13705v1",
+      "2604_10389v1"
+    ],
+    "type": "shared_problem_different_solutions"
+  },
+  {
+    "id": "eng_medium_042",
+    "question": "How do Doc-V* and DocSeeker differ in their approach to balancing efficiency and accuracy in long document visual reasoning?",
+    "answer": "Doc-V* explicitly optimizes for both answer accuracy and evidence-seeking efficiency through GRPO training, navigating documents via semantic retrieval and targeted page fetching and aggregating evidence in a structured working memory, achieving up to 47.9% improvement over RAG baseline on out-of-domain tasks with selective attention rather than processing more pages. DocSeeker uses an Evidence-Guided Resolution Allocation strategy specifically to mitigate memory constraints during training on multi-page documents, jointly optimizing evidence localization and answer accuracy via Evidence-aware GRPO.",
+    "difficulty": "medium",
+    "question_type": "method_comparison",
+    "gold_papers": [
+      "2604_13731v1",
+      "2604_12812v2"
+    ],
+    "type": "method_comparison"
+  },
+  {
+    "id": "eng_medium_043",
+    "question": "How do Adaptive Query Routing and FRESCO each address the challenge that no single retrieval strategy dominates across all query types?",
+    "answer": "Adaptive Query Routing addresses this by introducing a four-tier query complexity benchmark and showing empirically that Tree Reasoning wins on structured queries (Tier 3-4), Vector RAG wins on multi-document synthesis (Tier 4), and the Hybrid AHR framework performs best on cross-reference and multi-section queries, recommending dynamic strategy selection based on query complexity. FRESCO addresses it in the temporal dimension, showing re-rankers consistently fail on evolving knowledge queries while performing well on non-evolving ones, and using Pareto-optimal instruction optimization to find instructions that balance both task types without sacrificing either.",
+    "difficulty": "medium",
+    "question_type": "shared_problem_different_solutions",
+    "gold_papers": [
+      "2604_14222v1",
+      "2604_14227v1"
+    ],
+    "type": "shared_problem_different_solutions"
+  },
+  {
+    "id": "eng_medium_044",
+    "question": "How do ConflictQA/XoT and Agentic RAG for Ukrainian each identify and address a key bottleneck in the RAG pipeline?",
+    "answer": "ConflictQA/XoT identifies conflicting retrieved evidence as a bottleneck, finding that LLMs become more sensitive to prompting choices and tend to rely exclusively on either KG or textual evidence when conflicts arise, and proposes XoT, a two-stage explanation-based thinking framework to reason over heterogeneous conflicting sources. Agentic RAG for Ukrainian identifies retrieval quality itself as the primary bottleneck, finding that while agentic retry mechanisms improve answer accuracy, the overall score remains constrained by document and page identification, and outlines directions combining stronger retrieval with more advanced agentic reasoning.",
+    "difficulty": "medium",
+    "question_type": "shared_problem_different_solutions",
+    "gold_papers": [
+      "2604_11209v1",
+      "2604_14896v1"
+    ],
+    "type": "shared_problem_different_solutions"
+  },
+  {
+    "id": "eng_medium_045",
+    "question": "How do the CT Enterography RAG study and AOP-Smart differ in their application of RAG to specialized medical or scientific domains?",
+    "answer": "The CT Enterography study investigates vision-language transfer learning for inflammatory bowel disease imaging, finding that RAG improves severity report generation by 7-14 percentage points above chance across all configurations and reduces ordinal MAE from 0.98 to 0.80-0.89, with findings that per-slice tissue contrast matters more than spatial coverage. AOP-Smart applies RAG specifically to toxicological adverse outcome pathway analysis by retrieving Key Events and Key Event Relationships from AOP-Wiki XML data, dramatically improving LLM accuracy from 15-35% to 95-100% on AOP-related QA tasks.",
+    "difficulty": "medium",
+    "question_type": "method_comparison",
+    "gold_papers": [
+      "2604_13021v1",
+      "2604_10874v1"
+    ],
+    "type": "method_comparison"
+  },
+  {
+    "id": "eng_medium_046",
+    "question": "How do On-Device RAG and Corpus2Skill each address the need to minimize storage overhead while maintaining retrieval effectiveness?",
+    "answer": "On-Device RAG minimizes storage by proposing a unified model that shares representations for both retrieval and context compression, using a multi-vector retrieval representation that also serves as the compressed generation context, matching traditional RAG reader performance at 1/10 the context size without extra storage overhead. Corpus2Skill minimizes storage implicitly by condensing the entire document corpus into a hierarchical tree of navigable skill files at compilation time, replacing raw document embeddings with compact summarized skill nodes that agents can navigate without storing per-document dense vectors.",
+    "difficulty": "medium",
+    "question_type": "shared_problem_different_solutions",
+    "gold_papers": [
+      "2604_14403v1",
+      "2604_14572v1"
+    ],
+    "type": "shared_problem_different_solutions"
+  },
+  {
+    "id": "eng_medium_047",
+    "question": "How do CircuitSynth and Tri-RAG differ in their approach to enforcing logical structure and formal constraints in LLM-based knowledge systems?",
+    "answer": "CircuitSynth enforces hard logical constraints through a neuro-symbolic approach that distills teacher LLM reasoning into a Probabilistic Sentential Decision Diagram (PSDD) as a tractable semantic prior, using convex optimization for soft distributional goals, achieving 100% schema validity on complex logic puzzles. Tri-RAG enforces semantic structure by transforming external knowledge into Condition-Proof-Conclusion triplets using lightweight prompt-based adaptation with frozen model parameters, using the Condition as a semantic anchor for retrieval matching to reduce redundant context rather than enforcing formal logical constraints.",
+    "difficulty": "medium",
+    "question_type": "method_comparison",
+    "gold_papers": [
+      "2604_10114v1",
+      "2604_12610v1"
+    ],
+    "type": "method_comparison"
+  },
+  {
+    "id": "eng_medium_048",
+    "question": "How do LifeDialBench and OIDA each address the problem of evaluating or modeling knowledge that evolves and becomes stale over time?",
+    "answer": "LifeDialBench addresses temporal evolution in lifelog scenarios by proposing an Online Evaluation protocol that strictly adheres to temporal causality, ensuring memory systems are evaluated in a realistic streaming fashion rather than offline, and finding that sophisticated memory systems fail to outperform a simple RAG baseline due to over-designed structures. OIDA addresses knowledge staleness in organizational settings by assigning class-specific decay to importance scores on Knowledge Objects and by making the QUESTION primitive increase in urgency over time, surfacing what an organization does not know with growing visibility.",
+    "difficulty": "medium",
+    "question_type": "shared_problem_different_solutions",
+    "gold_papers": [
+      "2604_11182v1",
+      "2604_11759v1"
+    ],
+    "type": "shared_problem_different_solutions"
+  },
+  {
+    "id": "eng_medium_049",
+    "question": "How do the BPM/LLM Survey and the Van Hiele RAG study differ in their use of RAG within LLM-assisted domain-specific modeling or reasoning tasks?",
+    "answer": "The BPM/LLM Survey covers RAG as a promising future direction for injecting contextual knowledge into text-to-BPMN process model generation, identifying it as one of several key research gaps alongside interactive modeling architectures and standardized evaluation frameworks, based on a structured literature review. The Van Hiele RAG study actually implements RAG as one of two compared classification approaches for diagnosing teachers' geometric reasoning levels, empirically demonstrating that skills-aware RAG variants significantly outperform baselines across multiple evaluation metrics.",
+    "difficulty": "medium",
+    "question_type": "method_comparison",
+    "gold_papers": [
+      "2604_14034v1",
+      "2604_13666v1"
+    ],
+    "type": "method_comparison"
+  },
+  {
+    "id": "eng_medium_050",
+    "question": "How do NaviRAG and CodaRAG each address the challenge of multi-granular evidence discovery in complex question answering?",
+    "answer": "NaviRAG addresses multi-granular discovery by structuring knowledge hierarchically from coarse-grained topics to fine-grained details and deploying an LLM agent that actively navigates this hierarchy, iteratively identifying information gaps and retrieving content from the most appropriate granularity level at query time. CodaRAG addresses it through Associative Navigation, traversing a knowledge graph via semantic, contextualized, and functional pathways simultaneously to recover dispersed evidence chains, followed by Interference Elimination to prune hyper-associative noise and build a coherent reasoning context.",
+    "difficulty": "medium",
+    "question_type": "shared_problem_different_solutions",
+    "gold_papers": [
+      "2604_12766v1",
+      "2604_10426v1"
+    ],
+    "type": "shared_problem_different_solutions"
+  },
+  {
+    "id": "eng_medium_051",
+    "question": "How do Synthius-Mem and LifeDialBench differ in their findings about the effectiveness of complex memory architectures versus simple RAG baselines?",
+    "answer": "Synthius-Mem argues that existing systems fail because they treat conversation as a retrieval problem over raw or lightly summarized dialogue, and demonstrates that structured persona extraction with CategoryRAG achieves state-of-the-art results at 94.37% accuracy, exceeding both competing systems and human performance. LifeDialBench empirically finds the opposite trend in lifelog scenarios: current sophisticated memory systems fail to outperform a simple RAG-based baseline, concluding that over-designed structures and lossy compression are detrimental and that high-fidelity context preservation is essential.",
+    "difficulty": "medium",
+    "question_type": "method_comparison",
+    "gold_papers": [
+      "2604_11563v1",
+      "2604_11182v1"
+    ],
+    "type": "method_comparison"
+  },
+  {
+    "id": "eng_medium_052",
+    "question": "How do the PDF Parsing study and the CT Enterography RAG study each evaluate the impact of design choices in building RAG pipelines for domain-specific tasks?",
+    "answer": "The PDF Parsing study systematically examines multiple PDF parsers and chunking strategies with varied overlap on financial QA benchmarks, providing practical guidelines for how parser-chunker combinations and overlap settings affect retrieval precision and answer correctness. The CT Enterography study investigates vision-language representation choices for abdominal CT imaging, finding that aggregation method (mean vs. attention pooling) and window encoding strategy matter more than spatial coverage, and that RAG improves severity report generation by 7-14 percentage points above chance across all configurations tested.",
+    "difficulty": "medium",
+    "question_type": "shared_problem_different_solutions",
+    "gold_papers": [
+      "2604_12047v1",
+      "2604_13021v1"
+    ],
+    "type": "shared_problem_different_solutions"
+  },
+  {
+    "id": "eng_medium_053",
+    "question": "How do Beyond RAG for Cyber Threat Intelligence and Controlling Authority Retrieval (CAR) differ in their approach to handling structured relationships between documents in specialized retrieval scenarios?",
+    "answer": "Beyond RAG for CTI handles structured entity-relationship queries by constructing a CTI knowledge graph with entities like threat actors, malware, and vulnerabilities, evaluating graph-based, agentic, and hybrid retrieval to show that hybrid graph-text improves multi-hop answer quality by up to 35% over vector RAG. CAR handles authority relationships by formalizing the problem theoretically as recovering the active frontier of the authority closure set, proving necessary-and-sufficient conditions and an identifiability upper bound, then demonstrating that two-stage retrieval achieves 0.975 TCA@5 on security advisories.",
+    "difficulty": "medium",
+    "question_type": "method_comparison",
+    "gold_papers": [
+      "2604_11419v1",
+      "2604_14488v1"
+    ],
+    "type": "method_comparison"
+  },
+  {
+    "id": "eng_medium_054",
+    "question": "How do RoPE-Perturbed Self-Distillation and On-Device RAG each address the problem of LLMs operating effectively under constrained context or position budgets?",
+    "answer": "RoPE-Perturbed Self-Distillation addresses positional constraints by training models to produce consistent predictions regardless of where relevant evidence is placed in the context, using RoPE index perturbation and self-distillation to reduce positional variance, improving long-context benchmark performance by up to 12.04% on RULER-64K. On-Device RAG addresses context size constraints imposed by limited KV cache and attention memory by training a unified model that compresses the RAG context into 1/10 the size of traditional RAG while preserving answer quality and simultaneously reducing embedding storage.",
+    "difficulty": "medium",
+    "question_type": "shared_problem_different_solutions",
+    "gold_papers": [
+      "2604_14339v1",
+      "2604_14403v1"
+    ],
+    "type": "shared_problem_different_solutions"
+  },
+  {
+    "id": "eng_medium_055",
+    "question": "How do DocSeeker and MM-Doc-R1 differ in their use of policy optimization for training document reasoning agents?",
+    "answer": "DocSeeker uses Evidence-aware Group Relative Policy Optimization that jointly optimizes evidence localization accuracy and final answer accuracy, with an Evidence-Guided Resolution Allocation strategy to manage memory when training on multi-page documents, building on supervised fine-tuning from knowledge-distilled expert data. MM-Doc-R1 addresses the limitation of standard GRPO in multi-turn settings by proposing Similarity-based Policy Optimization (SPO), which corrects baseline estimation bias by using similarity-weighted averaging of rewards across semantically similar trajectories rather than applying a single baseline to all intermediate states.",
+    "difficulty": "medium",
+    "question_type": "method_comparison",
+    "gold_papers": [
+      "2604_12812v2",
+      "2604_13579v1"
+    ],
+    "type": "method_comparison"
+  },
+  {
+    "id": "eng_medium_056",
+    "question": "How do the Cognitive Circuit Breaker and CanaryRAG each address the challenge of detecting untrustworthy LLM outputs in RAG systems at runtime?",
+    "answer": "The Cognitive Circuit Breaker detects hallucination at runtime by extracting hidden states during a model's forward pass and computing the Cognitive Dissonance Delta between external semantic confidence (softmax probabilities) and internal latent certainty (linear probes), adding negligible overhead as an intrinsic white-box monitoring layer. CanaryRAG detects knowledge base leakage at runtime by embedding canary tokens into retrieved chunks and running a dual-path integrity game where leakage is flagged in real time whenever either the target or oracle path violates expected canary behavior, serving as an extrinsic black-box defense.",
+    "difficulty": "medium",
+    "question_type": "shared_problem_different_solutions",
+    "gold_papers": [
+      "2604_13417v1",
+      "2604_10717v1"
+    ],
+    "type": "shared_problem_different_solutions"
+  },
+  {
+    "id": "eng_medium_057",
+    "question": "How do Opinion-Aware RAG and ConflictQA/XoT differ in their approach to handling heterogeneous or subjective information in retrieved content?",
+    "answer": "Opinion-Aware RAG addresses subjective heterogeneity by introducing an architecture with LLM-based opinion extraction, entity-linked opinion graphs, and opinion-enriched document indexing designed to preserve aleatoric uncertainty rather than minimize posterior entropy, improving sentiment diversity by 26.8% and author demographic coverage by 31.6%. ConflictQA/XoT addresses factual heterogeneity by benchmarking conflicts between textual and KG evidence, finding that LLMs default to one source type in conflicts, and proposing XoT, an explanation-based thinking framework to make cross-source reasoning explicit and reliable.",
+    "difficulty": "medium",
+    "question_type": "method_comparison",
+    "gold_papers": [
+      "2604_12138v1",
+      "2604_11209v1"
+    ],
+    "type": "method_comparison"
+  },
+  {
+    "id": "eng_medium_058",
+    "question": "How do VISOR and Doc-V* each address the problem of cross-page evidence reasoning in visually rich multi-page document understanding?",
+    "answer": "VISOR addresses cross-page evidence sparsity by building a structured Evidence Space that enables progressive cross-page reasoning, combined with a Visual Action Evaluation and Correction mechanism to manage fine-grained visual actions, and a Dynamic Trajectory with Sliding Window and Intent Injection to prevent context overload. Doc-V* addresses cross-page evidence aggregation by maintaining a structured working memory that accumulates evidence across pages as the agent actively navigates via semantic retrieval and targeted page fetching, balancing answer accuracy with evidence-seeking efficiency through GRPO optimization.",
+    "difficulty": "medium",
+    "question_type": "shared_problem_different_solutions",
+    "gold_papers": [
+      "2604_09508v1",
+      "2604_13731v1"
+    ],
+    "type": "shared_problem_different_solutions"
+  },
+  {
+    "id": "eng_medium_059",
+    "question": "How do Agentic RAG for Ukrainian and Adaptive RAG Robustness each identify real-world failure modes in deployed RAG systems?",
+    "answer": "Agentic RAG for Ukrainian identifies document and page identification as the primary retrieval bottleneck in an offline agentic pipeline for a low-resource language, finding that agentic retry and query rephrasing improve accuracy but the overall score remains constrained by retrieval quality in the UNLP 2026 Shared Task setting. Adaptive RAG Robustness identifies surface-form query variation as a critical robustness gap in Adaptive RAG, finding through a large-scale benchmark of human-written and model-generated rewrites that semantically identical but surface-varied queries dramatically alter retrieval decisions and accuracy.",
+    "difficulty": "medium",
+    "question_type": "shared_problem_different_solutions",
+    "gold_papers": [
+      "2604_14896v1",
+      "2604_10745v1"
+    ],
+    "type": "shared_problem_different_solutions"
+  },
+  {
+    "id": "eng_medium_060",
+    "question": "How do Quantum-Inspired Embeddings and the Platonic Table RAG study differ in their investigation of geometric properties of document representations for RAG retrieval?",
+    "answer": "The Quantum-Inspired Embeddings study investigates 1024-dimensional quantum-inspired embeddings based on Hilbert-like space geometry, finding that standalone quantum-inspired embeddings suffer from distance compression and ranking instability, concluding that BM25 and teacher embeddings remain stronger baselines and hybrid retrieval can partially recover performance. Platonic Table RAG investigates the geometry of LLM table embeddings, finding that layout permutations cause significant semantic drift measured via CKA-based Permutation Invariance metrics, and proposes a structure-aware encoder with cell header alignment to achieve the Platonic ideal of permutation-invariant representations.",
+    "difficulty": "medium",
+    "question_type": "method_comparison",
+    "gold_papers": [
+      "2604_09430v1",
+      "2604_12133v1"
+    ],
+    "type": "method_comparison"
+  },
+  {
+    "id": "eng_complex_001",
+    "question": "Which papers use GRPO (Group Relative Policy Optimization) as their reinforcement learning training algorithm?",
+    "answer": "4 papers: UniDoc-RL (2604_14967v1) uses GRPO to train an LVLM agent for visual RAG; Doc-V* (2604_13731v1) is optimized with Group Relative Policy Optimization; VISOR (2604_09508v1) uses a GRPO-based RL pipeline with state masking; MM-Doc-R1 (2604_13579v1) uses and extends GRPO by proposing SPO as an improvement over GRPO in multi-turn RL.",
+    "difficulty": "complex",
+    "question_type": "enumeration",
+    "gold_papers": [
+      "2604_14967v1",
+      "2604_13731v1",
+      "2604_09508v1",
+      "2604_13579v1"
+    ],
+    "type": "enumeration"
+  },
+  {
+    "id": "eng_complex_002",
+    "question": "Which papers propose agentic RAG systems where an LLM agent iteratively navigates or retrieves from a knowledge source rather than performing a single-pass retrieval?",
+    "answer": "6 papers: UniDoc-RL (2604_14967v1) uses an LVLM agent for sequential retrieval and reasoning; VISOR (2604_09508v1) uses iterative search with over-horizon reasoning; NaviRAG (2604_12766v1) introduces active knowledge navigation with iterative gap-filling; Corpus2Skill (2604_14572v1) uses an LLM agent to navigate a hierarchical skill directory; MM-Doc-R1 (2604_13579v1) uses an agentic vision-aware workflow for iterative information discovery; Beyond RAG for Cyber Threat Intelligence (2604_11419v1) evaluates an agentic variant that repairs failed graph queries.",
+    "difficulty": "complex",
+    "question_type": "enumeration",
+    "gold_papers": [
+      "2604_14967v1",
+      "2604_09508v1",
+      "2604_12766v1",
+      "2604_14572v1",
+      "2604_13579v1",
+      "2604_11419v1"
+    ],
+    "type": "enumeration"
+  },
+  {
+    "id": "eng_complex_003",
+    "question": "Which papers address security vulnerabilities or attacks in RAG systems, including poisoning, extraction, and unauthorized data leakage?",
+    "answer": "3 papers: AdversarialCoT (2604_12201v1) proposes a single-document retrieval poisoning attack against RAG reasoning; CanaryRAG (2604_10717v1) defends against RAG knowledge base extraction attacks using canary tokens; Trans-RAG (2604_09541v1) addresses secure cross-organizational retrieval by isolating vector spaces to prevent information leakage.",
+    "difficulty": "complex",
+    "question_type": "enumeration",
+    "gold_papers": [
+      "2604_12201v1",
+      "2604_10717v1",
+      "2604_09541v1"
+    ],
+    "type": "enumeration"
+  },
+  {
+    "id": "eng_complex_004",
+    "question": "Which papers apply RAG to long multi-page document visual question answering (DocVQA) tasks?",
+    "answer": "4 papers: UniDoc-RL (2604_14967v1) targets visual RAG over document collections; Doc-V* (2604_13731v1) addresses multi-page DocVQA with OCR-free agentic retrieval; MM-Doc-R1 (2604_13579v1) targets long document visual QA with agentic multi-turn RL; DocSeeker (2604_12812v2) targets long document understanding and is evaluated on MMLongBench-Doc.",
+    "difficulty": "complex",
+    "question_type": "enumeration",
+    "gold_papers": [
+      "2604_14967v1",
+      "2604_13731v1",
+      "2604_13579v1",
+      "2604_12812v2"
+    ],
+    "type": "enumeration"
+  },
+  {
+    "id": "eng_complex_005",
+    "question": "Which papers combine knowledge graphs (KGs) with retrieval-augmented generation to improve reasoning or answer quality?",
+    "answer": "5 papers: Enhancing Mental Health Counseling (2604_14576v1) compares RAG with a clinically validated KG approach; Building Trust in the Skies (2604_13101v1) builds an Aviation Safety KG and uses it inside a RAG architecture; Beyond RAG for CTI (2604_11419v1) builds a CTI knowledge graph for structured multi-hop retrieval; Exploring Knowledge Conflicts (2604_11209v1) introduces ConflictQA combining textual and KG evidence; Knowledge Graph RAG (2604_14220v1) proposes Agentic Knowledge Graphs with recursive crawling for enterprise documents.",
+    "difficulty": "complex",
+    "question_type": "enumeration",
+    "gold_papers": [
+      "2604_14576v1",
+      "2604_13101v1",
+      "2604_11419v1",
+      "2604_11209v1",
+      "2604_14220v1"
+    ],
+    "type": "enumeration"
+  },
+  {
+    "id": "eng_complex_006",
+    "question": "Which papers address RAG for domain-specific professional applications (medical, legal, aviation, toxicology, education)?",
+    "answer": "7 papers: Enhancing Mental Health Counseling (2604_14576v1) targets para-counselor support in Bangladesh; BLUEmed (2604_10389v1) targets clinical error detection in healthcare notes; Legal2LogicICL (2604_11699v1) applies RAG to legal case reasoning; Building Trust in the Skies (2604_13101v1) applies KG-RAG to aviation safety; AOP-Smart (2604_10874v1) applies RAG to toxicological Adverse Outcome Pathway analysis; RAG-KT (2604_10960v1) applies RAG to cross-platform knowledge tracing in education; Representation geometry (2604_13021v1) applies RAG to medical CT enterography report generation.",
+    "difficulty": "complex",
+    "question_type": "enumeration",
+    "gold_papers": [
+      "2604_14576v1",
+      "2604_10389v1",
+      "2604_11699v1",
+      "2604_13101v1",
+      "2604_10874v1",
+      "2604_10960v1",
+      "2604_13021v1"
+    ],
+    "type": "enumeration"
+  },
+  {
+    "id": "eng_complex_007",
+    "question": "Which papers propose hierarchical document or knowledge structuring as a core technique to improve RAG retrieval quality?",
+    "answer": "5 papers: NaviRAG (2604_12766v1) structures documents into a hierarchical form from coarse to fine; Corpus2Skill (2604_14572v1) builds a hierarchical skill directory from the corpus; MultiDocFusion (2604_12352v1) reconstructs document structure into a hierarchical tree via DSHP-LLM; Adaptive Query Routing (2604_14222v1) implements tree reasoning over hierarchically organized documents; Knowledge Graph RAG (2604_14220v1) builds recursive knowledge graphs to navigate hierarchical enterprise documents.",
+    "difficulty": "complex",
+    "question_type": "enumeration",
+    "gold_papers": [
+      "2604_12766v1",
+      "2604_14572v1",
+      "2604_12352v1",
+      "2604_14222v1",
+      "2604_14220v1"
+    ],
+    "type": "enumeration"
+  },
+  {
+    "id": "eng_complex_008",
+    "question": "Which papers introduce or evaluate benchmarks specifically designed for assessing RAG systems or memory/retrieval capabilities?",
+    "answer": "5 papers: FRESCO (2604_14227v1) introduces a benchmark for re-rankers under temporally evolving semantic conflict; How You Ask Matters (2604_10745v1) introduces a large-scale benchmark of diverse query variations for Adaptive RAG; LifeDialBench (2604_11182v1) introduces a benchmark for memory systems in continuous lifelog scenarios; Exploring Knowledge Conflicts (2604_11209v1) introduces ConflictQA for cross-source knowledge conflict evaluation; Adaptive Query Routing (2604_14222v1) introduces a four-tier query complexity benchmark across financial, legal, and medical domains.",
+    "difficulty": "complex",
+    "question_type": "enumeration",
+    "gold_papers": [
+      "2604_14227v1",
+      "2604_10745v1",
+      "2604_11182v1",
+      "2604_11209v1",
+      "2604_14222v1"
+    ],
+    "type": "enumeration"
+  },
+  {
+    "id": "eng_complex_009",
+    "question": "Which papers specifically target long-context challenges in RAG or document understanding, such as the 'lost in the middle' problem or positional bias?",
+    "answer": "4 papers: Shuffle the Context (2604_14339v1) addresses positional variance in long-context adaptation of LLMs via RoPE-Perturbed Self-Distillation; Self-Correcting RAG (2604_10734v1) uses MCTS and MMKP to address low context utilization on complex multi-hop tasks; DocSeeker (2604_12812v2) addresses the low signal-to-noise ratio caused by crucial evidence buried in irrelevant pages; VISOR (2604_09508v1) addresses search drift from accumulation of visual tokens across long document pages.",
+    "difficulty": "complex",
+    "question_type": "enumeration",
+    "gold_papers": [
+      "2604_14339v1",
+      "2604_10734v1",
+      "2604_12812v2",
+      "2604_09508v1"
+    ],
+    "type": "enumeration"
+  },
+  {
+    "id": "eng_complex_010",
+    "question": "Which papers propose or evaluate multi-agent architectures specifically combined with RAG (where multiple agents collaborate on retrieval or reasoning)?",
+    "answer": "4 papers: BLUEmed (2604_10389v1) uses two domain expert agents in a structured debate augmented with hybrid RAG; Beyond Arrow's Impossibility (2604_13705v1) uses two agents where one is aligned via RAG for ethical debate; Beyond RAG for CTI (2604_11419v1) evaluates agentic and hybrid graph-text architectures for CTI analysis; Context Kubernetes (2604_11623v3) orchestrates knowledge delivery to multiple agents with a three-tier permission model.",
+    "difficulty": "complex",
+    "question_type": "enumeration",
+    "gold_papers": [
+      "2604_10389v1",
+      "2604_13705v1",
+      "2604_11419v1",
+      "2604_11623v3"
+    ],
+    "type": "enumeration"
+  },
+  {
+    "id": "eng_complex_011",
+    "question": "Which papers focus on improving memory systems for LLM agents beyond standard RAG, proposing novel memory architectures or management strategies?",
+    "answer": "4 papers: Memory as Metabolism (2604_12034v1) proposes a companion knowledge system with five operations (TRIAGE, DECAY, CONTEXTUALIZE, CONSOLIDATE, AUDIT) for managing personal wiki-style memory; Synthius-Mem (2604_11563v1) proposes a brain-inspired structured persona memory system with domain-based extraction and CategoryRAG retrieval; Retrieval Is Not Enough (2604_11759v1) proposes OIDA, a framework that structures organizational knowledge as typed Knowledge Objects with epistemic class and decay; Evaluating Memory Capability (2604_11182v1) proposes LifeDialBench for evaluating memory in continuous lifelog scenarios.",
+    "difficulty": "complex",
+    "question_type": "enumeration",
+    "gold_papers": [
+      "2604_12034v1",
+      "2604_11563v1",
+      "2604_11759v1",
+      "2604_11182v1"
+    ],
+    "type": "enumeration"
+  },
+  {
+    "id": "eng_complex_012",
+    "question": "Which papers propose novel document chunking or document structure parsing techniques to improve RAG pipelines?",
+    "answer": "3 papers: MultiDocFusion (2604_12352v1) proposes a multimodal chunking pipeline with DSHP-LLM for hierarchical document parsing; Empirical Evaluation of PDF Parsing (2604_12047v1) systematically compares PDF parsers and chunking strategies for financial QA; Tri-RAG (2604_12610v1) transforms document knowledge into structured triplets (Condition-Proof-Conclusion) for semantically aligned retrieval.",
+    "difficulty": "complex",
+    "question_type": "enumeration",
+    "gold_papers": [
+      "2604_12352v1",
+      "2604_12047v1",
+      "2604_12610v1"
+    ],
+    "type": "enumeration"
+  },
+  {
+    "id": "eng_complex_013",
+    "question": "Which papers address the problem of knowledge conflicts or temporal staleness in RAG systems, where retrieved evidence may be outdated or contradictory?",
+    "answer": "3 papers: FRESCO (2604_14227v1) benchmarks re-rankers specifically on temporally evolving semantic conflict between old and new documents; Exploring Knowledge Conflicts (2604_11209v1) introduces ConflictQA for cross-source conflicts between text and KG evidence and proposes XoT for resolution; Controlling Authority Retrieval (2604_14488v1) formalizes the problem of authority documents superseding earlier ones and proposes a two-stage retrieval approach.",
+    "difficulty": "complex",
+    "question_type": "enumeration",
+    "gold_papers": [
+      "2604_14227v1",
+      "2604_11209v1",
+      "2604_14488v1"
+    ],
+    "type": "enumeration"
+  },
+  {
+    "id": "eng_complex_014",
+    "question": "Which papers propose graph-based RAG approaches (using knowledge graphs or hypergraphs) as the primary retrieval mechanism?",
+    "answer": "5 papers: OKH-RAG (2604_12185v1) proposes Order-Aware Knowledge Hypergraph RAG treating interaction order as a first-class property; CodaRAG (2604_10426v1) uses a knowledge graph with multi-dimensional associative navigation; Knowledge Graph RAG (2604_14220v1) builds agentic knowledge graphs with recursive crawling; Beyond RAG for CTI (2604_11419v1) evaluates graph-based retrieval over a CTI knowledge graph; Tri-RAG (2604_12610v1) converts knowledge to semantic triplets as structured retrieval units.",
+    "difficulty": "complex",
+    "question_type": "enumeration",
+    "gold_papers": [
+      "2604_12185v1",
+      "2604_10426v1",
+      "2604_14220v1",
+      "2604_11419v1",
+      "2604_12610v1"
+    ],
+    "type": "enumeration"
+  },
+  {
+    "id": "eng_complex_015",
+    "question": "Which papers specifically study or improve robustness of RAG systems to adversarial inputs, noisy queries, or surface-level query variations?",
+    "answer": "3 papers: AdversarialCoT (2604_12201v1) studies RAG robustness against single-document knowledge-base poisoning attacks; How You Ask Matters (2604_10745v1) studies Adaptive RAG robustness to semantically identical but surface-varied query reformulations; CanaryRAG (2604_10717v1) provides runtime defense against adaptive and iterative adversarial extraction attacks on RAG.",
+    "difficulty": "complex",
+    "question_type": "enumeration",
+    "gold_papers": [
+      "2604_12201v1",
+      "2604_10745v1",
+      "2604_10717v1"
+    ],
+    "type": "enumeration"
+  },
+  {
+    "id": "eng_complex_016",
+    "question": "Which papers apply reinforcement learning (beyond GRPO) or policy optimization methods to train or improve RAG-related components?",
+    "answer": "4 papers: UniDoc-RL (2604_14967v1) uses GRPO with a dense multi-reward scheme for end-to-end RAG agent training; Doc-V* (2604_13731v1) combines imitation learning with GRPO optimization; MM-Doc-R1 (2604_13579v1) proposes SPO as an improvement over GRPO for multi-turn RL in document QA agents; DocSeeker (2604_12812v2) applies Evidence-aware Group Relative Policy Optimization (GRPO) jointly optimizing evidence localization and answer accuracy.",
+    "difficulty": "complex",
+    "question_type": "enumeration",
+    "gold_papers": [
+      "2604_14967v1",
+      "2604_13731v1",
+      "2604_13579v1",
+      "2604_12812v2"
+    ],
+    "type": "enumeration"
+  },
+  {
+    "id": "eng_complex_017",
+    "question": "Which papers address privacy or access control in RAG systems deployed in organizational or multi-tenant settings?",
+    "answer": "3 papers: Trans-RAG (2604_09541v1) addresses cross-organizational RAG security by isolating vector spaces; Context Kubernetes (2604_11623v3) introduces a three-tier agent permission model where agent authority is a strict subset of human authority, with ACL-filtering and RBAC-aware routing; Retrieval Is Not Enough / OIDA (2604_11759v1) structures knowledge with epistemic class and signed contradiction edges to govern organizational knowledge reliability.",
+    "difficulty": "complex",
+    "question_type": "enumeration",
+    "gold_papers": [
+      "2604_09541v1",
+      "2604_11623v3",
+      "2604_11759v1"
+    ],
+    "type": "enumeration"
+  },
+  {
+    "id": "eng_complex_018",
+    "question": "Which papers evaluate RAG on financial domain benchmarks (e.g., FinanceBench, SEC filings, financial QA datasets)?",
+    "answer": "3 papers: Adaptive Query Routing (2604_14222v1) validates on FinanceBench with 150 expert-annotated questions on SEC 10-K and 10-Q filings; Empirical Evaluation of PDF Parsing (2604_12047v1) uses two financial domain benchmarks including TableQuest for RAG PDF QA evaluation; Local-Splitter (2604_12301v1) evaluates token-reduction tactics across workload classes including edit-heavy, explanation-heavy, general chat, and RAG-heavy coding workloads on financial contexts.",
+    "difficulty": "complex",
+    "question_type": "enumeration",
+    "gold_papers": [
+      "2604_14222v1",
+      "2604_12047v1",
+      "2604_12301v1"
+    ],
+    "type": "enumeration"
+  },
+  {
+    "id": "eng_complex_019",
+    "question": "Which papers address reducing computational cost, token usage, or latency in RAG pipelines for on-device or resource-constrained deployment?",
+    "answer": "4 papers: On-Device RAG (2604_14403v1) proposes a unified model compressing RAG context to 1/10 size for on-device deployment; Local-Splitter (2604_12301v1) measures seven tactics for reducing cloud LLM token usage including routing, compression, and caching; Synthius-Mem (2604_11563v1) reduces token consumption by ~5x compared to full-context replay via structured persona memory; Self-Correcting RAG (2604_10734v1) formalizes context selection as an MMKP to maximize information density under a strict token budget.",
+    "difficulty": "complex",
+    "question_type": "enumeration",
+    "gold_papers": [
+      "2604_14403v1",
+      "2604_12301v1",
+      "2604_11563v1",
+      "2604_10734v1"
+    ],
+    "type": "enumeration"
+  },
+  {
+    "id": "eng_complex_020",
+    "question": "Which papers use the MMLongBench-Doc benchmark for evaluation?",
+    "answer": "3 papers: MM-Doc-R1 (2604_13579v1) evaluates on MMLongBench-Doc and reports 10.4% improvement over prior baselines; VISOR (2604_09508v1) evaluates on MMLongBench among other benchmarks; DocSeeker (2604_12812v2) conducts extensive experiments on in-domain and out-of-domain tasks that align with MMLongBench-Doc settings for long document understanding.",
+    "difficulty": "complex",
+    "question_type": "enumeration",
+    "gold_papers": [
+      "2604_13579v1",
+      "2604_09508v1",
+      "2604_12812v2"
+    ],
+    "type": "enumeration"
+  },
+  {
+    "id": "eng_complex_021",
+    "question": "How many papers in this collection propose agentic RAG variants where retrieval is performed by an autonomous agent (not a static pipeline)?",
+    "answer": "8 papers propose agentic RAG variants: UniDoc-RL (2604_14967v1), Toward Agentic RAG for Ukrainian (2604_14896v1), Corpus2Skill (2604_14572v1), NaviRAG (2604_12766v1), VISOR (2604_09508v1), MM-Doc-R1 (2604_13579v1), Beyond RAG for CTI (2604_11419v1), Knowledge Graph RAG (2604_14220v1). These all explicitly frame retrieval as an agentic decision-making process.",
+    "difficulty": "complex",
+    "question_type": "statistics",
+    "gold_papers": [
+      "2604_14967v1",
+      "2604_14896v1",
+      "2604_14572v1",
+      "2604_12766v1",
+      "2604_09508v1",
+      "2604_13579v1",
+      "2604_11419v1",
+      "2604_14220v1"
+    ],
+    "type": "statistics"
+  },
+  {
+    "id": "eng_complex_022",
+    "question": "How many papers address the hallucination problem in LLMs and use RAG specifically to mitigate or detect hallucinations?",
+    "answer": "5 papers address hallucination mitigation via RAG: AOP-Smart (2604_10874v1) shows RAG raises accuracy from ~23% to ~97% by grounding in AOP-Wiki data; The Cognitive Circuit Breaker (2604_13417v1) proposes intrinsic reliability monitoring via 'Cognitive Dissonance Delta' as an alternative to RAG cross-checking; Building Trust in the Skies (2604_13101v1) uses KG-RAG to ground and validate LLM responses to prevent hallucinations in aviation safety; Synthius-Mem (2604_11563v1) reports 99.55% adversarial robustness against hallucinated facts about user personas; Self-Correcting RAG (2604_10734v1) uses NLI-guided MCTS to validate faithfulness and reduce hallucinations.",
+    "difficulty": "complex",
+    "question_type": "statistics",
+    "gold_papers": [
+      "2604_10874v1",
+      "2604_13417v1",
+      "2604_13101v1",
+      "2604_11563v1",
+      "2604_10734v1"
+    ],
+    "type": "statistics"
+  },
+  {
+    "id": "eng_complex_023",
+    "question": "How many papers in this collection target multi-hop reasoning as a core challenge and propose specific solutions?",
+    "answer": "6 papers specifically target multi-hop reasoning: Self-Correcting RAG (2604_10734v1) evaluates on multi-hop QA benchmarks with MCTS-guided reasoning; GRIP (2604_11407v1) uses self-triggered information planning for multi-step inference; Beyond RAG for CTI (2604_11419v1) uses graph-text hybrid achieving 35% gain on multi-hop questions; Knowledge Graph RAG (2604_14220v1) uses recursive crawling for multi-hop references; CodaRAG (2604_10426v1) uses associative navigation to reconstruct logical chains for multi-hop evidence; OKH-RAG (2604_12185v1) treats interaction order as first-class for order-sensitive multi-hop scenarios.",
+    "difficulty": "complex",
+    "question_type": "statistics",
+    "gold_papers": [
+      "2604_10734v1",
+      "2604_11407v1",
+      "2604_11419v1",
+      "2604_14220v1",
+      "2604_10426v1",
+      "2604_12185v1"
+    ],
+    "type": "statistics"
+  },
+  {
+    "id": "eng_complex_024",
+    "question": "How many papers study or propose hybrid retrieval methods that combine two or more retrieval signals (e.g., dense + sparse, graph + text)?",
+    "answer": "6 papers combine multiple retrieval signals: Beyond RAG for CTI (2604_11419v1) evaluates a hybrid graph-text approach; BLUEmed (2604_10389v1) combines dense, sparse, and online retrieval in a hybrid RAG; Adaptive Query Routing (2604_14222v1) proposes Adaptive Hybrid Retrieval combining Vector RAG and Tree Reasoning; Quantum-Inspired Embeddings (2604_09430v1) introduces hybrid BM25 and embedding-based retrieval with interpolation; Toward Agentic RAG for Ukrainian (2604_14896v1) uses BGE-M3 with BGE reranking as two-stage retrieval; Self-Correcting RAG (2604_10734v1) integrates multi-step evidence retrieval within the MCTS reasoning process.",
+    "difficulty": "complex",
+    "question_type": "statistics",
+    "gold_papers": [
+      "2604_11419v1",
+      "2604_10389v1",
+      "2604_14222v1",
+      "2604_09430v1",
+      "2604_14896v1",
+      "2604_10734v1"
+    ],
+    "type": "statistics"
+  },
+  {
+    "id": "eng_complex_025",
+    "question": "How many papers use Qwen-series models as backbone LLMs in their RAG or document understanding systems?",
+    "answer": "4 papers use Qwen-series models: Toward Agentic RAG for Ukrainian (2604_14896v1) uses Qwen2.5-3B-Instruct as the base model; MM-Doc-R1 (2604_13579v1) evaluates SPO with Qwen3-8B and Qwen3-4B; Shuffle the Context (2604_14339v1) evaluates RoPE-Perturbed Self-Distillation on Qwen-3-4B for long-context adaptation; CHAIRO (2604_10502v1) compares its moderation framework against Qwen-series models (QwQ).",
+    "difficulty": "complex",
+    "question_type": "statistics",
+    "gold_papers": [
+      "2604_14896v1",
+      "2604_13579v1",
+      "2604_14339v1",
+      "2604_10502v1"
+    ],
+    "type": "statistics"
+  },
+  {
+    "id": "eng_complex_026",
+    "question": "How many papers propose reranking as a distinct pipeline stage for RAG, and what approaches do they use?",
+    "answer": "3 papers focus specifically on reranking: FRESCO (2604_14227v1) benchmarks and optimizes re-rankers for temporally evolving semantic conflict, finding a bias toward older semantically rich documents; Toward Agentic RAG for Ukrainian (2604_14896v1) uses BGE reranking as the second stage of a two-stage retrieval pipeline; UniDoc-RL (2604_14967v1) includes reranking as one of the hierarchical actions in the LVLM agent's action space alongside retrieval and visual perception.",
+    "difficulty": "complex",
+    "question_type": "statistics",
+    "gold_papers": [
+      "2604_14227v1",
+      "2604_14896v1",
+      "2604_14967v1"
+    ],
+    "type": "statistics"
+  },
+  {
+    "id": "eng_complex_027",
+    "question": "How many papers in this collection use the LoCoMo benchmark for memory evaluation?",
+    "answer": "1 paper uses the LoCoMo benchmark: Synthius-Mem (2604_11563v1) evaluates on LoCoMo (ACL 2024, 10 conversations, 1,813 questions), achieving 94.37% accuracy and surpassing all published systems including MemMachine (91.69%) and human performance (87.9 F1). The paper also notes that no competing system on LoCoMo reports adversarial robustness.",
+    "difficulty": "complex",
+    "question_type": "statistics",
+    "gold_papers": [
+      "2604_11563v1"
+    ],
+    "type": "statistics"
+  },
+  {
+    "id": "eng_complex_028",
+    "question": "How many papers specifically address content moderation tasks and use RAG or analogical retrieval to improve moderation accuracy?",
+    "answer": "2 papers address content moderation with RAG: CARO (2604_10504v1) bootstraps analogical reasoning chains via RAG on moderation data and uses SFT+DPO, achieving 24.9% F1 improvement over baselines including DeepSeek R1; CHAIRO (2604_10502v1) proposes end-to-end optimization of analogical retrieval, rule generation, and moderation classification, outperforming multi-stage static RAG pipelines.",
+    "difficulty": "complex",
+    "question_type": "statistics",
+    "gold_papers": [
+      "2604_10504v1",
+      "2604_10502v1"
+    ],
+    "type": "statistics"
+  },
+  {
+    "id": "eng_complex_029",
+    "question": "How many papers propose frameworks for enterprise or organizational knowledge management using RAG with governance, permissions, or authority structures?",
+    "answer": "4 papers address enterprise knowledge governance with RAG: Context Kubernetes (2604_11623v3) introduces declarative orchestration with YAML manifests, reconciliation loops, and three-tier permission models; Retrieval Is Not Enough / OIDA (2604_11759v1) proposes typed Knowledge Objects with epistemic class and signed contradiction edges for organizational knowledge; Controlling Authority Retrieval (2604_14488v1) formalizes authority closure for domains like law and security advisories; Corpus2Skill (2604_14572v1) distills enterprise knowledge into hierarchical navigable skill directories.",
+    "difficulty": "complex",
+    "question_type": "statistics",
+    "gold_papers": [
+      "2604_11623v3",
+      "2604_11759v1",
+      "2604_14488v1",
+      "2604_14572v1"
+    ],
+    "type": "statistics"
+  },
+  {
+    "id": "eng_complex_030",
+    "question": "What is the most common primary application domain across all 50 papers (excluding general QA)?",
+    "answer": "The most common application domain is visual/multimodal document understanding with 4 dedicated papers: UniDoc-RL (2604_14967v1), Doc-V* (2604_13731v1), MM-Doc-R1 (2604_13579v1), and DocSeeker (2604_12812v2). The second most common is domain-specific professional applications with 7 papers spanning medical (2604_14576v1, 2604_10389v1, 2604_13021v1), legal (2604_11699v1, 2604_14488v1), aviation (2604_13101v1), and toxicology (2604_10874v1).",
+    "difficulty": "complex",
+    "question_type": "statistics",
+    "gold_papers": [
+      "2604_14967v1",
+      "2604_13731v1",
+      "2604_13579v1",
+      "2604_12812v2",
+      "2604_14576v1",
+      "2604_10389v1",
+      "2604_13021v1"
+    ],
+    "type": "statistics"
+  },
+  {
+    "id": "eng_complex_031",
+    "question": "How many papers propose improvements specifically to the retrieval component of RAG (query formulation, query routing, or retrieval triggering) rather than to the generation component?",
+    "answer": "5 papers focus specifically on the retrieval component: How You Ask Matters (2604_10745v1) studies robustness of retrieval triggering in Adaptive RAG to query variations; FRESCO (2604_14227v1) improves re-ranker instruction optimization for evolving knowledge; GRIP (2604_11407v1) embeds retrieval control into decoding via self-triggered information planning; Controlling Authority Retrieval (2604_14488v1) formalizes authority-based retrieval as a distinct mathematical problem; Adaptive Query Routing (2604_14222v1) routes queries to different retrieval tiers based on query complexity.",
+    "difficulty": "complex",
+    "question_type": "statistics",
+    "gold_papers": [
+      "2604_10745v1",
+      "2604_14227v1",
+      "2604_11407v1",
+      "2604_14488v1",
+      "2604_14222v1"
+    ],
+    "type": "statistics"
+  },
+  {
+    "id": "eng_complex_032",
+    "question": "How many papers in this collection address the LLM-as-a-judge evaluation paradigm or use LLMs to evaluate RAG output quality?",
+    "answer": "3 papers use LLM-as-judge evaluation: Adaptive Query Routing (2604_14222v1) employs GPT-4-powered LLM-as-judge evaluation for its hybrid retrieval benchmark; The Cognitive Circuit Breaker (2604_13417v1) mentions LLM-as-a-judge evaluators as one of the existing black-box reliability mechanisms being replaced; Context Kubernetes (2604_11623v3) uses LLM evaluation to measure governance baselines across four increasing governance strengths.",
+    "difficulty": "complex",
+    "question_type": "statistics",
+    "gold_papers": [
+      "2604_14222v1",
+      "2604_13417v1",
+      "2604_11623v3"
+    ],
+    "type": "statistics"
+  },
+  {
+    "id": "eng_complex_033",
+    "question": "How many papers evaluate their proposed method on the SlideVQA benchmark?",
+    "answer": "2 papers evaluate on SlideVQA: VISOR (2604_09508v1) reports state-of-the-art performance on SlideVQA as one of three benchmarks; Doc-V* (2604_13731v1) evaluates across five benchmarks for multi-page DocVQA, which includes slide-based visual QA datasets as part of its evaluation suite.",
+    "difficulty": "complex",
+    "question_type": "statistics",
+    "gold_papers": [
+      "2604_09508v1",
+      "2604_13731v1"
+    ],
+    "type": "statistics"
+  },
+  {
+    "id": "eng_complex_034",
+    "question": "How many papers evaluate RAG on knowledge tracing or educational assessment tasks?",
+    "answer": "3 papers apply RAG to educational settings: RAG-KT (2604_10960v1) proposes RAG for cross-platform knowledge tracing and evaluates on three public KT benchmarks; Automatically Inferring Teachers' Geometric Content Knowledge (2604_13666v1) uses RAG and multi-task learning for classifying teacher Van Hiele reasoning levels; Large Language Models to Enhance Business Process Modeling (2604_14034v1) discusses RAG integration for educational process modeling pipelines.",
+    "difficulty": "complex",
+    "question_type": "statistics",
+    "gold_papers": [
+      "2604_10960v1",
+      "2604_13666v1",
+      "2604_14034v1"
+    ],
+    "type": "statistics"
+  },
+  {
+    "id": "eng_complex_035",
+    "question": "What are the main approaches to handling multi-hop reasoning in RAG systems, as represented across the papers in this collection?",
+    "answer": "Three main approaches: (1) Graph/structured traversal: CodaRAG (2604_10426v1) uses associative navigation over knowledge graphs, OKH-RAG (2604_12185v1) uses ordered hyperedge traversal, Knowledge Graph RAG (2604_14220v1) uses recursive graph crawling; (2) Tree search and planning: Self-Correcting RAG (2604_10734v1) uses NLI-guided MCTS, Adaptive Query Routing (2604_14222v1) uses tree reasoning for complex cross-reference queries; (3) Iterative agent retrieval: GRIP (2604_11407v1) uses self-triggered information planning, NaviRAG (2604_12766v1) uses iterative gap-identification navigation, Beyond RAG for CTI (2604_11419v1) uses hybrid graph-text retrieval.",
+    "difficulty": "complex",
+    "question_type": "topical_grouping",
+    "gold_papers": [
+      "2604_10426v1",
+      "2604_12185v1",
+      "2604_14220v1",
+      "2604_10734v1",
+      "2604_14222v1",
+      "2604_11407v1",
+      "2604_12766v1",
+      "2604_11419v1"
+    ],
+    "type": "topical_grouping"
+  },
+  {
+    "id": "eng_complex_036",
+    "question": "What are the main approaches to long-term memory management for LLM agents across the papers in this collection?",
+    "answer": "Three main approaches: (1) Structured persona/fact extraction: Synthius-Mem (2604_11563v1) decomposes conversations into six cognitive domains with CategoryRAG retrieval; Memory as Metabolism (2604_12034v1) proposes five operations (TRIAGE, DECAY, CONTEXTUALIZE, CONSOLIDATE, AUDIT) for companion knowledge wikis; (2) Epistemically typed knowledge: OIDA / Retrieval Is Not Enough (2604_11759v1) uses typed Knowledge Objects with importance decay and contradiction edges; Context Kubernetes (2604_11623v3) uses declarative manifests and three-tier permission governance; (3) Benchmark-based evaluation: LifeDialBench / Evaluating Memory Capability (2604_11182v1) benchmarks memory systems on continuous lifelog scenarios and finds simpler RAG outperforms complex memory designs.",
+    "difficulty": "complex",
+    "question_type": "topical_grouping",
+    "gold_papers": [
+      "2604_11563v1",
+      "2604_12034v1",
+      "2604_11759v1",
+      "2604_11623v3",
+      "2604_11182v1"
+    ],
+    "type": "topical_grouping"
+  },
+  {
+    "id": "eng_complex_037",
+    "question": "What are the main approaches to visual RAG for document understanding presented in this collection?",
+    "answer": "Three main approaches: (1) RL-trained agentic frameworks: UniDoc-RL (2604_14967v1) uses GRPO with hierarchical coarse-to-fine actions; Doc-V* (2604_13731v1) combines imitation learning with GRPO; MM-Doc-R1 (2604_13579v1) uses multi-turn RL with the novel SPO algorithm; VISOR (2604_09508v1) uses GRPO-based RL with sliding-window trajectory; (2) Supervised fine-tuning + evidence grounding: DocSeeker (2604_12812v2) uses SFT on distilled data followed by Evidence-aware GRPO; (3) Hierarchical document parsing without RL: MultiDocFusion (2604_12352v1) uses vision-based parsing and DSHP-LLM for hierarchical chunking.",
+    "difficulty": "complex",
+    "question_type": "topical_grouping",
+    "gold_papers": [
+      "2604_14967v1",
+      "2604_13731v1",
+      "2604_13579v1",
+      "2604_09508v1",
+      "2604_12812v2",
+      "2604_12352v1"
+    ],
+    "type": "topical_grouping"
+  },
+  {
+    "id": "eng_complex_038",
+    "question": "What are the main approaches to RAG security and adversarial robustness represented in this collection?",
+    "answer": "Three main approaches: (1) Attack methods: AdversarialCoT (2604_12201v1) proposes query-specific single-document poisoning by extracting the LLM's reasoning framework to craft adversarial CoT; (2) Runtime defense: CanaryRAG (2604_10717v1) embeds canary tokens for dual-path integrity checking against adaptive extraction attacks; (3) Architectural isolation: Trans-RAG (2604_09541v1) implements per-organization vector space isolation with query-centric transformation to prevent cross-organizational data leakage.",
+    "difficulty": "complex",
+    "question_type": "topical_grouping",
+    "gold_papers": [
+      "2604_12201v1",
+      "2604_10717v1",
+      "2604_09541v1"
+    ],
+    "type": "topical_grouping"
+  },
+  {
+    "id": "eng_complex_039",
+    "question": "What are the main approaches to knowledge structuring for RAG (how papers organize the underlying knowledge corpus prior to retrieval)?",
+    "answer": "Four main approaches: (1) Hierarchical summarization trees: Corpus2Skill (2604_14572v1) builds a tree of skill summaries; NaviRAG (2604_12766v1) builds hierarchical knowledge records from coarse to fine; (2) Knowledge graph construction: Knowledge Graph RAG (2604_14220v1) builds agentic KGs; Building Trust in the Skies (2604_13101v1) constructs an Aviation Safety KG; Beyond RAG for CTI (2604_11419v1) builds a structured CTI knowledge graph; (3) Structural triplet extraction: Tri-RAG (2604_12610v1) converts documents to Condition-Proof-Conclusion triplets; CodaRAG (2604_10426v1) consolidates fragments into a stable memory substrate; (4) Multimodal hierarchical chunking: MultiDocFusion (2604_12352v1) parses documents into hierarchical trees via DSHP-LLM.",
+    "difficulty": "complex",
+    "question_type": "topical_grouping",
+    "gold_papers": [
+      "2604_14572v1",
+      "2604_12766v1",
+      "2604_14220v1",
+      "2604_13101v1",
+      "2604_11419v1",
+      "2604_12610v1",
+      "2604_10426v1",
+      "2604_12352v1"
+    ],
+    "type": "topical_grouping"
+  },
+  {
+    "id": "eng_complex_040",
+    "question": "What are the main application domains for domain-specific RAG systems proposed in this collection, and which papers represent each domain?",
+    "answer": "Five main domains: (1) Healthcare/Medical: BLUEmed (2604_10389v1) for clinical error detection, Enhancing Mental Health Counseling (2604_14576v1) for Bangladesh counseling support, Representation geometry (2604_13021v1) for CT enterography; (2) Legal: Controlling Authority Retrieval (2604_14488v1) for security advisories and SCOTUS overruling, Legal2LogicICL (2604_11699v1) for legal case-to-logic transformation; (3) Aviation/Safety: Building Trust in the Skies (2604_13101v1) for aviation safety analytics; (4) Toxicology/Science: AOP-Smart (2604_10874v1) for Adverse Outcome Pathway analysis; (5) Education: RAG-KT (2604_10960v1) for knowledge tracing, Automatically Inferring Teachers' Geometric Knowledge (2604_13666v1) for Van Hiele classification.",
+    "difficulty": "complex",
+    "question_type": "topical_grouping",
+    "gold_papers": [
+      "2604_10389v1",
+      "2604_14576v1",
+      "2604_13021v1",
+      "2604_14488v1",
+      "2604_11699v1",
+      "2604_13101v1",
+      "2604_10874v1",
+      "2604_10960v1",
+      "2604_13666v1"
+    ],
+    "type": "topical_grouping"
+  },
+  {
+    "id": "eng_complex_041",
+    "question": "What are the main training paradigms used across papers that fine-tune models for RAG or document understanding tasks?",
+    "answer": "Four main training paradigms: (1) RL with GRPO/SPO: UniDoc-RL (2604_14967v1), Doc-V* (2604_13731v1), VISOR (2604_09508v1), DocSeeker (2604_12812v2); (2) Multi-turn RL with novel objectives: MM-Doc-R1 (2604_13579v1) with SPO; (3) SFT + DPO: CARO (2604_10504v1) uses SFT then DPO; (4) Knowledge distillation: DocSeeker (2604_12812v2) performs SFT on distilled trajectories before RL; CircuitSynth (2604_10114v1) distills a Teacher LLM into a PSDD; Shuffle the Context (2604_14339v1) uses self-distillation via RoPE-Perturbed training.",
+    "difficulty": "complex",
+    "question_type": "topical_grouping",
+    "gold_papers": [
+      "2604_14967v1",
+      "2604_13731v1",
+      "2604_09508v1",
+      "2604_12812v2",
+      "2604_13579v1",
+      "2604_10504v1",
+      "2604_10114v1",
+      "2604_14339v1"
+    ],
+    "type": "topical_grouping"
+  },
+  {
+    "id": "eng_complex_042",
+    "question": "What are the main approaches to opinion-aware, subjective, or non-factual content handling in RAG systems?",
+    "answer": "Two main approaches: (1) Opinion-aware retrieval: Beyond Factual Grounding (2604_12138v1) formalizes opinion queries as involving aleatoric uncertainty that should be preserved rather than minimized, proposing entity-linked opinion graphs and opinion-enriched indexing; (2) Ethical alignment through RAG: Beyond Arrow's Impossibility (2604_13705v1) aligns one agent to a specific ethical framework via RAG in a two-agent negotiation, demonstrating that fairness emerges from multi-agent interaction rather than individual alignment.",
+    "difficulty": "complex",
+    "question_type": "topical_grouping",
+    "gold_papers": [
+      "2604_12138v1",
+      "2604_13705v1"
+    ],
+    "type": "topical_grouping"
+  },
+  {
+    "id": "eng_complex_043",
+    "question": "What are the main approaches to structured knowledge representation for improving faithfulness and reasoning in RAG systems?",
+    "answer": "Four main approaches: (1) Triplet/relation extraction: Tri-RAG (2604_12610v1) uses Condition-Proof-Conclusion triplets; (2) Hypergraph with temporal ordering: OKH-RAG (2604_12185v1) encodes precedence structure in hyperedges; (3) Knowledge object typing with epistemic metadata: OIDA (2604_11759v1) uses typed Knowledge Objects with decay and contradiction edges; (4) Cross-source conflict handling: ConflictQA / Exploring Knowledge Conflicts (2604_11209v1) models conflicts between KG and text evidence with the XoT framework.",
+    "difficulty": "complex",
+    "question_type": "topical_grouping",
+    "gold_papers": [
+      "2604_12610v1",
+      "2604_12185v1",
+      "2604_11759v1",
+      "2604_11209v1"
+    ],
+    "type": "topical_grouping"
+  },
+  {
+    "id": "eng_complex_044",
+    "question": "What are the main approaches to Adaptive RAG (systems that dynamically decide when to retrieve) and their limitations?",
+    "answer": "Two main approaches with one evaluation study: (1) Self-triggered retrieval within generation: GRIP (2604_11407v1) uses control-token emission to decide when to retrieve, reformulate queries, and terminate within a single autoregressive trajectory; (2) Robustness analysis: How You Ask Matters (2604_10745v1) finds that surface-level query variations dramatically alter retrieval behavior and accuracy in Adaptive RAG, and that robustness does not improve with larger models; (3) Dynamic instruction optimization: FRESCO (2604_14227v1) identifies Pareto-optimal instructions to balance evolving and non-evolving knowledge tasks in re-rankers for adaptive knowledge update.",
+    "difficulty": "complex",
+    "question_type": "topical_grouping",
+    "gold_papers": [
+      "2604_11407v1",
+      "2604_10745v1",
+      "2604_14227v1"
+    ],
+    "type": "topical_grouping"
+  },
+  {
+    "id": "eng_complex_045",
+    "question": "What are the main approaches to token efficiency and context compression for RAG pipelines?",
+    "answer": "Three main approaches: (1) Unified model compression: On-Device RAG (2604_14403v1) uses a single model for both retrieval and context compression, achieving 1/10 context size; (2) Structured selection formalized as optimization: Self-Correcting RAG (2604_10734v1) frames context selection as MMKP to maximize information under a strict token budget; (3) Local triage and caching: Local-Splitter (2604_12301v1) applies local routing, prompt compression, semantic caching, and batching to reduce cloud LLM token usage by 45-79% on certain workloads.",
+    "difficulty": "complex",
+    "question_type": "topical_grouping",
+    "gold_papers": [
+      "2604_14403v1",
+      "2604_10734v1",
+      "2604_12301v1"
+    ],
+    "type": "topical_grouping"
+  },
+  {
+    "id": "eng_complex_046",
+    "question": "What are the main approaches to table retrieval and reasoning in RAG systems?",
+    "answer": "Two main approaches: (1) Permutation-invariant table representation: Towards Platonic Representation for Table Reasoning (2604_12133v1) proposes a structure-aware TRL encoder that enforces cell-header alignment to make table embeddings robust to layout permutations, addressing fragility of RAG retrieval on permuted tables; (2) Empirical evaluation for financial tables: Empirical Evaluation of PDF Parsing (2604_12047v1) uses TableQuest benchmark to evaluate RAG system performance on financial tables across different PDF parsers and chunking strategies.",
+    "difficulty": "complex",
+    "question_type": "topical_grouping",
+    "gold_papers": [
+      "2604_12133v1",
+      "2604_12047v1"
+    ],
+    "type": "topical_grouping"
+  },
+  {
+    "id": "eng_complex_047",
+    "question": "What are the main approaches to integrating RAG with business processes, workflow modeling, or enterprise automation?",
+    "answer": "Two main approaches: (1) Knowledge-as-code orchestration: Context Kubernetes (2604_11623v3) proposes a YAML-based declarative manifest and reconciliation loop to deliver knowledge to agents with permission governance; (2) RAG in business process modeling pipelines: Large LLMs to Enhance Business Process Modeling (2604_14034v1) reviews how RAG is integrated into text-to-BPMN pipelines to provide contextual knowledge for automated process model generation.",
+    "difficulty": "complex",
+    "question_type": "topical_grouping",
+    "gold_papers": [
+      "2604_11623v3",
+      "2604_14034v1"
+    ],
+    "type": "topical_grouping"
+  },
+  {
+    "id": "eng_complex_048",
+    "question": "What are the main retrieval signal types (dense vector, sparse BM25, graph traversal, hybrid) used across papers in this collection, and which papers represent each?",
+    "answer": "Four main signal types: (1) Dense vector retrieval only or primarily: On-Device RAG (2604_14403v1), Toward Agentic RAG for Ukrainian (2604_14896v1, with BGE-M3), Synthius-Mem (2604_11563v1 with CategoryRAG); (2) Hybrid dense+sparse: BLUEmed (2604_10389v1), Quantum-Inspired Embeddings (2604_09430v1) with BM25+embeddings, Trans-RAG (2604_09541v1) evaluated across 8 retrievers; (3) Graph traversal: OKH-RAG (2604_12185v1), CodaRAG (2604_10426v1), Knowledge Graph RAG (2604_14220v1); (4) Hierarchical/tree navigation: NaviRAG (2604_12766v1), Corpus2Skill (2604_14572v1), Adaptive Query Routing (2604_14222v1).",
+    "difficulty": "complex",
+    "question_type": "topical_grouping",
+    "gold_papers": [
+      "2604_14403v1",
+      "2604_14896v1",
+      "2604_11563v1",
+      "2604_10389v1",
+      "2604_09430v1",
+      "2604_09541v1",
+      "2604_12185v1",
+      "2604_10426v1",
+      "2604_14220v1",
+      "2604_12766v1",
+      "2604_14572v1",
+      "2604_14222v1"
+    ],
+    "type": "topical_grouping"
+  },
+  {
+    "id": "eng_complex_049",
+    "question": "Compare UniDoc-RL, Doc-V*, MM-Doc-R1, and VISOR on how they use reinforcement learning for training visual document understanding agents.",
+    "answer": "UniDoc-RL (2604_14967v1): Uses GRPO with a dense multi-reward scheme covering retrieval, reranking, and visual perception actions; trains on curated high-quality reasoning trajectories; reports up to 17.7% gains over prior RL methods. Doc-V* (2604_13731v1): First performs imitation learning from expert trajectories, then optimizes with GRPO; focuses on evidence aggregation in structured working memory; improves out-of-domain performance by 47.9% over RAG baseline. MM-Doc-R1 (2604_13579v1): Uses multi-turn RL with SPO (Similarity-based Policy Optimization) as an improvement over GRPO by using similarity-weighted baseline averaging; reports 10.4% gain on MMLongBench-Doc; SPO boosts 5.0%/6.1% over GRPO on Qwen3-8B/4B. VISOR (2604_09508v1): Uses GRPO-based RL with state masking and credit assignment for dynamic context reconstruction; introduces sliding window + intent injection to prevent context overload during long-horizon retrieval.",
+    "difficulty": "complex",
+    "question_type": "multi_comparison",
+    "gold_papers": [
+      "2604_14967v1",
+      "2604_13731v1",
+      "2604_13579v1",
+      "2604_09508v1"
+    ],
+    "type": "multi_comparison"
+  },
+  {
+    "id": "eng_complex_050",
+    "question": "Compare NaviRAG, Corpus2Skill, and CodaRAG on how they organize and navigate knowledge structures for improved retrieval.",
+    "answer": "NaviRAG (2604_12766v1): Structures documents into a hierarchical form preserving semantic relationships from broad concepts to specific evidence; an LLM agent actively navigates by identifying information gaps and retrieving from the most appropriate granularity level; evaluated on long-document QA benchmarks. Corpus2Skill (2604_14572v1): Distills corpus offline into a hierarchical skill directory via iterative clustering and LLM-written summaries; at serve time, the agent navigates the tree top-down, drills into topic branches, and retrieves full documents by ID; outperforms RAPTOR and agentic RAG baselines on WixQA. CodaRAG (2604_10426v1): Builds a knowledge graph (not a tree), navigates via multi-dimensional pathways (semantic, contextualized, functional) to recover dispersed evidence chains; explicitly prunes hyper-associative noise; achieves 7-10% retrieval recall and 3-11% generation accuracy gains on GraphRAG-Bench.",
+    "difficulty": "complex",
+    "question_type": "multi_comparison",
+    "gold_papers": [
+      "2604_12766v1",
+      "2604_14572v1",
+      "2604_10426v1"
+    ],
+    "type": "multi_comparison"
+  },
+  {
+    "id": "eng_complex_051",
+    "question": "Compare AdversarialCoT, CanaryRAG, and Trans-RAG on the specific security threat they address and their defensive or offensive mechanisms.",
+    "answer": "AdversarialCoT (2604_12201v1): Attacks RAG by injecting a single adversarially crafted document that exploits the LLM's own reasoning framework; constructs an adversarial CoT by iteratively interacting with the target LLM to expose critical reasoning vulnerabilities; demonstrates that a single poisoned document can significantly degrade accuracy. CanaryRAG (2604_10717v1): Defends against RAG extraction attacks (where adversaries probe the RAG system to recover proprietary knowledge); embeds canary tokens into retrieved chunks and uses dual-path runtime integrity checking (target path + oracle path); plug-and-play, requires no retraining. Trans-RAG (2604_09541v1): Defends against cross-organizational data leakage; implements query-centric vector space transformation so each organization's knowledge is mathematically isolated; achieves 89.90° angular separation and 99.81% isolation; only 3.5% nDCG@10 degradation.",
+    "difficulty": "complex",
+    "question_type": "multi_comparison",
+    "gold_papers": [
+      "2604_12201v1",
+      "2604_10717v1",
+      "2604_09541v1"
+    ],
+    "type": "multi_comparison"
+  },
+  {
+    "id": "eng_complex_052",
+    "question": "Compare Synthius-Mem, Memory as Metabolism, and OIDA on their core architectural principles for long-term LLM memory management.",
+    "answer": "Synthius-Mem (2604_11563v1): Brain-inspired structured persona memory; extracts facts into six cognitive domains (biography, experiences, preferences, social circle, work, psychometrics); retrieves via CategoryRAG at 21.79ms; achieves 94.37% on LoCoMo with 99.55% adversarial robustness; ~5x token reduction vs. full context. Memory as Metabolism (2604_12034v1): Companion knowledge governance; proposes five operations (TRIAGE, DECAY, CONTEXTUALIZE, CONSOLIDATE, AUDIT) and 'memory gravity' for centrality; key innovation is a structural path for minority-hypothesis retention and accumulated contradictory evidence to update dominant interpretations via multi-cycle buffer pressure. OIDA (2604_11759v1): Organizational epistemic infrastructure; uses typed Knowledge Objects with epistemic class, class-specific importance decay, and signed contradiction edges; introduces QUESTION-as-modeled-ignorance primitive with inverse decay; Knowledge Gravity Engine has proved convergence guarantees.",
+    "difficulty": "complex",
+    "question_type": "multi_comparison",
+    "gold_papers": [
+      "2604_11563v1",
+      "2604_12034v1",
+      "2604_11759v1"
+    ],
+    "type": "multi_comparison"
+  },
+  {
+    "id": "eng_complex_053",
+    "question": "Compare FRESCO, How You Ask Matters, and Controlling Authority Retrieval on the specific limitation of existing RAG systems they identify and the solutions they propose.",
+    "answer": "FRESCO (2604_14227v1): Identifies that re-rankers are biased toward older, semantically rich documents even when factually obsolete; introduces FRESCO benchmark using Wikipedia revision pairs; proposes instruction optimization framework to find Pareto-optimal instructions balancing evolving and non-evolving knowledge tasks (up to 27% gain on evolving tasks). How You Ask Matters (2604_10745v1): Identifies that Adaptive RAG retrieval decisions and accuracy vary dramatically with query surface form even when semantics are identical; introduces the first large-scale benchmark of semantically identical query variations; finds that larger models do not improve robustness. Controlling Authority Retrieval (2604_14488v1): Identifies that dense retrieval fails to recover the active frontier of superseded documents in authority-governed domains; formalizes CAR as a distinct math problem from argmax similarity; proves Scope Identifiability Upper Bound; introduces two-stage approach achieving 0.975 TCA@5 vs. 0.270 for dense.",
+    "difficulty": "complex",
+    "question_type": "multi_comparison",
+    "gold_papers": [
+      "2604_14227v1",
+      "2604_10745v1",
+      "2604_14488v1"
+    ],
+    "type": "multi_comparison"
+  },
+  {
+    "id": "eng_complex_054",
+    "question": "Compare CARO and CHAIRO on their use of analogical retrieval for content moderation.",
+    "answer": "CARO (2604_10504v1): Two-stage framework; stage 1 uses RAG to bootstrap analogical reasoning chains (SFT); stage 2 uses customized DPO to reinforce analogical behaviors; dynamically generates tailored analogical references during inference; achieves 24.9% average F1 improvement over DeepSeek R1, QwQ, and LLaMA Guard on ambiguous moderation benchmarks. CHAIRO (2604_10502v1): Focuses on end-to-end optimization integrating analogical retrieval, rule generation, and moderation classification; the rule generation step creates dynamic moderation rules from analogical examples; evaluated with human assessments and external model generalization; outperforms rule-injected fine-tuning and multi-stage static RAG pipelines in accuracy, rule clarity, and applicability. Key difference: CARO optimizes the reasoning chain via DPO while CHAIRO optimizes rule induction via joint end-to-end training.",
+    "difficulty": "complex",
+    "question_type": "multi_comparison",
+    "gold_papers": [
+      "2604_10504v1",
+      "2604_10502v1"
+    ],
+    "type": "multi_comparison"
+  },
+  {
+    "id": "eng_complex_055",
+    "question": "Compare OKH-RAG, CodaRAG, and Knowledge Graph RAG on their graph construction and traversal strategies for improving RAG.",
+    "answer": "OKH-RAG (2604_12185v1): Represents knowledge as higher-order interactions in a hypergraph with precedence structure; retrieval is formulated as sequence inference over hyperedges; learns transition models from data without explicit temporal supervision; evaluated on tropical cyclone and port operation order-sensitive tasks. CodaRAG (2604_10426v1): Builds a graph via Knowledge Consolidation from fragmented extractions; traverses via three-dimensional pathways (semantic, contextualized, functional); applies Interference Elimination to prune noise; achieves 7-10% recall and 3-11% generation accuracy gains on GraphRAG-Bench. Knowledge Graph RAG (2604_14220v1): Focuses on enterprise document ecosystems using Recursive Crawling to navigate superseding logic and multi-hop references; evaluated on Code of Federal Regulations; achieves 70% accuracy improvement over standard vector-based RAG.",
+    "difficulty": "complex",
+    "question_type": "multi_comparison",
+    "gold_papers": [
+      "2604_12185v1",
+      "2604_10426v1",
+      "2604_14220v1"
+    ],
+    "type": "multi_comparison"
+  },
+  {
+    "id": "eng_complex_056",
+    "question": "Compare Enhancing Mental Health Counseling, BLUEmed, and AOP-Smart on their use of domain-specific structured knowledge in RAG for professional applications.",
+    "answer": "Enhancing Mental Health Counseling (2604_14576v1): Compares RAG vs. a manually constructed, clinically validated Knowledge Graph capturing causal relationships between stressors, interventions, and outcomes; KG-based approach consistently outperforms RAG alone in contextual relevance and clinical appropriateness; uses BERTScore F1, SBERT cosine similarity, and five-metric human evaluation. BLUEmed (2604_10389v1): Hybrid RAG combining dense, sparse, and online retrieval; assigns two domain expert agents distinct clinical knowledge bases for independent analysis; structured counter-argumentation resolves disagreements; best accuracy 69.13% with few-shot prompting. AOP-Smart (2604_10874v1): Uses official AOP-Wiki XML data (KEs, KERs, AOP information) as structured retrieval corpus; raises GPT/DeepSeek/Gemini accuracy from 15-35% to 95-100% on AOP QA tasks; most direct demonstration of structured domain knowledge transforming RAG performance.",
+    "difficulty": "complex",
+    "question_type": "multi_comparison",
+    "gold_papers": [
+      "2604_14576v1",
+      "2604_10389v1",
+      "2604_10874v1"
+    ],
+    "type": "multi_comparison"
+  },
+  {
+    "id": "eng_complex_057",
+    "question": "Compare Self-Correcting RAG, GRIP, and NaviRAG on how they integrate reasoning and retrieval within a single unified framework.",
+    "answer": "Self-Correcting RAG (2604_10734v1): Separates retrieval (MMKP-based context selection maximizing information density under token budget) from generation (NLI-guided MCTS for test-time reasoning path exploration and faithfulness validation); retrieval is a constrained optimization problem, reasoning is a path-planning problem; evaluated on six multi-hop QA and fact-checking benchmarks. GRIP (2604_11407v1): Embeds retrieval control directly into generation via control-token emission within a single autoregressive trajectory; Self-Triggered Information Planning decides when to retrieve, how to reformulate, and when to terminate all in one pass; unified training set covers answerable, partially answerable, and multi-hop queries. NaviRAG (2604_12766v1): Separates offline knowledge structuring (hierarchical organization) from online LLM-agent navigation; the agent iteratively identifies information gaps and chooses the appropriate granularity level to retrieve from; focuses on long-document QA with multi-granular evidence localization.",
+    "difficulty": "complex",
+    "question_type": "multi_comparison",
+    "gold_papers": [
+      "2604_10734v1",
+      "2604_11407v1",
+      "2604_12766v1"
+    ],
+    "type": "multi_comparison"
+  },
+  {
+    "id": "eng_complex_058",
+    "question": "Compare Context Kubernetes, Retrieval Is Not Enough (OIDA), and Corpus2Skill on their approaches to organizing and governing enterprise knowledge for AI agents.",
+    "answer": "Context Kubernetes (2604_11623v3): Uses a Kubernetes-inspired architecture with YAML declarative manifests, reconciliation loops, and a three-tier agent permission model; explicitly tests governance across ACL filtering, RBAC routing, and three-tier enforcement; blocks all five tested attack scenarios that RBAC misses; TLA+-verified with zero safety violations across 4.6M states. OIDA (2604_11759v1): Focuses on epistemic fidelity over retrieval fidelity; typed Knowledge Objects carry epistemic class, importance scores with decay, and signed contradiction edges; unique QUESTION-as-modeled-ignorance primitive surfaces organizational unknowns with inverse decay (statistically validated, Fisher p=0.0325). Corpus2Skill (2604_14572v1): Focuses on efficient retrieval navigation rather than governance; compiles corpus offline into hierarchical skill tree; at serve time, agent sees bird's-eye view and drills into topic branches; outperforms RAPTOR and agentic RAG on WixQA without permission management.",
+    "difficulty": "complex",
+    "question_type": "multi_comparison",
+    "gold_papers": [
+      "2604_11623v3",
+      "2604_11759v1",
+      "2604_14572v1"
+    ],
+    "type": "multi_comparison"
+  },
+  {
+    "id": "eng_complex_059",
+    "question": "Compare Tri-RAG, Towards Platonic Representation for Table Reasoning, and OKH-RAG on how they model structural relationships in knowledge for retrieval.",
+    "answer": "Tri-RAG (2604_12610v1): Converts natural language documents into Condition-Proof-Conclusion triplets using prompt-based adaptation with frozen model parameters; the Condition serves as a semantic anchor for retrieval matching; achieves a balance between accuracy and token efficiency without adding training overhead. Towards Platonic Representation (2604_12133v1): Focuses on tables; identifies that linearization causes layout-permutation brittleness in LLM table embeddings; proposes a structure-aware TRL encoder enforcing cell-header alignment; introduces two metrics (PI for permutation invariance, rho for structural convergence) to diagnose serialization bias in any model. OKH-RAG (2604_12185v1): Represents knowledge as higher-order hyperedges augmented with precedence structure; reformulates retrieval as sequence inference over ordered hyperedges; learned transition model infers precedence from data without explicit temporal supervision; validated on order-sensitive QA tasks.",
+    "difficulty": "complex",
+    "question_type": "multi_comparison",
+    "gold_papers": [
+      "2604_12610v1",
+      "2604_12133v1",
+      "2604_12185v1"
+    ],
+    "type": "multi_comparison"
+  },
+  {
+    "id": "eng_complex_060",
+    "question": "Compare the Cognitive Circuit Breaker, CanaryRAG, and FRESCO on their approaches to quality monitoring and reliability assurance in RAG inference pipelines.",
+    "answer": "Cognitive Circuit Breaker (2604_13417v1): Provides intrinsic reliability monitoring during LLM forward pass by extracting hidden states and computing 'Cognitive Dissonance Delta' (gap between softmax confidence and latent certainty via linear probes); operates without any external API calls or secondary models; minimal computational overhead; targets hallucination detection before generation is finalized. CanaryRAG (2604_10717v1): Runtime defense at the retrieval-generation interface; embeds canary tokens into retrieved chunks; monitors dual-path integrity (target path + oracle path) during generation; detects extraction attacks in real time; plug-and-play with negligible impact on task performance and latency. FRESCO (2604_14227v1): Quality assurance at the re-ranking stage; benchmarks re-rankers using Wikipedia revision pairs to test factual recency; identifies systematic bias toward older content; proposes instruction optimization to obtain Pareto-optimal re-ranker behavior between evolving and non-evolving knowledge tasks.",
+    "difficulty": "complex",
+    "question_type": "multi_comparison",
+    "gold_papers": [
+      "2604_13417v1",
+      "2604_10717v1",
+      "2604_14227v1"
+    ],
+    "type": "multi_comparison"
+  }
+]

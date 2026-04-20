@@ -1,0 +1,16 @@
+{
+  "chunk_utilization": 0.3,
+  "f1": 0.06999999999999999,
+  "em": 0.05333333333333334,
+  "response_coherence": 0.38333333333333336,
+  "factual_consistency": 0.5499999999999999,
+  "answer_comprehensiveness": 0.15333333333333335,
+  "llm_comprehensiveness": 0.20666666666666667,
+  "llm_relativeness": 0.32666666666666666,
+  "llm_empowerment": 0.24666666666666667,
+  "llm_directness": 0.6166666666666666,
+  "llm_total": 0.32866666666666666,
+  "retrieval_latency": 3.3175606727600098,
+  "retrieval_precision": 0.3,
+  "retrieval_utilization": 0.3
+}

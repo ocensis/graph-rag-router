@@ -1,0 +1,902 @@
+[
+  {
+    "question": "What time does Li Hua check in with Adam about moving in?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 1.0,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.002998828887939453
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.002998828887939453,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "When was the first time Li Hua had dinner with Wolfgang this year?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 1.0,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.007999181747436523
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.007999181747436523,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "Where was the first time Li Hua had dinner with Wolfgang this year?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 0.3,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.011998653411865234
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.011998653411865234,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "What time is Li Hua's lunch with Wolfgang Schulz at the cozy café downtown?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 0.3,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.013999462127685547
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.013999462127685547,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "What is the Wi-Fi password at Li Hua's house?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 1.0,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.018001079559326172
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.018001079559326172,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "What does Adam say about having friends over?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 0.3,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.01900005340576172
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.01900005340576172,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "What house rule does Adam mention?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 0.3,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.017000436782836914
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.017000436782836914,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "What does Li Hua report to Adam on January 6th?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 0.3,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.01699995994567871
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.01699995994567871,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "When does Adam confirm the plumber will arrive?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 0.3,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.01699972152709961
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.01699972152709961,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "What does Li Hua ask Adam about the door hinge?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 1.0,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.013997793197631836
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.013997793197631836,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "What is the name of the gym that Wolfgang recommended LiHua to go to?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 0.3,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.014002323150634766
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.014002323150634766,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "When does Li Hua plan to celebrate Chinese Lunar New Year?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 0.3,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.011999845504760742
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.011999845504760742,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "What does Li Hua plan to celebrate Chinese Lunar New Year?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 0.3,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.009001970291137695
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.009001970291137695,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "Who does Li Hua plan to celebrate Chinese Lunar New Year with?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 1.0,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.01000070571899414
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.01000070571899414,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "Li Hua accidentally broke a light fixture once. What did Adam say about the light fixture?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 0.3,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.010000228881835938
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.010000228881835938,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "When did Li Hua express frustration about a client changing requirements?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 0.3,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.00999760627746582
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.00999760627746582,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "Who suggested Li Hua keep a clear log of all the changes requested by the client?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 0.3,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.010000228881835938
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.010000228881835938,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "What did Wolfgang Schulz suggest Li Hua to do when Li Hua face a difficult client?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 1.0,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.011998891830444336
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.011998891830444336,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "What does Li Hua plan to do to clear their head?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 1.0,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.01199960708618164
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.01199960708618164,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "What is the name of the café Wolfgang Schulz recommends to Li Hua?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 1.0,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.01399993896484375
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.01399993896484375,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "Can Li Hua hang his artworks on the wall?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 1.0,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.014000415802001953
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.014000415802001953,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "What does Adam Smith suggest Li Hua use to hang artwork without damaging the walls?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 0.3,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.016999483108520508
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.016999483108520508,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "How many times does Li Hua train per week now?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 1.0,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.016999483108520508
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.016999483108520508,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "When did Li Hua change the training plan?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 1.0,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.016001224517822266
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.016001224517822266,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "What days does Li Hua takes for the training sessions?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 1.0,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.017000675201416016
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.017000675201416016,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "Did Adam Smith send a message to Li Hua about the upcoming building maintenance schedule before the administrators announced a temporary change in the construction schedule due to weather conditions?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 0.3,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.015001773834228516
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.015001773834228516,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "Did Wolfgang ask Li Hua about watching \"Star Wars: A New Hope\" after he asked Li Hua about going to see \"Overwatch 3\"?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 0.3,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.015000104904174805
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.015000104904174805,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "Did Li Hua agree to go out for dinner after Wolfgang first asked him if he wanted to go out for dinner?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 1.0,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.015003204345703125
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.015003204345703125,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "Did Li Hua send a message to Jennifer thanking her for the new training schedule before he requested a change in his training schedule for Thursday?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 1.0,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.015001296997070312
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.015001296997070312,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "Did Li Hua ask Jennifer for advice on how to prevent muscle soreness after an intense workout session before he told her that he feels soreness in his arm muscles after the workout this week?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 1.0,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.015004396438598633
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.015004396438598633,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "Did Li Hua send a message to Jennifer asking for her opinion on protein supplements before he consulted her about his daily protein powder consumption?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 1.0,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.017003536224365234
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.017003536224365234,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "Did Yuriko ask Li Hua for help with her studio's homepage before she booked a seat at the \"Central Perk\" cafe?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 1.0,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.014002561569213867
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.014002561569213867,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "Did Li Hua discuss his progress with the fitness plan before he shared a blog post about his recent fitness achievements?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 0.3,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.014504432678222656
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.014504432678222656,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "Did Li Hua send a message to Jennifer asking if he can turn the Thursday class to Friday after he requested a change in his training schedule for Thursday?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 1.0,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.01450490951538086
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.01450490951538086,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "Did Li Hua ask Yuriko to play music together before Wolfgang proposed to pause playing musical instruments?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 0.3,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.014037132263183594
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.014037132263183594,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "Did Wolfgang Schulz recommend the band learns \"Viva la Vida\" by Coldplay after he and Li Hua discussed what song to play this Sunday?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 0.3,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.015035390853881836
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.015035390853881836,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "Did Wolfgang's promotion announcement occur before he invited Li Hua for dinner on 20260430?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 1.0,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.017038345336914062
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.017038345336914062,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "Did Turalyon announce the construction updates and feedback from residents after Illidan Stormrage complained about the construction noise?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 1.0,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.017534255981445312
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.017534255981445312,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "Did Hailey announce the new line of high-protein breads before inviting Li Hua to the special bakery event?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 1.0,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.017533302307128906
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.017533302307128906,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "Did Chae tell Li Hua that taking a warm shower before sleeping can improve the sleep quality before sharing the neuroscience article with her?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 1.0,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.018001079559326172
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.018001079559326172,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "Did Li Hua ask Jennifer Moore for book recommendations on fitness nutrition before she announced the special guest speaker at the gym?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 0.3,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.01699995994567871
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.01699995994567871,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "Did Jennifer remind Li Hua about proper nutrition and hydration before Jake shared his tips for staying hydrated during the match?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 1.0,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.01699995994567871
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.01699995994567871,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "Did the group members talk about their favorite characters in the TV series Game of Thrones after Emily started a vote on the most hateable character?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 1.0,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.016002178192138672
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.016002178192138672,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "Question: Did Jennifer remind Li Hua to consume enough protein after the workout before she shared tips with the group members on common mistakes to avoid after an intense workout?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 1.0,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.017000436782836914
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.017000436782836914,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "Did Li Hua ask Thane about his opinion on The Last of Us before he asked about Sekiro: Shadows Die Twice?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 0.3,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.013998270034790039
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.013998270034790039,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "Did Jake Watson and Li Hua discuss the classic matches between FC Barcelona and FC Bayern Munich before the group members discussed the classic matches between FC Barcelona and Real Madrid?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 0.3,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.014003276824951172
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.014003276824951172,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "Did the group members debate about the best football manager in the Premier League history after they debated if Pep Guardiola is the greatest soccer manager in football history?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 1.0,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.01399993896484375
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.01399993896484375,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "Did the discussion about Jaime Lannister's character occur after the discussion about Cersei Lannister's character?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 0.3,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.01100015640258789
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.01100015640258789,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "Did Wolfgang ask Li Hua if she wants to have pizza for dinner after work today before he wondered if she wanted to have Sichuan hot pot for dinner tonight?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 1.0,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 0.012000322341918945
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 0.012000322341918945,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  },
+  {
+    "question": "Did Jennifer challenge Li Hua to do 60 pull-ups in a training session after she challenged him to do 100 pushups?",
+    "system_answer": "获取回答时出错: expected string or bytes-like object",
+    "retrieved_entities": [],
+    "retrieved_relationships": [],
+    "referenced_entities": [],
+    "referenced_relationships": [],
+    "scores": {
+      "retrieval_precision": 0.3,
+      "retrieval_utilization": 0.3,
+      "retrieval_latency": 15.33177638053894
+    },
+    "agent_type": "hybrid",
+    "retrieval_time": 15.33177638053894,
+    "retrieval_logs": {},
+    "entity_details": [],
+    "enhanced_relationships": []
+  }
+]

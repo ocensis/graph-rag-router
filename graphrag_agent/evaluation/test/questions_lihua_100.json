@@ -1,0 +1,502 @@
+[
+  {
+    "question_id": 1,
+    "question": "What time does Li Hua check in with Adam about moving in?",
+    "type": "Single"
+  },
+  {
+    "question_id": 2,
+    "question": "When was the first time Li Hua had dinner with Wolfgang this year?",
+    "type": "Single"
+  },
+  {
+    "question_id": 3,
+    "question": "Where was the first time Li Hua had dinner with Wolfgang this year?",
+    "type": "Single"
+  },
+  {
+    "question_id": 4,
+    "question": "What time is Li Hua's lunch with Wolfgang Schulz at the cozy café downtown?",
+    "type": "Single"
+  },
+  {
+    "question_id": 5,
+    "question": "What is the Wi-Fi password at Li Hua's house?",
+    "type": "Single"
+  },
+  {
+    "question_id": 6,
+    "question": "What does Adam say about having friends over?",
+    "type": "Single"
+  },
+  {
+    "question_id": 7,
+    "question": "What house rule does Adam mention?",
+    "type": "Single"
+  },
+  {
+    "question_id": 8,
+    "question": "What does Li Hua report to Adam on January 6th?",
+    "type": "Single"
+  },
+  {
+    "question_id": 9,
+    "question": "When does Adam confirm the plumber will arrive?",
+    "type": "Single"
+  },
+  {
+    "question_id": 10,
+    "question": "What does Li Hua ask Adam about the door hinge?",
+    "type": "Single"
+  },
+  {
+    "question_id": 11,
+    "question": "What is the name of the gym that Wolfgang recommended LiHua to go to?",
+    "type": "Single"
+  },
+  {
+    "question_id": 12,
+    "question": "When does Li Hua plan to celebrate Chinese Lunar New Year?",
+    "type": "Single"
+  },
+  {
+    "question_id": 13,
+    "question": "What does Li Hua plan to celebrate Chinese Lunar New Year?",
+    "type": "Single"
+  },
+  {
+    "question_id": 14,
+    "question": "Who does Li Hua plan to celebrate Chinese Lunar New Year with?",
+    "type": "Single"
+  },
+  {
+    "question_id": 15,
+    "question": "Li Hua accidentally broke a light fixture once. What did Adam say about the light fixture?",
+    "type": "Single"
+  },
+  {
+    "question_id": 16,
+    "question": "When did Li Hua express frustration about a client changing requirements?",
+    "type": "Single"
+  },
+  {
+    "question_id": 17,
+    "question": "Who suggested Li Hua keep a clear log of all the changes requested by the client?",
+    "type": "Single"
+  },
+  {
+    "question_id": 18,
+    "question": "What did Wolfgang Schulz suggest Li Hua to do when Li Hua face a difficult client?",
+    "type": "Single"
+  },
+  {
+    "question_id": 19,
+    "question": "What does Li Hua plan to do to clear their head?",
+    "type": "Single"
+  },
+  {
+    "question_id": 20,
+    "question": "What is the name of the café Wolfgang Schulz recommends to Li Hua?",
+    "type": "Single"
+  },
+  {
+    "question_id": 21,
+    "question": "Can Li Hua hang his artworks on the wall?",
+    "type": "Single"
+  },
+  {
+    "question_id": 22,
+    "question": "What does Adam Smith suggest Li Hua use to hang artwork without damaging the walls?",
+    "type": "Single"
+  },
+  {
+    "question_id": 23,
+    "question": "How many times does Li Hua train per week now?",
+    "type": "Single"
+  },
+  {
+    "question_id": 24,
+    "question": "When did Li Hua change the training plan?",
+    "type": "Single"
+  },
+  {
+    "question_id": 25,
+    "question": "What days does Li Hua takes for the training sessions?",
+    "type": "Single"
+  },
+  {
+    "question_id": 26,
+    "question": "When did Li Hua ask Jennifer Moore for tips on dealing with muscle soreness?",
+    "type": "Single"
+  },
+  {
+    "question_id": 27,
+    "question": "What are some of Jennifer Moore's tips for dealing with muscle soreness?",
+    "type": "Single"
+  },
+  {
+    "question_id": 28,
+    "question": "Why did Li Hua ask for extra exercises to do at home?",
+    "type": "Single"
+  },
+  {
+    "question_id": 29,
+    "question": "What exercises did Jennifer Moore suggest Li Hua do at home?",
+    "type": "Single"
+  },
+  {
+    "question_id": 30,
+    "question": "What is Adam Smith's condition for Li Hua to add decorations to the basement?",
+    "type": "Single"
+  },
+  {
+    "question_id": 31,
+    "question": "When was the first time Wolfgang went to Li Hua's basement?",
+    "type": "Single"
+  },
+  {
+    "question_id": 32,
+    "question": "What ideas did Wolfgang Schulz suggest for Li Hua's basement practice spot?",
+    "type": "Single"
+  },
+  {
+    "question_id": 33,
+    "question": "Why did Adam remind Li Hua not to play guitar late at night?",
+    "type": "Single"
+  },
+  {
+    "question_id": 34,
+    "question": "What type of ambiance does YurikoYamamoto want for her studio's homepage?",
+    "type": "Single"
+  },
+  {
+    "question_id": 35,
+    "question": "When did Li Hua invite Adam Smith to check the basement renovation progress?",
+    "type": "Single"
+  },
+  {
+    "question_id": 36,
+    "question": "What is the name of the café where Li Hua and YurikoYamamoto first meeting to talk about Yuriko's website?",
+    "type": "Single"
+  },
+  {
+    "question_id": 37,
+    "question": "What is the essence of YurikoYamamoto Li Hua is helping with her homepage?",
+    "type": "Single"
+  },
+  {
+    "question_id": 38,
+    "question": "What type of instrument does Li Hua play in the basement?",
+    "type": "Single"
+  },
+  {
+    "question_id": 39,
+    "question": "When did Adam Smith inform Li Hua about potential issues with the pipes in the basement?",
+    "type": "Single"
+  },
+  {
+    "question_id": 40,
+    "question": "When did Li Hua inform Adam Smith that the rent was transferred?",
+    "type": "Single"
+  },
+  {
+    "question_id": 41,
+    "question": "When is the music concert that Wolfgang invites Li Hua to?",
+    "type": "Single"
+  },
+  {
+    "question_id": 42,
+    "question": "What dish does Li Hua agree to bring to the neighborhood potluck dinner?",
+    "type": "Single"
+  },
+  {
+    "question_id": 43,
+    "question": "Who is Li Hua meeting with to discuss homepage design updates?",
+    "type": "Single"
+  },
+  {
+    "question_id": 44,
+    "question": "What new feature does Yuriko Yamamoto consider adding to her studio's homepage?",
+    "type": "Single"
+  },
+  {
+    "question_id": 45,
+    "question": "What time is the power outage in the neighborhood?",
+    "type": "Single"
+  },
+  {
+    "question_id": 46,
+    "question": "What suggestions does Li Hua give for promoting the new scheduling feature?",
+    "type": "Single"
+  },
+  {
+    "question_id": 47,
+    "question": "Who invites Li Hua to join the community bake sale?",
+    "type": "Single"
+  },
+  {
+    "question_id": 48,
+    "question": "What day and time is the community bake sale taking place?",
+    "type": "Single"
+  },
+  {
+    "question_id": 49,
+    "question": "When does Li Hua request a delivery from Hailey Johnson?",
+    "type": "Single"
+  },
+  {
+    "question_id": 50,
+    "question": "What is the address where Li Hua wants the bread delivery to be made?",
+    "type": "Single"
+  },
+  {
+    "question_id": 51,
+    "question": "Did Adam Smith send a message to Li Hua about the upcoming building maintenance schedule before the administrators announced a temporary change in the construction schedule due to weather conditions?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 52,
+    "question": "Did Wolfgang ask Li Hua about watching \"Star Wars: A New Hope\" after he asked Li Hua about going to see \"Overwatch 3\"?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 53,
+    "question": "Did Li Hua agree to go out for dinner after Wolfgang first asked him if he wanted to go out for dinner?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 54,
+    "question": "Did Li Hua send a message to Jennifer thanking her for the new training schedule before he requested a change in his training schedule for Thursday?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 55,
+    "question": "Did Li Hua ask Jennifer for advice on how to prevent muscle soreness after an intense workout session before he told her that he feels soreness in his arm muscles after the workout this week?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 56,
+    "question": "Did Li Hua send a message to Jennifer asking for her opinion on protein supplements before he consulted her about his daily protein powder consumption?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 57,
+    "question": "Did Yuriko ask Li Hua for help with her studio's homepage before she booked a seat at the \"Central Perk\" cafe?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 58,
+    "question": "Did Li Hua discuss his progress with the fitness plan before he shared a blog post about his recent fitness achievements?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 59,
+    "question": "Did Li Hua send a message to Jennifer asking if he can turn the Thursday class to Friday after he requested a change in his training schedule for Thursday?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 60,
+    "question": "Did Li Hua ask Yuriko to play music together before Wolfgang proposed to pause playing musical instruments?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 61,
+    "question": "Did Wolfgang Schulz recommend the band learns \"Viva la Vida\" by Coldplay after he and Li Hua discussed what song to play this Sunday?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 62,
+    "question": "Did Wolfgang's promotion announcement occur before he invited Li Hua for dinner on 20260430?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 63,
+    "question": "Did Turalyon announce the construction updates and feedback from residents after Illidan Stormrage complained about the construction noise?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 64,
+    "question": "Did Hailey announce the new line of high-protein breads before inviting Li Hua to the special bakery event?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 65,
+    "question": "Did Chae tell Li Hua that taking a warm shower before sleeping can improve the sleep quality before sharing the neuroscience article with her?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 66,
+    "question": "Did Li Hua ask Jennifer Moore for book recommendations on fitness nutrition before she announced the special guest speaker at the gym?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 67,
+    "question": "Did Jennifer remind Li Hua about proper nutrition and hydration before Jake shared his tips for staying hydrated during the match?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 68,
+    "question": "Did the group members talk about their favorite characters in the TV series Game of Thrones after Emily started a vote on the most hateable character?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 69,
+    "question": "Question: Did Jennifer remind Li Hua to consume enough protein after the workout before she shared tips with the group members on common mistakes to avoid after an intense workout?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 70,
+    "question": "Did Li Hua ask Thane about his opinion on The Last of Us before he asked about Sekiro: Shadows Die Twice?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 71,
+    "question": "Did Jake Watson and Li Hua discuss the classic matches between FC Barcelona and FC Bayern Munich before the group members discussed the classic matches between FC Barcelona and Real Madrid?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 72,
+    "question": "Did the group members debate about the best football manager in the Premier League history after they debated if Pep Guardiola is the greatest soccer manager in football history?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 73,
+    "question": "Did the discussion about Jaime Lannister's character occur after the discussion about Cersei Lannister's character?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 74,
+    "question": "Did Wolfgang ask Li Hua if she wants to have pizza for dinner after work today before he wondered if she wanted to have Sichuan hot pot for dinner tonight?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 75,
+    "question": "Did Jennifer challenge Li Hua to do 60 pull-ups in a training session after she challenged him to do 100 pushups?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 76,
+    "question": "Did Jake share common knowledge about offside in soccer with Li Hua before he passed practical techniques to Li Hua on how to avoid offside for a forward?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 77,
+    "question": "Did Wolfgang arrive in Hong Kong after he informed Li Hua about his upcoming trip?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 78,
+    "question": "What time does Li Hua watch the movie \"Overwatch 3\"?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 79,
+    "question": "Who does Li Hua go to watch the movie \"Overwatch 3\" with?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 80,
+    "question": "Has Wolfgang ever been to Hong Kong?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 81,
+    "question": "Who knows about Wolfgang going to Hong Kong?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 82,
+    "question": "Who wished Li Hua a happy Lunar New Year?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 83,
+    "question": "Who introduced the bread delivery service and recommend Alice for the delivery?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 84,
+    "question": "What is the opportunity that makes Wolfgang and Yuriko acquaitances?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 85,
+    "question": "What was the content of the first-ever delivery from Hailey to LiHua and what was LiHua's opinion about it?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 86,
+    "question": "What opportunity did LiHua create for Chae to meet Wolfgang and Yuriko?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 87,
+    "question": "What special offerings did Hailey have for her backery shop in the month of May?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 88,
+    "question": "What feedbacks does Hailey ask from LiHua in July?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 89,
+    "question": "How long does it take in total from LiHua planning on getting the air-conditioner to the air-conditioner been installed?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 90,
+    "question": "Did it take more than 3 weeks from LiHua planning on getting the air-conditioner to the air-conditioner been actually installed?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 91,
+    "question": "Did it take more than a week from Adam asking LiHua about the ideal installation date to Adam reminding LiHua about the contractor team installing air-conditioner at 18:00?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 92,
+    "question": "Who does LiHua want to invite to the photo exhibition and who goes with him (during August)?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 93,
+    "question": "Is the time interval between LiHua asking JakeWatson to help him with dribbling skills and Li Hua asking the group about classic must-watch UCL matches more than 2 days (restrict your search within August)?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 94,
+    "question": "Is the time interval more than 3 days between LiHua asking Adam to help him install a curtain on the basement window and Adam asking LiHua to measure the size of the window?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 95,
+    "question": "Is the time interval more than 7 days between Adam asking LiHua to measure the size of the window and Adam informing Li Hua that he has booked the curtain of the right size?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 96,
+    "question": "Is the time interval more than 3 days between LiHua confirming that he has received the curtain and Adam asking LiHua if the curtain is all good?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 97,
+    "question": "Is the time interval more than 3 days between LiHua first asking Adam if he can buy a small fridge for the basement and Adam asking LiHua about the size of the fridge?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 98,
+    "question": "Is the time interval more than 7 days between Adam asking LiHua about the size of the fridge and Adam informing LiHua that the fridge will be delivered at 4pm next day?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 99,
+    "question": "Wolfgang suddenly becomes very concerned about good body shape and healthy food choices in December. What are the two conversations he had with LiHua in December that reflect this?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 100,
+    "question": "Did Li Hua agree to have dinner with Wolfgang after he told Wolfgang about the lunch arrangement?",
+    "type": "Multi"
+  }
+]

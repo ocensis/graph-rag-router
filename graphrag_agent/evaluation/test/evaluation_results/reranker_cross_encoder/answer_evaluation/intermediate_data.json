@@ -1,0 +1,68 @@
+[
+  {
+    "question": "优秀学生申请的条件?",
+    "golden_answer": "优秀学生申请条件包括：1. 申请资格：必须是在校二、三、四年级本科生，热爱祖国，遵守法律法规。2. 学术要求：获得优秀奖学金二等奖及以上或民族班奖学金二等奖及以上，同时获社会工作奖B等及以上。3. 德育成绩：德育考核成绩需达到85分及以上。4. 综合素质：综合素质评价成绩需达到85分及以上。5. 思想品德：具备强烈的社会责任感，思想积极上进，关心集体，热心公益，尊敬师长，团结同学，文明礼貌，诚实守信。",
+    "system_answer": "## 申请条件说明\n\n根据检索到的文档片段，“优秀学生申请条件”这一表述本身**没有被完整定义**。现有材料中，只能确认与“学生申请条件”相关的两类情况：\n\n### 一、国内校际交流学生的申请条件\n\n申请校际交流的学生需满足以下条件：\n\n1. **品德优良，遵纪守法，无违规违纪记录**\n2. **学习成绩优良，无不及格课程**\n3. **身心健康，能够圆满完成交流学习任务**\n\n这些条件主要对应学生的思想品德、学习表现和身心状况。\n\n### 二、大学生创新创业训练计划项目的申请基本条件\n\n如果这里的“优秀学生申请”是指申请大学生创新创业训练计划项目，则申请者需符合以下条件：\n\n1. **具有华东理工大学学籍的全日制在读学生**\n2. **须品学兼优、学有余力**\n3. **对科学研究、社会实践和自主创业有浓厚兴趣**\n4. **敢于探索和实践，具有较强独立思考能力和创新创业意识**\n5. **具备良好学术道德和社会公德**\n\n团队申报时，文档还提到以下补充要求：\n\n- 鼓励跨学科、跨院系、跨专业组队\n- 团队成员应基本稳定，专业和能力结构合理\n- 创新训练项目团队人数原则上不超过4人\n- 创业训练项目和创业实践项目团队人数原则上不超过6人\n- 项目负责人仅限1人\n- 每位学生原则上同一批次只能参加一个项目，不能交叉申报\n\n### 三、无法确认的信息\n\n如果您问的是“华东理工大学优秀学生”这一**单独奖项、荣誉称号或评选项目**的专门申请条件，当前提供的文档片段中**没有明确给出**，因此答案是：**不知道**。\n\n}",
+    "scores": {
+      "chunk_utilization": 0.3,
+      "f1": 0.21,
+      "em": 0.16,
+      "response_coherence": 0.95,
+      "factual_consistency": 0.95,
+      "answer_comprehensiveness": 0.46,
+      "llm_evaluation": {
+        "comprehensiveness": 0.62,
+        "relativeness": 0.68,
+        "empowerment": 0.74,
+        "directness": 0.55
+      }
+    },
+    "agent_type": "naive",
+    "retrieved_entities": [],
+    "retrieved_relationships": []
+  },
+  {
+    "question": "获得优秀学生称号的奖励是什么?",
+    "golden_answer": "优秀学生称号的奖励标准按级别区分：1. 全国'优秀学生'奖励1000元。2. 市'优秀学生标兵'奖励500元。3. 市'优秀学生'奖励500元。4. 校'优秀学生'奖励150元。除经济奖励外，获得优秀学生称号会记入学生的学籍档案，对未来就业和深造有积极影响。",
+    "system_answer": "不知道。\n\n}",
+    "scores": {
+      "chunk_utilization": 0.3,
+      "f1": 0.0,
+      "em": 0.0,
+      "response_coherence": 0.1,
+      "factual_consistency": 0.2,
+      "answer_comprehensiveness": 0.0,
+      "llm_evaluation": {
+        "comprehensiveness": 0.0,
+        "relativeness": 0.1,
+        "empowerment": 0.0,
+        "directness": 0.6
+      }
+    },
+    "agent_type": "naive",
+    "retrieved_entities": [],
+    "retrieved_relationships": []
+  },
+  {
+    "question": "国家奖学金和国家励志奖学金互斥吗?",
+    "golden_answer": "国家奖学金和国家励志奖学金是互斥的。",
+    "system_answer": "# 回答\n\n不知道。\n\n}",
+    "scores": {
+      "chunk_utilization": 0.3,
+      "f1": 0.0,
+      "em": 0.0,
+      "response_coherence": 0.1,
+      "factual_consistency": 0.5,
+      "answer_comprehensiveness": 0.0,
+      "llm_evaluation": {
+        "comprehensiveness": 0.0,
+        "relativeness": 0.2,
+        "empowerment": 0.0,
+        "directness": 0.7
+      }
+    },
+    "agent_type": "naive",
+    "retrieved_entities": [],
+    "retrieved_relationships": []
+  }
+]

@@ -1,0 +1,47 @@
+{
+  "naive": {
+    "factual_consistency": 0.6900000000000001,
+    "response_coherence": 0.68,
+    "em": 0.36000000000000004,
+    "f1": 0.39666666666666667,
+    "answer_comprehensiveness": 0.5233333333333333,
+    "llm_comprehensiveness": 0.5,
+    "llm_relativeness": 0.59,
+    "llm_empowerment": 0.5333333333333333,
+    "llm_directness": 0.7000000000000001,
+    "llm_total": 0.5708333333333333,
+    "retrieval_precision": 0.3,
+    "retrieval_latency": 3.8666404088338218,
+    "retrieval_utilization": 0.3
+  },
+  "hybrid": {
+    "factual_consistency": 0.9433333333333334,
+    "response_coherence": 0.9633333333333333,
+    "em": 0.13333333333333333,
+    "f1": 0.23901743051349353,
+    "answer_comprehensiveness": 0.39999999999999997,
+    "llm_comprehensiveness": 0.4966666666666666,
+    "llm_relativeness": 0.88,
+    "llm_empowerment": 0.5666666666666668,
+    "llm_directness": 0.7866666666666667,
+    "llm_total": 0.668,
+    "retrieval_precision": 0.5333333333333333,
+    "retrieval_latency": 0.000667572021484375,
+    "retrieval_utilization": 0.3
+  },
+  "graph": {
+    "factual_consistency": 0.7933333333333333,
+    "response_coherence": 0.6433333333333334,
+    "em": 0.06,
+    "f1": 0.08175438596491229,
+    "answer_comprehensiveness": 0.10000000000000002,
+    "llm_comprehensiveness": 0.13333333333333333,
+    "llm_relativeness": 0.5833333333333334,
+    "llm_empowerment": 0.18333333333333335,
+    "llm_directness": 0.75,
+    "llm_total": 0.3816666666666667,
+    "retrieval_precision": 0.5333333333333333,
+    "retrieval_latency": 5.049632787704468,
+    "retrieval_utilization": 0.3
+  }
+}

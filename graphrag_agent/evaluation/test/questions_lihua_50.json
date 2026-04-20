@@ -1,0 +1,252 @@
+[
+  {
+    "question_id": 1,
+    "question": "What time does Li Hua check in with Adam about moving in?",
+    "type": "Single"
+  },
+  {
+    "question_id": 2,
+    "question": "When was the first time Li Hua had dinner with Wolfgang this year?",
+    "type": "Single"
+  },
+  {
+    "question_id": 3,
+    "question": "Where was the first time Li Hua had dinner with Wolfgang this year?",
+    "type": "Single"
+  },
+  {
+    "question_id": 4,
+    "question": "What time is Li Hua's lunch with Wolfgang Schulz at the cozy café downtown?",
+    "type": "Single"
+  },
+  {
+    "question_id": 5,
+    "question": "What is the Wi-Fi password at Li Hua's house?",
+    "type": "Single"
+  },
+  {
+    "question_id": 6,
+    "question": "What does Adam say about having friends over?",
+    "type": "Single"
+  },
+  {
+    "question_id": 7,
+    "question": "What house rule does Adam mention?",
+    "type": "Single"
+  },
+  {
+    "question_id": 8,
+    "question": "What does Li Hua report to Adam on January 6th?",
+    "type": "Single"
+  },
+  {
+    "question_id": 9,
+    "question": "When does Adam confirm the plumber will arrive?",
+    "type": "Single"
+  },
+  {
+    "question_id": 10,
+    "question": "What does Li Hua ask Adam about the door hinge?",
+    "type": "Single"
+  },
+  {
+    "question_id": 11,
+    "question": "What is the name of the gym that Wolfgang recommended LiHua to go to?",
+    "type": "Single"
+  },
+  {
+    "question_id": 12,
+    "question": "When does Li Hua plan to celebrate Chinese Lunar New Year?",
+    "type": "Single"
+  },
+  {
+    "question_id": 13,
+    "question": "What does Li Hua plan to celebrate Chinese Lunar New Year?",
+    "type": "Single"
+  },
+  {
+    "question_id": 14,
+    "question": "Who does Li Hua plan to celebrate Chinese Lunar New Year with?",
+    "type": "Single"
+  },
+  {
+    "question_id": 15,
+    "question": "Li Hua accidentally broke a light fixture once. What did Adam say about the light fixture?",
+    "type": "Single"
+  },
+  {
+    "question_id": 16,
+    "question": "When did Li Hua express frustration about a client changing requirements?",
+    "type": "Single"
+  },
+  {
+    "question_id": 17,
+    "question": "Who suggested Li Hua keep a clear log of all the changes requested by the client?",
+    "type": "Single"
+  },
+  {
+    "question_id": 18,
+    "question": "What did Wolfgang Schulz suggest Li Hua to do when Li Hua face a difficult client?",
+    "type": "Single"
+  },
+  {
+    "question_id": 19,
+    "question": "What does Li Hua plan to do to clear their head?",
+    "type": "Single"
+  },
+  {
+    "question_id": 20,
+    "question": "What is the name of the café Wolfgang Schulz recommends to Li Hua?",
+    "type": "Single"
+  },
+  {
+    "question_id": 21,
+    "question": "Can Li Hua hang his artworks on the wall?",
+    "type": "Single"
+  },
+  {
+    "question_id": 22,
+    "question": "What does Adam Smith suggest Li Hua use to hang artwork without damaging the walls?",
+    "type": "Single"
+  },
+  {
+    "question_id": 23,
+    "question": "How many times does Li Hua train per week now?",
+    "type": "Single"
+  },
+  {
+    "question_id": 24,
+    "question": "When did Li Hua change the training plan?",
+    "type": "Single"
+  },
+  {
+    "question_id": 25,
+    "question": "What days does Li Hua takes for the training sessions?",
+    "type": "Single"
+  },
+  {
+    "question_id": 26,
+    "question": "Did Adam Smith send a message to Li Hua about the upcoming building maintenance schedule before the administrators announced a temporary change in the construction schedule due to weather conditions?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 27,
+    "question": "Did Wolfgang ask Li Hua about watching \"Star Wars: A New Hope\" after he asked Li Hua about going to see \"Overwatch 3\"?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 28,
+    "question": "Did Li Hua agree to go out for dinner after Wolfgang first asked him if he wanted to go out for dinner?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 29,
+    "question": "Did Li Hua send a message to Jennifer thanking her for the new training schedule before he requested a change in his training schedule for Thursday?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 30,
+    "question": "Did Li Hua ask Jennifer for advice on how to prevent muscle soreness after an intense workout session before he told her that he feels soreness in his arm muscles after the workout this week?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 31,
+    "question": "Did Li Hua send a message to Jennifer asking for her opinion on protein supplements before he consulted her about his daily protein powder consumption?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 32,
+    "question": "Did Yuriko ask Li Hua for help with her studio's homepage before she booked a seat at the \"Central Perk\" cafe?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 33,
+    "question": "Did Li Hua discuss his progress with the fitness plan before he shared a blog post about his recent fitness achievements?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 34,
+    "question": "Did Li Hua send a message to Jennifer asking if he can turn the Thursday class to Friday after he requested a change in his training schedule for Thursday?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 35,
+    "question": "Did Li Hua ask Yuriko to play music together before Wolfgang proposed to pause playing musical instruments?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 36,
+    "question": "Did Wolfgang Schulz recommend the band learns \"Viva la Vida\" by Coldplay after he and Li Hua discussed what song to play this Sunday?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 37,
+    "question": "Did Wolfgang's promotion announcement occur before he invited Li Hua for dinner on 20260430?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 38,
+    "question": "Did Turalyon announce the construction updates and feedback from residents after Illidan Stormrage complained about the construction noise?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 39,
+    "question": "Did Hailey announce the new line of high-protein breads before inviting Li Hua to the special bakery event?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 40,
+    "question": "Did Chae tell Li Hua that taking a warm shower before sleeping can improve the sleep quality before sharing the neuroscience article with her?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 41,
+    "question": "Did Li Hua ask Jennifer Moore for book recommendations on fitness nutrition before she announced the special guest speaker at the gym?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 42,
+    "question": "Did Jennifer remind Li Hua about proper nutrition and hydration before Jake shared his tips for staying hydrated during the match?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 43,
+    "question": "Did the group members talk about their favorite characters in the TV series Game of Thrones after Emily started a vote on the most hateable character?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 44,
+    "question": "Question: Did Jennifer remind Li Hua to consume enough protein after the workout before she shared tips with the group members on common mistakes to avoid after an intense workout?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 45,
+    "question": "Did Li Hua ask Thane about his opinion on The Last of Us before he asked about Sekiro: Shadows Die Twice?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 46,
+    "question": "Did Jake Watson and Li Hua discuss the classic matches between FC Barcelona and FC Bayern Munich before the group members discussed the classic matches between FC Barcelona and Real Madrid?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 47,
+    "question": "Did the group members debate about the best football manager in the Premier League history after they debated if Pep Guardiola is the greatest soccer manager in football history?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 48,
+    "question": "Did the discussion about Jaime Lannister's character occur after the discussion about Cersei Lannister's character?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 49,
+    "question": "Did Wolfgang ask Li Hua if she wants to have pizza for dinner after work today before he wondered if she wanted to have Sichuan hot pot for dinner tonight?",
+    "type": "Multi"
+  },
+  {
+    "question_id": 50,
+    "question": "Did Jennifer challenge Li Hua to do 60 pull-ups in a training session after she challenged him to do 100 pushups?",
+    "type": "Multi"
+  }
+]

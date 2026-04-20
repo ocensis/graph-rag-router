@@ -1,0 +1,17 @@
+[
+    {"question_id": 1, "question": "优秀学生申请的条件?", "type": "single_hop"},
+    {"question_id": 2, "question": "获得优秀学生称号的奖励是什么?", "type": "single_hop"},
+    {"question_id": 3, "question": "国家奖学金和国家励志奖学金互斥吗?", "type": "relation"},
+    {"question_id": 4, "question": "旷课多少学时会被退学?", "type": "single_hop"},
+    {"question_id": 5, "question": "学生申诉的流程是什么?", "type": "multi_hop"},
+    {"question_id": 6, "question": "勤工助学每月工作时间上限是多少?", "type": "single_hop"},
+    {"question_id": 7, "question": "国家奖学金的评选由哪个部门负责?", "type": "single_hop"},
+    {"question_id": 8, "question": "哪些情况下学生应予休学?", "type": "single_hop"},
+    {"question_id": 9, "question": "国家奖学金和上海市奖学金可以同时获得吗?", "type": "relation"},
+    {"question_id": 10, "question": "受到处分的学生还能申请奖学金吗?", "type": "relation"},
+    {"question_id": 11, "question": "退役士兵教育资助包括哪些内容?", "type": "single_hop"},
+    {"question_id": 12, "question": "考试作弊会受到什么处分?", "type": "single_hop"},
+    {"question_id": 13, "question": "学生对处分不服怎么申诉?申诉期限是多久?", "type": "multi_hop"},
+    {"question_id": 14, "question": "社会工作奖的评选条件和奖励标准分别是什么?", "type": "multi_hop"},
+    {"question_id": 15, "question": "国家励志奖学金和社会工作奖可以同时获得吗?", "type": "relation"}
+]

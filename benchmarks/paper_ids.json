@@ -1,0 +1,202 @@
+[
+  {
+    "arxiv_id": "2604_14967v1",
+    "title": "UniDoc-RL: Coarse-to-Fine Visual RAG with Hierarchical Actions and Dense Rewards"
+  },
+  {
+    "arxiv_id": "2604_14896v1",
+    "title": "Toward Agentic RAG for Ukrainian"
+  },
+  {
+    "arxiv_id": "2604_14576v1",
+    "title": "Enhancing Mental Health Counseling Support in Bangladesh using Culturally-Grounded Knowledge"
+  },
+  {
+    "arxiv_id": "2604_14572v1",
+    "title": "Don't Retrieve, Navigate: Distilling Enterprise Knowledge into Navigable Agent Skills for QA and RAG"
+  },
+  {
+    "arxiv_id": "2604_14488v1",
+    "title": "Controlling Authority Retrieval: A Missing Retrieval Objective for Authority-Governed Knowledge"
+  },
+  {
+    "arxiv_id": "2604_14403v1",
+    "title": "A Unified Model and Document Representation for On-Device Retrieval-Augmented Generation"
+  },
+  {
+    "arxiv_id": "2604_14339v1",
+    "title": "Shuffle the Context: RoPE-Perturbed Self-Distillation for Long-Context Adaptation"
+  },
+  {
+    "arxiv_id": "2604_14034v1",
+    "title": "Large Language Models to Enhance Business Process Modeling: Past, Present, and Future Trends"
+  },
+  {
+    "arxiv_id": "2604_13731v1",
+    "title": "Doc-V*:Coarse-to-Fine Interactive Visual Reasoning for Multi-Page Document VQA"
+  },
+  {
+    "arxiv_id": "2604_13705v1",
+    "title": "Beyond Arrow's Impossibility: Fairness as an Emergent Property of Multi-Agent Collaboration"
+  },
+  {
+    "arxiv_id": "2604_13666v1",
+    "title": "Automatically Inferring Teachers' Geometric Content Knowledge: A Skills Based Approach"
+  },
+  {
+    "arxiv_id": "2604_13579v1",
+    "title": "MM-Doc-R1: Training Agents for Long Document Visual Question Answering through Multi-turn Reinforcement Learning"
+  },
+  {
+    "arxiv_id": "2604_13417v1",
+    "title": "The Cognitive Circuit Breaker: A Systems Engineering Framework for Intrinsic AI Reliability"
+  },
+  {
+    "arxiv_id": "2604_13021v1",
+    "title": "Representation geometry shapes task performance in vision-language modeling for CT enterography"
+  },
+  {
+    "arxiv_id": "2604_14227v1",
+    "title": "FRESCO: Benchmarking and Optimizing Re-rankers for Evolving Semantic Conflict in Retrieval-Augmented Generation"
+  },
+  {
+    "arxiv_id": "2604_12812v2",
+    "title": "DocSeeker: Structured Visual Reasoning with Evidence Grounding for Long Document Understanding"
+  },
+  {
+    "arxiv_id": "2604_12766v1",
+    "title": "NaviRAG: Towards Active Knowledge Navigation for Retrieval-Augmented Generation"
+  },
+  {
+    "arxiv_id": "2604_12610v1",
+    "title": "Transforming External Knowledge into Triplets for Enhanced Retrieval in RAG of LLMs"
+  },
+  {
+    "arxiv_id": "2604_14222v1",
+    "title": "Adaptive Query Routing: A Tier-Based Framework for Hybrid Retrieval Across Financial, Legal, and Medical Documents"
+  },
+  {
+    "arxiv_id": "2604_12352v1",
+    "title": "MultiDocFusion: Hierarchical and Multimodal Chunking Pipeline for Enhanced RAG on Long Industrial Documents"
+  },
+  {
+    "arxiv_id": "2604_14220v1",
+    "title": "Knowledge Graph RAG: Agentic Crawling and Graph Construction in Enterprise Documents"
+  },
+  {
+    "arxiv_id": "2604_12301v1",
+    "title": "Local-Splitter: A Measurement Study of Seven Tactics for Reducing Cloud LLM Token Usage on Coding-Agent Workloads"
+  },
+  {
+    "arxiv_id": "2604_12201v1",
+    "title": "AdversarialCoT: Single-Document Retrieval Poisoning for LLM Reasoning"
+  },
+  {
+    "arxiv_id": "2604_12185v1",
+    "title": "Knowledge Is Not Static: Order-Aware Hypergraph RAG for Language Models"
+  },
+  {
+    "arxiv_id": "2604_12138v1",
+    "title": "Beyond Factual Grounding: The Case for Opinion-Aware Retrieval-Augmented Generation"
+  },
+  {
+    "arxiv_id": "2604_12133v1",
+    "title": "Towards Platonic Representation for Table Reasoning: A Foundation for Permutation-Invariant Retrieval"
+  },
+  {
+    "arxiv_id": "2604_12047v1",
+    "title": "Empirical Evaluation of PDF Parsing and Chunking for Financial Question Answering with RAG"
+  },
+  {
+    "arxiv_id": "2604_12034v1",
+    "title": "Memory as Metabolism: A Design for Companion Knowledge Systems"
+  },
+  {
+    "arxiv_id": "2604_11759v1",
+    "title": "Retrieval Is Not Enough: Why Organizational AI Needs Epistemic Infrastructure"
+  },
+  {
+    "arxiv_id": "2604_11699v1",
+    "title": "Legal2LogicICL: Improving Generalization in Transforming Legal Cases to Logical Formulas via Diverse Few-Shot Learning"
+  },
+  {
+    "arxiv_id": "2604_11623v3",
+    "title": "Context Kubernetes: Declarative Orchestration of Enterprise Knowledge for Agentic AI Systems"
+  },
+  {
+    "arxiv_id": "2604_11563v1",
+    "title": "Synthius-Mem: Brain-Inspired Hallucination-Resistant Persona Memory Achieving 94.4% Memory Accuracy and 99.6% Adversarial Robustness on LoCoMo"
+  },
+  {
+    "arxiv_id": "2604_11419v1",
+    "title": "Beyond RAG for Cyber Threat Intelligence: A Systematic Evaluation of Graph-Based and Agentic Retrieval"
+  },
+  {
+    "arxiv_id": "2604_11407v1",
+    "title": "Retrieval as Generation: A Unified Framework with Self-Triggered Information Planning"
+  },
+  {
+    "arxiv_id": "2604_11209v1",
+    "title": "Exploring Knowledge Conflicts for Faithful LLM Reasoning: Benchmark and Method"
+  },
+  {
+    "arxiv_id": "2604_11182v1",
+    "title": "Evaluating Memory Capability in Continuous Lifelog Scenario"
+  },
+  {
+    "arxiv_id": "2604_10960v1",
+    "title": "RAG-KT: Cross-platform Explainable Knowledge Tracing with Multi-view Fusion Retrieval Generation"
+  },
+  {
+    "arxiv_id": "2604_10874v1",
+    "title": "AOP-Smart: A RAG-Enhanced Large Language Model Framework for Adverse Outcome Pathway Analysis"
+  },
+  {
+    "arxiv_id": "2604_10745v1",
+    "title": "How You Ask Matters! Adaptive RAG Robustness to Query Variations"
+  },
+  {
+    "arxiv_id": "2604_10734v1",
+    "title": "Self-Correcting RAG: Enhancing Faithfulness via MMKP Context Selection and NLI-Guided MCTS"
+  },
+  {
+    "arxiv_id": "2604_10717v1",
+    "title": "Detecting RAG Extraction Attack via Dual-Path Runtime Integrity Game"
+  },
+  {
+    "arxiv_id": "2604_10504v1",
+    "title": "CARO: Chain-of-Analogy Reasoning Optimization for Robust Content Moderation"
+  },
+  {
+    "arxiv_id": "2604_10502v1",
+    "title": "CHAIRO: Contextual Hierarchical Analogical Induction and Reasoning Optimization for LLMs"
+  },
+  {
+    "arxiv_id": "2604_10426v1",
+    "title": "CodaRAG: Connecting the Dots with Associativity Inspired by Complementary Learning"
+  },
+  {
+    "arxiv_id": "2604_10389v1",
+    "title": "BLUEmed: Retrieval-Augmented Multi-Agent Debate for Clinical Error Detection"
+  },
+  {
+    "arxiv_id": "2604_10114v1",
+    "title": "CircuitSynth: Reliable Synthetic Data Generation"
+  },
+  {
+    "arxiv_id": "2604_09541v1",
+    "title": "Trans-RAG: Query-Centric Vector Transformation for Secure Cross-Organizational Retrieval"
+  },
+  {
+    "arxiv_id": "2604_09508v1",
+    "title": "VISOR: Agentic Visual Retrieval-Augmented Generation via Iterative Search and Over-horizon Reasoning"
+  },
+  {
+    "arxiv_id": "2604_09430v1",
+    "title": "On the Representational Limits of Quantum-Inspired 1024-D Document Embeddings: An Experimental Evaluation Framework"
+  },
+  {
+    "arxiv_id": "2604_13101v1",
+    "title": "Building Trust in the Skies: A Knowledge-Grounded LLM-based Framework for Aviation Safety"
+  }
+]

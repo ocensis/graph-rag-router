@@ -1,0 +1,11 @@
+f1: 0.1157142857142857
+response_coherence: 0.6266666666666666
+answer_comprehensiveness: 0.22
+chunk_utilization: 0.3
+llm_comprehensiveness: 0.2733333333333334
+llm_relativeness: 0.58
+llm_empowerment: 0.33666666666666667
+llm_directness: 0.6933333333333334
+llm_total: 0.4498333333333333
+em: 0.05333333333333334
+factual_consistency: 0.7000000000000001

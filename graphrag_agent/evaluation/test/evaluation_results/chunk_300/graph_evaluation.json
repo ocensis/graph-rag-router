@@ -1,0 +1,15 @@
+{
+  "response_coherence": 0.51,
+  "factual_consistency": 0.5399999999999999,
+  "answer_comprehensiveness": 0.07333333333333333,
+  "f1": 0.06333333333333334,
+  "llm_comprehensiveness": 0.06666666666666667,
+  "llm_relativeness": 0.35000000000000003,
+  "llm_empowerment": 0.08333333333333333,
+  "llm_directness": 0.55,
+  "llm_total": 0.23833333333333337,
+  "em": 0.04,
+  "retrieval_utilization": 0.3,
+  "retrieval_latency": 4.924401839574178,
+  "retrieval_precision": 0.7666666666666666
+}

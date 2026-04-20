@@ -1,0 +1,402 @@
+[
+  {
+    "question_id": 1,
+    "answer": "5:30 PM"
+  },
+  {
+    "question_id": 2,
+    "answer": "20260108"
+  },
+  {
+    "question_id": 3,
+    "answer": "the cozy café downtown"
+  },
+  {
+    "question_id": 4,
+    "answer": "20260108"
+  },
+  {
+    "question_id": 5,
+    "answer": "Family123"
+  },
+  {
+    "question_id": 6,
+    "answer": "having friends over occasionally is fine"
+  },
+  {
+    "question_id": 7,
+    "answer": "keep noise to a minimum during late hours"
+  },
+  {
+    "question_id": 8,
+    "answer": "the water tab in the apartment is broken"
+  },
+  {
+    "question_id": 9,
+    "answer": "tomorrow at 10 AM"
+  },
+  {
+    "question_id": 10,
+    "answer": "a small repair"
+  },
+  {
+    "question_id": 11,
+    "answer": "FitZone"
+  },
+  {
+    "question_id": 12,
+    "answer": "20260118"
+  },
+  {
+    "question_id": 13,
+    "answer": "dumplings"
+  },
+  {
+    "question_id": 14,
+    "answer": "Wolfgang"
+  },
+  {
+    "question_id": 15,
+    "answer": "I'll arrange for a professional to take a look"
+  },
+  {
+    "question_id": 16,
+    "answer": "20260131_14:00"
+  },
+  {
+    "question_id": 17,
+    "answer": "Wolfgang Schulz"
+  },
+  {
+    "question_id": 18,
+    "answer": "keep a clear log of all the changes requested by the client"
+  },
+  {
+    "question_id": 19,
+    "answer": "go for a walk and find a new café"
+  },
+  {
+    "question_id": 20,
+    "answer": "The Java Spot"
+  },
+  {
+    "question_id": 21,
+    "answer": "Yes"
+  },
+  {
+    "question_id": 22,
+    "answer": "use removable hooks"
+  },
+  {
+    "question_id": 23,
+    "answer": "2"
+  },
+  {
+    "question_id": 24,
+    "answer": "20260204"
+  },
+  {
+    "question_id": 25,
+    "answer": "Tuesdays and Thursdays"
+  },
+  {
+    "question_id": 26,
+    "answer": "20260206_16:00"
+  },
+  {
+    "question_id": 27,
+    "answer": "hydration&active recovery&stretching&foam rolling&rest"
+  },
+  {
+    "question_id": 28,
+    "answer": "to complement his training schedule"
+  },
+  {
+    "question_id": 29,
+    "answer": "bodyweight squats& plank holds&push-ups&lunges&glute bridges"
+  },
+  {
+    "question_id": 30,
+    "answer": "must be reversible and not damage anything"
+  },
+  {
+    "question_id": 31,
+    "answer": "20260221"
+  },
+  {
+    "question_id": 32,
+    "answer": "good lighting&soundproofing&a comfy chair"
+  },
+  {
+    "question_id": 33,
+    "answer": "a few neighbors have mentioned they're hearing guitar music late at night"
+  },
+  {
+    "question_id": 34,
+    "answer": "more welcoming and engaging"
+  },
+  {
+    "question_id": 35,
+    "answer": "20260223_19:00"
+  },
+  {
+    "question_id": 36,
+    "answer": "Central Perk"
+  },
+  {
+    "question_id": 37,
+    "answer": "speech therapy"
+  },
+  {
+    "question_id": 38,
+    "answer": "guitar"
+  },
+  {
+    "question_id": 39,
+    "answer": "20260301_13:00"
+  },
+  {
+    "question_id": 40,
+    "answer": "20260301_10:00"
+  },
+  {
+    "question_id": 41,
+    "answer": "20260307_18:00"
+  },
+  {
+    "question_id": 42,
+    "answer": "Homemade pasta salad"
+  },
+  {
+    "question_id": 43,
+    "answer": "Yuriko Yamamoto"
+  },
+  {
+    "question_id": 44,
+    "answer": "A blog section"
+  },
+  {
+    "question_id": 45,
+    "answer": "2 PM to 3 PM"
+  },
+  {
+    "question_id": 46,
+    "answer": "Showcase it on social media platforms and include a short tutorial and send out a newsletter to clients"
+  },
+  {
+    "question_id": 47,
+    "answer": "Adam Smith"
+  },
+  {
+    "question_id": 48,
+    "answer": "Sunday at 3 PM"
+  },
+  {
+    "question_id": 49,
+    "answer": "Tuesday"
+  },
+  {
+    "question_id": 50,
+    "answer": "123 Sunny Street"
+  },
+  {
+    "question_id": 51,
+    "answer": "Yes"
+  },
+  {
+    "question_id": 52,
+    "answer": "Yes"
+  },
+  {
+    "question_id": 53,
+    "answer": "Yes"
+  },
+  {
+    "question_id": 54,
+    "answer": "Yes"
+  },
+  {
+    "question_id": 55,
+    "answer": "Yes"
+  },
+  {
+    "question_id": 56,
+    "answer": "Yes"
+  },
+  {
+    "question_id": 57,
+    "answer": "Yes"
+  },
+  {
+    "question_id": 58,
+    "answer": "Yes"
+  },
+  {
+    "question_id": 59,
+    "answer": "Yes"
+  },
+  {
+    "question_id": 60,
+    "answer": "Yes"
+  },
+  {
+    "question_id": 61,
+    "answer": "Yes"
+  },
+  {
+    "question_id": 62,
+    "answer": "Yes"
+  },
+  {
+    "question_id": 63,
+    "answer": "Yes"
+  },
+  {
+    "question_id": 64,
+    "answer": "Yes"
+  },
+  {
+    "question_id": 65,
+    "answer": "No"
+  },
+  {
+    "question_id": 66,
+    "answer": "No"
+  },
+  {
+    "question_id": 67,
+    "answer": "Yes"
+  },
+  {
+    "question_id": 68,
+    "answer": "Yes"
+  },
+  {
+    "question_id": 69,
+    "answer": "Answer: Yes"
+  },
+  {
+    "question_id": 70,
+    "answer": "No"
+  },
+  {
+    "question_id": 71,
+    "answer": "Yes"
+  },
+  {
+    "question_id": 72,
+    "answer": "Yes"
+  },
+  {
+    "question_id": 73,
+    "answer": "Yes"
+  },
+  {
+    "question_id": 74,
+    "answer": "No"
+  },
+  {
+    "question_id": 75,
+    "answer": "Yes"
+  },
+  {
+    "question_id": 76,
+    "answer": "Yes"
+  },
+  {
+    "question_id": 77,
+    "answer": "Yes"
+  },
+  {
+    "question_id": 78,
+    "answer": "20260122"
+  },
+  {
+    "question_id": 79,
+    "answer": "Wolfgang"
+  },
+  {
+    "question_id": 80,
+    "answer": "Yes"
+  },
+  {
+    "question_id": 81,
+    "answer": "LiHua & Chae & Yuriko"
+  },
+  {
+    "question_id": 82,
+    "answer": "Adam Smith & Jennifer Moore & Wolfgang Schulz"
+  },
+  {
+    "question_id": 83,
+    "answer": "HaileyJohnson"
+  },
+  {
+    "question_id": 84,
+    "answer": "LiHua introduce them to each other by saying that they can play music together every Sunday"
+  },
+  {
+    "question_id": 85,
+    "answer": "a fresh sourdough loaf and a bottle of milk and LiHua praises Hailey's bread and milk"
+  },
+  {
+    "question_id": 86,
+    "answer": "LiHua introduced Chae to Wolfgang and Yuriko during the band's gathering on Sunday evening"
+  },
+  {
+    "question_id": 87,
+    "answer": "a special Mother's Day bakery promotion & a special summer promotion on ice cream & a free baking class at the end of May & banana durian cheesecake"
+  },
+  {
+    "question_id": 88,
+    "answer": "feedback on the bread delivery service & customer feedback on a new line of artisanal donuts"
+  },
+  {
+    "question_id": 89,
+    "answer": "about 27 days"
+  },
+  {
+    "question_id": 90,
+    "answer": "Yes"
+  },
+  {
+    "question_id": 91,
+    "answer": "Yes"
+  },
+  {
+    "question_id": 92,
+    "answer": "Wolfgang"
+  },
+  {
+    "question_id": 93,
+    "answer": "Yes"
+  },
+  {
+    "question_id": 94,
+    "answer": "Yes"
+  },
+  {
+    "question_id": 95,
+    "answer": "Yes"
+  },
+  {
+    "question_id": 96,
+    "answer": "Yes"
+  },
+  {
+    "question_id": 97,
+    "answer": "Yes"
+  },
+  {
+    "question_id": 98,
+    "answer": "Yes"
+  },
+  {
+    "question_id": 99,
+    "answer": "20261202_14:00 & 20261209_19:00"
+  },
+  {
+    "question_id": 100,
+    "answer": "Yes"
+  }
+]

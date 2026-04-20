@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.egg
+build/
+dist/
+.pytest_cache/
+
+# venv
+.venv/
+venv/
+env/
+
+# Caches & temp
+cache/
+.streamlit/
+.cache/
+*.log
+
+# Data (large, regenerable)
+files/
+datasets/
+tmp/
+
+# Secrets
+.env
+*.key
+*.pem
+
+# Bench iteration results (only keep 4 canonical ones under benchmarks/results/)
+bench_results/
+!benchmarks/results/*.json
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# file_registry (runtime state)
+file_registry.json

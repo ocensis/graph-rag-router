@@ -1,0 +1,3 @@
+retrieval_latency: 6.393044630686442
+retrieval_precision: 0.3
+retrieval_utilization: 0.3

@@ -1,0 +1,70 @@
+[
+  {
+    "question": "优秀学生申请的条件?",
+    "golden_answer": "优秀学生申请条件包括：1. 申请资格：必须是在校二、三、四年级本科生，热爱祖国，遵守法律法规。2. 学术要求：获得优秀奖学金二等奖及以上或民族班奖学金二等奖及以上，同时获社会工作奖B等及以上。3. 德育成绩：德育考核成绩需达到85分及以上。4. 综合素质：综合素质评价成绩需达到85分及以上。5. 思想品德：具备强烈的社会责任感，思想积极上进，关心集体，热心公益，尊敬师长，团结同学，文明礼貌，诚实守信。",
+    "system_answer": "### 优秀学生申请条件\n\n根据现有材料，已知学校发布了《关于评选2023-2024学年本科生优秀学生、优秀学生干部和先进集体的正式通知文件》，其中**明确设立了“优秀学生”评选项目，并规定了评选对象与条件**；同时，该通知也属于学校统一组织实施的正式评选通知，由学校进行统一管理。[1][8][5]\n\n但就本次提供的分析材料来看，**“优秀学生申请的具体条件内容”并未展开列出**，因此无法进一步准确说明具体条款、指标或资格要求。\n\n#}",
+    "scores": {
+      "response_coherence": 0.86,
+      "factual_consistency": 0.92,
+      "answer_comprehensiveness": 0.22,
+      "f1": 0.19,
+      "llm_evaluation": {
+        "comprehensiveness": 0.2,
+        "relativeness": 0.75,
+        "empowerment": 0.25,
+        "directness": 0.45
+      },
+      "em": 0.12
+    },
+    "agent_type": "graph",
+    "retrieved_entities": [
+      "1"
+    ],
+    "retrieved_relationships": [
+      "8",
+      "5"
+    ]
+  },
+  {
+    "question": "获得优秀学生称号的奖励是什么?",
+    "golden_answer": "优秀学生称号的奖励标准按级别区分：1. 全国'优秀学生'奖励1000元。2. 市'优秀学生标兵'奖励500元。3. 市'优秀学生'奖励500元。4. 校'优秀学生'奖励150元。除经济奖励外，获得优秀学生称号会记入学生的学籍档案，对未来就业和深造有积极影响。",
+    "system_answer": "### 获得优秀学生称号的奖励\n\n不知道。\n\n#}",
+    "scores": {
+      "response_coherence": 0.22,
+      "factual_consistency": 0.5,
+      "answer_comprehensiveness": 0.0,
+      "f1": 0.0,
+      "llm_evaluation": {
+        "comprehensiveness": 0.0,
+        "relativeness": 0.1,
+        "empowerment": 0.0,
+        "directness": 0.9
+      },
+      "em": 0.0
+    },
+    "agent_type": "graph",
+    "retrieved_entities": [],
+    "retrieved_relationships": []
+  },
+  {
+    "question": "国家奖学金和国家励志奖学金互斥吗?",
+    "golden_answer": "国家奖学金和国家励志奖学金是互斥的。",
+    "system_answer": "### 国家奖学金和国家励志奖学金是否互斥\n\n不知道。\n\n#}",
+    "scores": {
+      "response_coherence": 0.45,
+      "factual_consistency": 0.2,
+      "answer_comprehensiveness": 0.0,
+      "f1": 0.0,
+      "llm_evaluation": {
+        "comprehensiveness": 0.0,
+        "relativeness": 0.2,
+        "empowerment": 0.0,
+        "directness": 0.3
+      },
+      "em": 0.0
+    },
+    "agent_type": "graph",
+    "retrieved_entities": [],
+    "retrieved_relationships": []
+  }
+]

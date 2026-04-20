@@ -1,0 +1,47 @@
+{
+  "naive": {
+    "response_coherence": 0.66,
+    "factual_consistency": 0.6733333333333333,
+    "answer_comprehensiveness": 0.26,
+    "f1": 0.10678362573099415,
+    "llm_comprehensiveness": 0.3233333333333333,
+    "llm_relativeness": 0.56,
+    "llm_empowerment": 0.3466666666666667,
+    "llm_directness": 0.7333333333333334,
+    "llm_total": 0.4703333333333334,
+    "em": 0.02666666666666667,
+    "retrieval_utilization": 0.3,
+    "retrieval_latency": 3.7668546040852866,
+    "retrieval_precision": 0.3
+  },
+  "hybrid": {
+    "response_coherence": 0.96,
+    "factual_consistency": 0.9366666666666665,
+    "answer_comprehensiveness": 0.41333333333333333,
+    "f1": 0.21568409718016016,
+    "llm_comprehensiveness": 0.49666666666666665,
+    "llm_relativeness": 0.84,
+    "llm_empowerment": 0.5733333333333334,
+    "llm_directness": 0.7766666666666667,
+    "llm_total": 0.6576666666666666,
+    "em": 0.13999999999999999,
+    "retrieval_utilization": 0.3,
+    "retrieval_latency": 0.005603392918904622,
+    "retrieval_precision": 0.5333333333333333
+  },
+  "graph": {
+    "response_coherence": 0.51,
+    "factual_consistency": 0.5399999999999999,
+    "answer_comprehensiveness": 0.07333333333333333,
+    "f1": 0.06333333333333334,
+    "llm_comprehensiveness": 0.06666666666666667,
+    "llm_relativeness": 0.35000000000000003,
+    "llm_empowerment": 0.08333333333333333,
+    "llm_directness": 0.55,
+    "llm_total": 0.23833333333333337,
+    "em": 0.04,
+    "retrieval_utilization": 0.3,
+    "retrieval_latency": 4.924401839574178,
+    "retrieval_precision": 0.7666666666666666
+  }
+}
