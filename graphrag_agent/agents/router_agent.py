@@ -44,6 +44,10 @@ class RouterState(TypedDict, total=False):
     route: str       # "classic" | "graph" | "agentic"
     confidence: str  # "high" | "medium" | "low"
     answer: str
+    # 兜底机制相关
+    verify_ok: bool        # verifier 判定：True=答得上 False=需要升级
+    verify_reason: str     # verifier 给的理由（debug 用）
+    escalated: bool        # 是否触发了升级到 agentic（观测用，避免无限循环）
 
 
 # ==================== Rewriter Prompt ====================
@@ -95,6 +99,74 @@ Rewritten: What is GRPO?
 {history_block}
 Current: {query}
 Rewritten:"""
+
+
+# ==================== Verifier Prompt ====================
+#
+# 在 classic / graph path 跑完后判"这个答案回答到点上了吗"。
+# 关键是区分两类"失败"：
+#   - 明显 hedge / 拒绝 ("I don't know", "Not enough context") → 直接 fail，不用 LLM
+#   - 看起来像答案但其实没答到点 → 需要 LLM 判
+# Pass → 直接返回
+# Fail → 升级到 agentic 重跑（agentic 会做 plan + 多轮 retrieval，兜住大部分 classic/graph 漏的 case）
+
+VERIFIER_PROMPT = """You are a quality judge for a retrieval-augmented system. Decide whether the ANSWER actually addresses the QUESTION.
+
+## Pass criteria (ok=true)
+- Answer contains specific, concrete information directly responsive to the question
+- For factual questions: names a concrete method/dataset/number/fact
+- For comparison questions: covers both/all sides with specifics
+
+## Fail criteria (ok=false)
+- Answer is a refusal or hedge ("I don't know", "insufficient context", "cannot find")
+- Answer restates the question without answering
+- Answer is tangential / off-topic / too vague
+- Answer contradicts itself or mentions the wrong entity
+
+## Output (JSON on ONE line)
+{{"ok": true|false, "reason": "<10 words max>"}}
+
+## Examples
+
+Q: "What dataset does UniDoc-RL evaluate on?"
+A: "UniDoc-RL evaluates on MMLongBench-Doc and DocVQA benchmarks."
+Output: {{"ok": true, "reason": "names specific datasets"}}
+
+Q: "What dataset does UniDoc-RL evaluate on?"
+A: "I don't have sufficient information about UniDoc-RL's evaluation."
+Output: {{"ok": false, "reason": "explicit hedge"}}
+
+Q: "Compare GRPO and SPO reward design."
+A: "Both GRPO and SPO are reinforcement learning methods used in RAG papers."
+Output: {{"ok": false, "reason": "generic, no comparison specifics"}}
+
+Q: "What is the main contribution of MM-Doc-R1?"
+A: "MM-Doc-R1 introduces a multi-modal reasoning framework based on SPO reward."
+Output: {{"ok": true, "reason": "states concrete contribution"}}
+
+## Input
+Question: {query}
+Answer: {answer}
+Output:"""
+
+
+# 明显 hedge 短路词：命中任一就直接 fail 不调 LLM 省钱
+_HEDGE_MARKERS = (
+    "i don't know",
+    "i do not know",
+    "insufficient context",
+    "insufficient information",
+    "not enough information",
+    "cannot find",
+    "could not find",
+    "no relevant information",
+    "unable to answer",
+    "unable to determine",
+    "我无法",
+    "信息不足",
+    "没有足够",
+    "无法找到",
+)
 
 
 # ==================== Classifier Prompt ====================
@@ -171,11 +243,16 @@ class RouterAgent:
             ChatPromptTemplate.from_messages([("human", REWRITER_PROMPT)])
             | self.llm | StrOutputParser()
         )
+        self.verifier_chain = (
+            ChatPromptTemplate.from_messages([("human", VERIFIER_PROMPT)])
+            | self.llm | StrOutputParser()
+        )
 
         # 简单缓存（同一 query 分类结果复用）
         self._classify_cache: Dict[str, Dict] = {}
         self.cache_manager = self.classic.cache_manager
         self.route_counts = {"classic": 0, "graph": 0, "agentic": 0, "error": 0}
+        self.verify_counts = {"pass": 0, "fail_hedge": 0, "fail_llm": 0, "escalated": 0}
 
         # session_id → [(user_query, answer), ...]  最新轮在末尾
         # 进程内存即可；Redis 那种分布式 session 不是本项目范围
@@ -362,10 +439,111 @@ class RouterAgent:
             ans = f"Agentic path failed: {e}"
         return {"answer": ans}
 
+    # ==================== Verify & Escalate ====================
+
+    @staticmethod
+    def _parse_verifier(raw: str) -> Dict:
+        """解析 verifier JSON 输出。失败就当 ok（保守策略——不确定就不升级）。"""
+        import json as _json
+        import re as _re
+        raw = (raw or "").strip()
+        m = _re.search(r"\{.*?\}", raw, _re.DOTALL)
+        if not m:
+            return {"ok": True, "reason": "verifier parse failed, default pass"}
+        try:
+            obj = _json.loads(m.group(0))
+            return {
+                "ok": bool(obj.get("ok", True)),
+                "reason": str(obj.get("reason", ""))[:80],
+            }
+        except _json.JSONDecodeError:
+            return {"ok": True, "reason": "verifier json decode failed, default pass"}
+
+    def _node_verify(self, state: RouterState, config: Dict = None) -> RouterState:
+        """
+        对 classic/graph 的答案做质量检查。
+        两级筛：
+          Level 1（免费）：命中 hedge 关键词直接 fail
+          Level 2（1 次 LLM call）：让 LLM 判"答到点上没"
+        Agentic 不走这里——它是最强 path，再失败也没地方升级。
+        """
+        query = state.get("rewritten_query") or state["query"]
+        answer = state.get("answer") or ""
+
+        # Level 1: 纯字符串短路
+        low = answer.lower()
+        if any(m in low for m in _HEDGE_MARKERS):
+            self.verify_counts["fail_hedge"] += 1
+            logger.info(f"[verify] fail (hedge marker) | {query[:60]}")
+            return {"verify_ok": False, "verify_reason": "hedge marker detected"}
+
+        # 极短答案（< 30 chars 且不含数字）也可疑
+        if len(answer.strip()) < 30 and not any(c.isdigit() for c in answer):
+            self.verify_counts["fail_hedge"] += 1
+            logger.info(f"[verify] fail (too short) | ans={answer[:40]}")
+            return {"verify_ok": False, "verify_reason": "answer too short"}
+
+        # Level 2: LLM 判
+        # 答案太长就截——判"质量"只看前 1500 字符足够，完整上下文会让 LLM 注意力涣散
+        answer_excerpt = answer[:1500]
+        try:
+            raw = retry_sync(max_retries=2, base_delay=0.5)(self.verifier_chain.invoke)(
+                {"query": query, "answer": answer_excerpt},
+                config=self._scoped(config, "verifier"),
+            )
+            parsed = self._parse_verifier(raw)
+            if parsed["ok"]:
+                self.verify_counts["pass"] += 1
+                logger.info(f"[verify] pass | {query[:60]}")
+            else:
+                self.verify_counts["fail_llm"] += 1
+                logger.info(f"[verify] fail (llm) reason='{parsed['reason']}' | {query[:60]}")
+            return {"verify_ok": parsed["ok"], "verify_reason": parsed["reason"]}
+        except Exception as e:
+            # Verifier 挂了走保守策略：默认 pass，不无谓升级
+            logger.warning(f"[verify] failed: {e} → default pass")
+            self.verify_counts["pass"] += 1
+            return {"verify_ok": True, "verify_reason": f"verifier error: {e}"}
+
+    def _node_escalate(self, state: RouterState, config: Dict = None) -> RouterState:
+        """
+        Verify 失败 → 升级到 agentic path 重跑。
+        Agentic 内部会做 planner → multi-round ReAct → aggregate，大概率能兜住
+        classic/graph 漏答的 case。代价：~3-5x 成本，只在 ~10-15% 被触发。
+        """
+        q = state.get("rewritten_query") or state["query"]
+        prev_route = state.get("route", "?")
+        prev_reason = state.get("verify_reason", "")
+        logger.info(
+            f"[escalate] {prev_route} → agentic | reason='{prev_reason}' | {q[:60]}"
+        )
+        self.verify_counts["escalated"] += 1
+        try:
+            ans = self.agentic.run(
+                q,
+                session_id=state.get("session_id"),
+                parent_config=self._scoped(config, "agentic_escalate"),
+            )
+            # 注意：不再覆盖 route 为 agentic——保留原 route 便于 analytics 看"谁被升级了"
+            # 但标记 escalated=True，前端 / benchmark 可以据此区分
+            return {"answer": ans, "escalated": True}
+        except Exception as e:
+            logger.error(f"[escalate] failed: {e}")
+            # 升级也挂了就把原答案保留 + 加个错误标记
+            orig = state.get("answer", "")
+            return {
+                "answer": orig + f"\n\n[Note: escalation also failed: {e}]",
+                "escalated": True,
+            }
+
     # ==================== Routing ====================
 
     def _route_after_classify(self, state: RouterState) -> str:
         return state.get("route", "classic")
+
+    def _route_after_verify(self, state: RouterState) -> str:
+        """verify 通过 → END；失败 → escalate"""
+        return "ok" if state.get("verify_ok", True) else "fail"
 
     # ==================== Build ====================
 
@@ -376,6 +554,8 @@ class RouterAgent:
         g.add_node("classic_path", self._node_classic)
         g.add_node("graph_path", self._node_graph)
         g.add_node("agentic_path", self._node_agentic)
+        g.add_node("verify", self._node_verify)
+        g.add_node("escalate", self._node_escalate)
 
         g.set_entry_point("rewrite")
         g.add_edge("rewrite", "classify")
@@ -384,8 +564,16 @@ class RouterAgent:
             self._route_after_classify,
             {"classic": "classic_path", "graph": "graph_path", "agentic": "agentic_path"},
         )
-        g.add_edge("classic_path", END)
-        g.add_edge("graph_path", END)
+        # classic / graph 都走 verify；verify 结果决定 END 还是 escalate
+        g.add_edge("classic_path", "verify")
+        g.add_edge("graph_path", "verify")
+        g.add_conditional_edges(
+            "verify",
+            self._route_after_verify,
+            {"ok": END, "fail": "escalate"},
+        )
+        g.add_edge("escalate", END)
+        # Agentic 本身不走 verify——它是最强 path，再错也没地方升级了
         g.add_edge("agentic_path", END)
         return g.compile()
 
@@ -491,25 +679,25 @@ class RouterAgent:
                 answer = self.classic.run(q_effective, session_id=session_id)
                 trace_steps.append({
                     "node": "classic_path",
-                    "input": query[:80],
+                    "input": q_effective[:80],
                     "output": "hybrid (vector+BM25+RRF) → generate answer with citations",
                     "latency": round(time.time() - t_path, 2),
                 })
                 self.route_counts["classic"] += 1
             elif route == "graph":
-                answer = self.graph.run(query, session_id=session_id)
+                answer = self.graph.run(q_effective, session_id=session_id)
                 trace_steps.append({
                     "node": "graph_path",
-                    "input": query[:80],
+                    "input": q_effective[:80],
                     "output": "detect_mode → extract_entities → graph_lookup + community + hybrid chunks → compose",
                     "latency": round(time.time() - t_path, 2),
                 })
                 self.route_counts["graph"] += 1
             else:  # agentic
-                answer = self.agentic.run(query, session_id=session_id)
+                answer = self.agentic.run(q_effective, session_id=session_id)
                 trace_steps.append({
                     "node": "agentic_path",
-                    "input": query[:80],
+                    "input": q_effective[:80],
                     "output": "planner → execute (ReAct w/ classic/graph sub-tools) → aggregate",
                     "latency": round(time.time() - t_path, 2),
                 })
@@ -517,6 +705,35 @@ class RouterAgent:
         except Exception as e:
             logger.error(f"[ask_with_trace] path {route} failed: {e}")
             answer = f"Router path failed: {e}"
+
+        # Step 2.5: verify + escalate（仅对 classic/graph 生效，agentic 跳过）
+        if route in ("classic", "graph") and not answer.startswith("Router path failed"):
+            t_v = time.time()
+            v_result = self._node_verify({
+                "query": query, "rewritten_query": q_effective, "answer": answer,
+            })
+            v_ok = v_result.get("verify_ok", True)
+            trace_steps.append({
+                "node": "verify",
+                "input": f"route={route}, answer_len={len(answer)}",
+                "output": f"ok={v_ok} reason={v_result.get('verify_reason', '')}",
+                "latency": round(time.time() - t_v, 2),
+            })
+            if not v_ok:
+                t_e = time.time()
+                escalate_result = self._node_escalate({
+                    "query": query, "rewritten_query": q_effective,
+                    "answer": answer, "route": route,
+                    "verify_reason": v_result.get("verify_reason", ""),
+                    "session_id": session_id,
+                })
+                answer = escalate_result.get("answer", answer)
+                trace_steps.append({
+                    "node": "escalate",
+                    "input": f"{route} failed verify",
+                    "output": "re-ran via agentic path",
+                    "latency": round(time.time() - t_e, 2),
+                })
 
         # Step 3: 构建 KG 可视化数据（从改写后的 query 抽实体——这样指代已解析）
         kg_data = self._build_kg_for_query(q_effective)
@@ -617,7 +834,10 @@ class RouterAgent:
         return None
 
     def get_route_stats(self):
-        return dict(self.route_counts)
+        return {
+            "routes": dict(self.route_counts),
+            "verify": dict(self.verify_counts),
+        }
 
     def visualize(self) -> str:
         try:
