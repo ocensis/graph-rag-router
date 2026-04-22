@@ -81,10 +81,82 @@ class GlobalSearchTool(BaseSearchTool):
                 return max_level   # 最粗粒度
         return default_level
 
-    def _get_top_communities(self, level: int = None) -> List[Dict[str, Any]]:
-        """取指定层级的 top-N 社区（按摘要长度降序）。
-        level=None 时用 self.community_level"""
+    # Hybrid 排序系数（和 GraphPath 保持一致）：
+    # score = entity_hits × α + vec_sim × β + log(weight+1) × γ
+    _HYBRID_ALPHA = 3.0
+    _HYBRID_BETA = 2.0
+    _HYBRID_GAMMA = 0.1
+
+    def _get_top_communities(self, level: int = None, query: str = "",
+                             entities: List[str] = None) -> List[Dict[str, Any]]:
+        """
+        取指定 level 的 top-N 社区，Hybrid 融合排序：
+          score = entity_hits × α + vec_sim × β + log(weight+1) × γ
+
+        参数：
+          query:    用户 query，用于 embed 算 vec_sim。空字符串时退化到 entity + weight
+          entities: query 抽出的实体 list，用于 entity_hits 维度。None 等价空列表
+          level:    社区层级（None 用默认 self.community_level）
+
+        前置条件：需先跑 scripts/maintenance/backfill_community_hybrid.py
+                  给社区补 c.embedding 和 c.entities_kwd 两个字段。
+        """
         use_level = self.community_level if level is None else level
+        entities = entities or []
+
+        # Embed query
+        q_vec = None
+        if query:
+            try:
+                from graphrag_agent.models.get_models import get_embeddings_model
+                emb = get_embeddings_model()
+                q_vec = emb.embed_query(query)
+            except Exception as e:
+                logger.warning(f"[global] query embed failed: {e}")
+
+        # Hybrid Cypher（需要 c.embedding 和 c.entities_kwd 字段都存在）
+        if q_vec is not None:
+            try:
+                rows = self.graph.query(
+                    """
+                    MATCH (c:__Community__)
+                    WHERE c.level = $level
+                      AND c.embedding IS NOT NULL
+                      AND c.full_content IS NOT NULL
+                      AND size(c.full_content) > 200
+                    WITH c,
+                         CASE WHEN size($entities) > 0 AND c.entities_kwd IS NOT NULL
+                              THEN size([e IN c.entities_kwd WHERE e IN $entities])
+                              ELSE 0 END AS entity_hits,
+                         vector.similarity.cosine(c.embedding, $q_vec) AS vec_sim,
+                         log(toFloat(coalesce(c.weight, 1)) + 1.0) AS weight_log
+                    WITH c, entity_hits, vec_sim, weight_log,
+                         entity_hits * $alpha + vec_sim * $beta + weight_log * $gamma AS score
+                    ORDER BY score DESC
+                    LIMIT $limit
+                    RETURN c.id AS community_id,
+                           c.full_content AS content,
+                           entity_hits, vec_sim, score
+                    """,
+                    params={
+                        "level": use_level,
+                        "entities": entities,
+                        "q_vec": q_vec,
+                        "alpha": self._HYBRID_ALPHA,
+                        "beta": self._HYBRID_BETA,
+                        "gamma": self._HYBRID_GAMMA,
+                        "limit": self.max_communities,
+                    },
+                )
+                if rows:
+                    top = [f"{r['score']:.2f}(e={r['entity_hits']},v={r['vec_sim']:.2f})" for r in rows[:3]]
+                    logger.info(f"[global] hybrid level={use_level} got {len(rows)}, top: {', '.join(top)}")
+                    return rows
+            except Exception as e:
+                logger.warning(f"[global] hybrid Cypher failed: {e}, fallback to legacy")
+
+        # Fallback：没 embedding / hybrid 失败 → 退化到老的 content_size 排序
+        logger.info(f"[global] fallback: content_size ordering at level={use_level}")
         rows = self.graph.query(
             """
             MATCH (c:__Community__)
@@ -98,7 +170,6 @@ class GlobalSearchTool(BaseSearchTool):
             """,
             params={"level": use_level, "limit": self.max_communities},
         )
-        # Fallback：指定 level 没摘要时降到 level 0
         if not rows and use_level > 0:
             logger.info(f"[global] level={use_level} 无摘要，fallback 到 level 0")
             rows = self.graph.query(
@@ -177,7 +248,10 @@ class GlobalSearchTool(BaseSearchTool):
         try:
             # Step 1: 决定社区 level（宽域 query 用高 level 粗粒度）
             chosen_level = self._detect_level(query, default_level=self.community_level)
-            communities = self._get_top_communities(level=chosen_level)
+            # 带 query 触发 Hybrid 排序（entity_hits + vec_sim + weight）。
+            # 这里不抽实体——GlobalSearchTool 的历史用户没传实体，
+            # 传空列表等价于"纯 vec_sim + weight 排序"，仍然 query-relevant。
+            communities = self._get_top_communities(level=chosen_level, query=query)
             logger.info(
                 f"[global] Cypher 取 {len(communities)} 个社区 (level={chosen_level}, "
                 f"default was {self.community_level})",

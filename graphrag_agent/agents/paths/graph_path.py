@@ -26,6 +26,7 @@ from graphrag_agent.search.tool.primitives import (
     HybridSearchTool,
     GraphLookupTool,
     _get_graph,
+    _get_embeddings,
 )
 # GlobalSearchTool 已弃用：原 map-reduce 架构改为统一 Cypher 社区检索
 from graphrag_agent.agents.paths.context_packer import pack_context
@@ -214,8 +215,9 @@ class GraphPath:
         except Exception as e:
             chunk_ctx = f"(hybrid failed: {e})"
 
-        # Path 3: community summaries
+        # Path 3: community summaries (hybrid ranking)
         community_ctx = self._fetch_community_summaries(
+            state["query"],
             entities,
             top_n=params["community_top_n"],
             level=params["level"],
@@ -223,84 +225,107 @@ class GraphPath:
 
         return {"graph_ctx": graph_ctx, "chunk_ctx": chunk_ctx, "community_ctx": community_ctx}
 
-    def _fetch_community_summaries(self, entities: List[str], top_n: int = 3,
-                                   level: int = 0) -> str:
+    # 混合排序的权重系数。写成类属性方便后面调参 / 写进 .env
+    # score = entity_hits * α + vec_sim * β + log(weight+1) * γ
+    _HYBRID_ALPHA = 3.0   # entity 命中权重（强信号）
+    _HYBRID_BETA = 2.0    # 向量相似度权重
+    _HYBRID_GAMMA = 0.1   # 社区 weight 轻微 bias（tiebreaker）
+
+    def _fetch_community_summaries(self, query: str, entities: List[str],
+                                   top_n: int = 3, level: int = 0) -> str:
         """
-        统一的 community 检索（替代 GlobalSearchTool map-reduce）。
+        Hybrid community retrieval（替代之前的 entity-pivoted / weight-fallback 两分支）。
 
-        ⚠ 语义严格区分，不要混淆：
-          - 有 entities（narrow query） → 只做 entity-pivoted。没召回就返回空字符串，
-            **不能** fallback 到 weight——会把不相关的 top-weight 社区塞进 compose，
-            污染答案。这是之前重构首次 bench -19pp 的 bug。
-          - 无 entities（broad query 抽不出实体）→ weight-ranked fallback，按 weight 降
-            序取 top_n。指定 level 全无摘要时再降到 level 0 兜一次。
+        三维融合排序：
+          score = entity_hits × α + vec_sim × β + log(weight+1) × γ
 
-        两种路径都是 Cypher 查询，0 LLM call。
+        - entity_hits: query 实体命中社区 entities_kwd 的数量（narrow 场景主导）
+        - vec_sim:    query embedding 和社区 embedding 的 cosine（broad / 实体抽偏时兜底）
+        - weight_log: 社区大小的对数（平手时偏向信息多的社区）
+
+        无论 narrow/broad，都走同一条 Cypher。没有 embedding 或 entities_kwd 的社区
+        自动被 WHERE 过滤掉（需要先跑 scripts/maintenance/backfill_community_hybrid.py）。
         """
         g = _get_graph()
 
-        # Case 1: entity-pivoted (narrow query)
-        if entities:
-            try:
-                rows = g.query(
-                    """
-                    UNWIND $names AS name
-                    MATCH (e:__Entity__)-[:IN_COMMUNITY]->(c:__Community__)
-                    WHERE (toLower(e.id) = toLower(name) OR toLower(e.id) CONTAINS toLower(name))
-                      AND c.level = $level
-                      AND (c.full_content IS NOT NULL OR c.summary IS NOT NULL)
-                    WITH c, count(DISTINCT e) AS entity_hits
-                    ORDER BY entity_hits DESC, c.weight DESC
-                    LIMIT $top_n
-                    RETURN c.id AS id,
-                           coalesce(c.full_content, c.summary) AS content
-                    """,
-                    {"names": entities, "level": level, "top_n": top_n},
-                )
-                return self._format_community_rows(rows)  # 可能返回空——就空，不 fallback
-            except Exception as e:
-                logger.warning(f"[graph_path] entity-pivoted community lookup failed: {e}")
-                return ""
+        # Embed query（1 次轻量 call，~1ms）
+        try:
+            emb = _get_embeddings()
+            q_vec = emb.embed_query(query)
+        except Exception as e:
+            logger.warning(f"[graph_path] query embed failed: {e}")
+            q_vec = None
 
-        # Case 2: weight-ranked fallback (broad query, 无实体)
+        # 没 embedding 就降级到纯 entity-pivoted（兜底）
+        if q_vec is None:
+            return self._fetch_community_entity_only(entities, top_n, level)
+
         try:
             rows = g.query(
                 """
                 MATCH (c:__Community__)
                 WHERE c.level = $level
+                  AND c.embedding IS NOT NULL
                   AND (c.full_content IS NOT NULL OR c.summary IS NOT NULL)
-                RETURN c.id AS id,
-                       coalesce(c.full_content, c.summary) AS content
-                ORDER BY c.weight DESC
+                WITH c,
+                     CASE WHEN size($entities) > 0 AND c.entities_kwd IS NOT NULL
+                          THEN size([e IN c.entities_kwd WHERE e IN $entities])
+                          ELSE 0 END AS entity_hits,
+                     vector.similarity.cosine(c.embedding, $q_vec) AS vec_sim,
+                     log(toFloat(coalesce(c.weight, 1)) + 1.0) AS weight_log
+                WITH c, entity_hits, vec_sim, weight_log,
+                     entity_hits * $alpha + vec_sim * $beta + weight_log * $gamma AS score
+                ORDER BY score DESC
                 LIMIT $top_n
+                RETURN c.id AS id,
+                       coalesce(c.full_content, c.summary) AS content,
+                       entity_hits, vec_sim, score
                 """,
-                {"level": level, "top_n": top_n},
+                {
+                    "level": level,
+                    "entities": entities,
+                    "q_vec": q_vec,
+                    "alpha": self._HYBRID_ALPHA,
+                    "beta": self._HYBRID_BETA,
+                    "gamma": self._HYBRID_GAMMA,
+                    "top_n": top_n,
+                },
             )
         except Exception as e:
-            logger.warning(f"[graph_path] weight-ranked community lookup failed: {e}")
-            return ""
+            logger.warning(f"[graph_path] hybrid community lookup failed: {e}, fallback entity-only")
+            return self._fetch_community_entity_only(entities, top_n, level)
 
-        # 指定 level 完全没摘要 → 降到 level 0 再试一次
-        if not rows and level > 0:
-            logger.info(f"[graph_path] level={level} 无摘要，fallback 到 level 0")
-            try:
-                rows = g.query(
-                    """
-                    MATCH (c:__Community__)
-                    WHERE c.level = 0
-                      AND (c.full_content IS NOT NULL OR c.summary IS NOT NULL)
-                    RETURN c.id AS id,
-                           coalesce(c.full_content, c.summary) AS content
-                    ORDER BY c.weight DESC
-                    LIMIT $top_n
-                    """,
-                    {"top_n": top_n},
-                )
-            except Exception as e:
-                logger.warning(f"[graph_path] level-0 fallback failed: {e}")
-                return ""
+        if rows:
+            top_scores = [f"{r['score']:.2f}(e={r['entity_hits']}, v={r['vec_sim']:.2f})" for r in rows[:3]]
+            logger.info(f"[graph_path] hybrid retrieve {len(rows)} communities, top scores: {', '.join(top_scores)}")
 
         return self._format_community_rows(rows)
+
+    def _fetch_community_entity_only(self, entities: List[str], top_n: int, level: int) -> str:
+        """Fallback：embedding 不可用时退化到老的 entity-pivoted 逻辑。"""
+        if not entities:
+            return ""
+        g = _get_graph()
+        try:
+            rows = g.query(
+                """
+                UNWIND $names AS name
+                MATCH (e:__Entity__)-[:IN_COMMUNITY]->(c:__Community__)
+                WHERE (toLower(e.id) = toLower(name) OR toLower(e.id) CONTAINS toLower(name))
+                  AND c.level = $level
+                  AND (c.full_content IS NOT NULL OR c.summary IS NOT NULL)
+                WITH c, count(DISTINCT e) AS entity_hits
+                ORDER BY entity_hits DESC, c.weight DESC
+                LIMIT $top_n
+                RETURN c.id AS id,
+                       coalesce(c.full_content, c.summary) AS content
+                """,
+                {"names": entities, "level": level, "top_n": top_n},
+            )
+            return self._format_community_rows(rows)
+        except Exception as e:
+            logger.warning(f"[graph_path] entity-only fallback failed: {e}")
+            return ""
 
     @staticmethod
     def _format_community_rows(rows: List[Dict]) -> str:
