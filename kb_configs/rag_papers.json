@@ -1,0 +1,27 @@
+{
+    "kb_name": "rag_papers",
+    "theme": "Retrieval-Augmented Generation academic papers from arXiv",
+    "entity_types": [
+        "Method",
+        "Model",
+        "Dataset",
+        "Metric",
+        "Task",
+        "Component",
+        "Author",
+        "Institution",
+        "Paper"
+    ],
+    "relationship_types": [
+        "proposes",
+        "evaluated_on",
+        "outperforms",
+        "uses",
+        "extends",
+        "compares_with",
+        "published_by",
+        "authored_by",
+        "addresses",
+        "other"
+    ]
+}

@@ -98,8 +98,8 @@ community_algorithm = os.getenv("GRAPH_COMMUNITY_ALGORITHM", "leiden")
 
 # ===== 文本处理配置 =====
 
-CHUNK_SIZE = _get_env_int("CHUNK_SIZE", 500) or 500  # 文本分块大小
-OVERLAP = _get_env_int("CHUNK_OVERLAP", 100) or 100  # 分块重叠长度
+CHUNK_SIZE = _get_env_int("CHUNK_SIZE", 1000) or 1000  # 文本分块大小 (ablation: was 500)
+OVERLAP = _get_env_int("CHUNK_OVERLAP", 200) or 200  # 分块重叠长度 (ablation: was 100, 保持 20% 比例)
 MAX_TEXT_LENGTH = _get_env_int("MAX_TEXT_LENGTH", 500000) or 500000  # 最大文本长度
 similarity_threshold = _get_env_float("SIMILARITY_THRESHOLD", 0.9) or 0.9  # 向量相似度阈值
 

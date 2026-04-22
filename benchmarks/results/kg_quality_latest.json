@@ -1,0 +1,1003 @@
+{
+  "generated_at": "2026-04-22T01:54:48",
+  "scale": {
+    "entity_total": 11774,
+    "chunk_total": 958,
+    "document_total": 51,
+    "relationship_total": 66132
+  },
+  "types": {
+    "rel_types": [
+      {
+        "type": "IN_COMMUNITY",
+        "count": 29741
+      },
+      {
+        "type": "MENTIONS",
+        "count": 20092
+      },
+      {
+        "type": "USES",
+        "count": 3590
+      },
+      {
+        "type": "AUTHORED_BY",
+        "count": 2092
+      },
+      {
+        "type": "ADDRESSES",
+        "count": 1854
+      },
+      {
+        "type": "EVALUATED_ON",
+        "count": 1659
+      },
+      {
+        "type": "SIMILAR",
+        "count": 1218
+      },
+      {
+        "type": "PART_OF",
+        "count": 992
+      },
+      {
+        "type": "NEXT_CHUNK",
+        "count": 910
+      },
+      {
+        "type": "COMPARES_WITH",
+        "count": 807
+      },
+      {
+        "type": "PROPOSES",
+        "count": 742
+      },
+      {
+        "type": "PUBLISHED_BY",
+        "count": 735
+      },
+      {
+        "type": "EXTENDS",
+        "count": 572
+      },
+      {
+        "type": "OUTPERFORMS",
+        "count": 369
+      },
+      {
+        "type": "OTHER",
+        "count": 285
+      },
+      {
+        "type": "FIRST_CHUNK",
+        "count": 51
+      },
+      {
+        "type": "AFFILIATED_WITH",
+        "count": 44
+      },
+      {
+        "type": "INCLUDES",
+        "count": 39
+      },
+      {
+        "type": "CONTAINS",
+        "count": 24
+      },
+      {
+        "type": "CITES",
+        "count": 22
+      },
+      {
+        "type": "FUNDED_BY",
+        "count": 13
+      },
+      {
+        "type": "AFFECTS",
+        "count": 11
+      },
+      {
+        "type": "USED_IN",
+        "count": 10
+      },
+      {
+        "type": "COMPONENT_OF",
+        "count": 10
+      },
+      {
+        "type": "ILLUSTRATES",
+        "count": 9
+      },
+      {
+        "type": "PROVIDES",
+        "count": 8
+      },
+      {
+        "type": "PRODUCES",
+        "count": 8
+      },
+      {
+        "type": "DEFINES",
+        "count": 7
+      },
+      {
+        "type": "GENERATES",
+        "count": 6
+      },
+      {
+        "type": "INFLUENCES",
+        "count": 6
+      },
+      {
+        "type": "PERFORMS",
+        "count": 6
+      },
+      {
+        "type": "DESCRIBES",
+        "count": 6
+      },
+      {
+        "type": "HAS",
+        "count": 5
+      },
+      {
+        "type": "IMPLEMENTS",
+        "count": 5
+      },
+      {
+        "type": "DISCUSSES",
+        "count": 5
+      },
+      {
+        "type": "CAUSES",
+        "count": 5
+      },
+      {
+        "type": "USED_BY",
+        "count": 5
+      },
+      {
+        "type": "IMPROVES",
+        "count": 4
+      },
+      {
+        "type": "ANALYZES",
+        "count": 4
+      },
+      {
+        "type": "TRIGGERS",
+        "count": 3
+      },
+      {
+        "type": "PUBLISHES",
+        "count": 3
+      },
+      {
+        "type": "PARTICIPATES_IN",
+        "count": 3
+      },
+      {
+        "type": "ENABLES",
+        "count": 3
+      },
+      {
+        "type": "REQUIRES",
+        "count": 3
+      },
+      {
+        "type": "LEADS",
+        "count": 3
+      },
+      {
+        "type": "ESTABLISHED_BY",
+        "count": 3
+      },
+      {
+        "type": "PARAMETERIZED_BY",
+        "count": 2
+      },
+      {
+        "type": "ENHANCES",
+        "count": 2
+      },
+      {
+        "type": "SUMMARIZES",
+        "count": 2
+      },
+      {
+        "type": "PROCESSES",
+        "count": 2
+      },
+      {
+        "type": "OPTIMIZES",
+        "count": 2
+      },
+      {
+        "type": "SUPPORTS",
+        "count": 2
+      },
+      {
+        "type": "ASSISTS",
+        "count": 2
+      },
+      {
+        "type": "DEVELOPS",
+        "count": 2
+      },
+      {
+        "type": "RETRIEVES",
+        "count": 2
+      },
+      {
+        "type": "MONITORS",
+        "count": 2
+      },
+      {
+        "type": "ACHIEVES",
+        "count": 2
+      },
+      {
+        "type": "ORCHESTRATES",
+        "count": 2
+      },
+      {
+        "type": "ASSOCIATED_WITH",
+        "count": 2
+      },
+      {
+        "type": "MODIFIES",
+        "count": 2
+      },
+      {
+        "type": "DERIVED_FROM",
+        "count": 2
+      },
+      {
+        "type": "EXPLORES",
+        "count": 2
+      },
+      {
+        "type": "COMBINES_WITH",
+        "count": 2
+      },
+      {
+        "type": "STUDIES",
+        "count": 2
+      },
+      {
+        "type": "CONNECTS_TO",
+        "count": 2
+      },
+      {
+        "type": "CHALLENGES",
+        "count": 2
+      },
+      {
+        "type": "REPLACES",
+        "count": 2
+      },
+      {
+        "type": "LEADS_TO",
+        "count": 2
+      },
+      {
+        "type": "MITIGATES",
+        "count": 2
+      },
+      {
+        "type": "FOLLOWS",
+        "count": 2
+      },
+      {
+        "type": "BASED_ON",
+        "count": 2
+      },
+      {
+        "type": "CORRECTS",
+        "count": 1
+      },
+      {
+        "type": "TERMINATES",
+        "count": 1
+      },
+      {
+        "type": "RELATED_TO",
+        "count": 1
+      },
+      {
+        "type": "DECREASES",
+        "count": 1
+      },
+      {
+        "type": "LINKS",
+        "count": 1
+      },
+      {
+        "type": "AGENTIC_ICL",
+        "count": 1
+      },
+      {
+        "type": "SIGNALS",
+        "count": 1
+      },
+      {
+        "type": "HALLUCINATES",
+        "count": 1
+      },
+      {
+        "type": "CLUSTERS",
+        "count": 1
+      },
+      {
+        "type": "RESERVES_BUDGET_FOR",
+        "count": 1
+      },
+      {
+        "type": "IS_A_SCENARIO_OF",
+        "count": 1
+      },
+      {
+        "type": "ANALYSES",
+        "count": 1
+      },
+      {
+        "type": "DEPENDS_ON",
+        "count": 1
+      },
+      {
+        "type": "RECEIVES",
+        "count": 1
+      },
+      {
+        "type": "ENABLED_BY",
+        "count": 1
+      },
+      {
+        "type": "TARGETS",
+        "count": 1
+      },
+      {
+        "type": "VERIFIED_BY",
+        "count": 1
+      },
+      {
+        "type": "CONVERTED_TO",
+        "count": 1
+      },
+      {
+        "type": "EXECUTES",
+        "count": 1
+      },
+      {
+        "type": "WORKS_WITH",
+        "count": 1
+      },
+      {
+        "type": "MEASURES",
+        "count": 1
+      },
+      {
+        "type": "CANNOT_GOVERN",
+        "count": 1
+      },
+      {
+        "type": "CANNOT_AUDIT",
+        "count": 1
+      },
+      {
+        "type": "PROVIDES_ORCHESTRATION_BUT_NO_GOVERNANCE",
+        "count": 1
+      },
+      {
+        "type": "STORED_IN",
+        "count": 1
+      },
+      {
+        "type": "ACCESSES",
+        "count": 1
+      },
+      {
+        "type": "INTERFACES_WITH",
+        "count": 1
+      },
+      {
+        "type": "PRECEDES",
+        "count": 1
+      },
+      {
+        "type": "RELIES_ON",
+        "count": 1
+      },
+      {
+        "type": "CREATES",
+        "count": 1
+      },
+      {
+        "type": "CONSUMES",
+        "count": 1
+      },
+      {
+        "type": "AUDITS",
+        "count": 1
+      },
+      {
+        "type": "CONTRADICTS",
+        "count": 1
+      },
+      {
+        "type": "EVALUATES",
+        "count": 1
+      },
+      {
+        "type": "BORROWS_FROM",
+        "count": 1
+      },
+      {
+        "type": "DIFFERS_FROM",
+        "count": 1
+      },
+      {
+        "type": "CONSTRAINED_BY",
+        "count": 1
+      },
+      {
+        "type": "DISCARDS",
+        "count": 1
+      },
+      {
+        "type": "PROTECTS",
+        "count": 1
+      },
+      {
+        "type": "FORMALIZED",
+        "count": 1
+      },
+      {
+        "type": "COMPLEMENTS",
+        "count": 1
+      },
+      {
+        "type": "TRANSFORMS",
+        "count": 1
+      },
+      {
+        "type": "FACILITATES",
+        "count": 1
+      },
+      {
+        "type": "EXTRACTED_FROM",
+        "count": 1
+      },
+      {
+        "type": "SUPPORTED_BY",
+        "count": 1
+      },
+      {
+        "type": "其他",
+        "count": 1
+      },
+      {
+        "type": "TRAINED_ON",
+        "count": 1
+      },
+      {
+        "type": "ADAPTS",
+        "count": 1
+      },
+      {
+        "type": "FINE-TUNES",
+        "count": 1
+      },
+      {
+        "type": "MOTIVATES",
+        "count": 1
+      },
+      {
+        "type": "CONTACT",
+        "count": 1
+      },
+      {
+        "type": "CONTROLED_BY",
+        "count": 1
+      },
+      {
+        "type": "EXHIBITS",
+        "count": 1
+      },
+      {
+        "type": "BENEFITS",
+        "count": 1
+      },
+      {
+        "type": "INTEGRATED_WITH",
+        "count": 1
+      },
+      {
+        "type": "IS_A",
+        "count": 1
+      },
+      {
+        "type": "ORGANIZES",
+        "count": 1
+      },
+      {
+        "type": "COMPATIBLE_WITH",
+        "count": 1
+      },
+      {
+        "type": "SPECIFIED_BY",
+        "count": 1
+      },
+      {
+        "type": "REFERENCED_BY",
+        "count": 1
+      },
+      {
+        "type": "IS_A_TYPE_OF",
+        "count": 1
+      },
+      {
+        "type": "GOVERNED_BY",
+        "count": 1
+      },
+      {
+        "type": "SUPERSEDES",
+        "count": 1
+      },
+      {
+        "type": "TRANSFORMS_INTO",
+        "count": 1
+      },
+      {
+        "type": "FAILS_AT",
+        "count": 1
+      },
+      {
+        "type": "AFFECTED_BY",
+        "count": 1
+      },
+      {
+        "type": "IMPLEMENTED_BY",
+        "count": 1
+      },
+      {
+        "type": "APPLIED_TO",
+        "count": 1
+      },
+      {
+        "type": "EVALUATEDATED_ON",
+        "count": 1
+      },
+      {
+        "type": "GOVERNS",
+        "count": 1
+      },
+      {
+        "type": "LABELED_WITH",
+        "count": 1
+      },
+      {
+        "type": "DEFINED_BY",
+        "count": 1
+      },
+      {
+        "type": "CORRESPONDS_TO",
+        "count": 1
+      },
+      {
+        "type": "IDENTIFIED_BY",
+        "count": 1
+      },
+      {
+        "type": "USED_FOR",
+        "count": 1
+      },
+      {
+        "type": "REFERENCED_IN",
+        "count": 1
+      },
+      {
+        "type": "EXPLAINS",
+        "count": 1
+      },
+      {
+        "type": "SELECTS",
+        "count": 1
+      },
+      {
+        "type": "OUTPUT_BY",
+        "count": 1
+      },
+      {
+        "type": "LOCATED_IN",
+        "count": 1
+      },
+      {
+        "type": "PERFORMED_IN",
+        "count": 1
+      },
+      {
+        "type": "INCLUDED_IN",
+        "count": 1
+      },
+      {
+        "type": "GUIDES",
+        "count": 1
+      },
+      {
+        "type": "INPUT_FOR",
+        "count": 1
+      },
+      {
+        "type": "SELECTED_IN",
+        "count": 1
+      },
+      {
+        "type": "MODELS",
+        "count": 1
+      },
+      {
+        "type": "INTEGRATED_INTO",
+        "count": 1
+      },
+      {
+        "type": "SYNERGIZES",
+        "count": 1
+      },
+      {
+        "type": "CAPTURES",
+        "count": 1
+      },
+      {
+        "type": "APPLIED_ON",
+        "count": 1
+      }
+    ],
+    "entity_labels": [
+      {
+        "label": "Author",
+        "count": 3083
+      },
+      {
+        "label": "Component",
+        "count": 1745
+      },
+      {
+        "label": "Method",
+        "count": 1633
+      },
+      {
+        "label": "Paper",
+        "count": 1274
+      },
+      {
+        "label": "Task",
+        "count": 1069
+      },
+      {
+        "label": "Metric",
+        "count": 879
+      },
+      {
+        "label": "Model",
+        "count": 805
+      },
+      {
+        "label": "Dataset",
+        "count": 575
+      },
+      {
+        "label": "未知",
+        "count": 551
+      },
+      {
+        "label": "Institution",
+        "count": 387
+      },
+      {
+        "label": "Concept",
+        "count": 53
+      },
+      {
+        "label": "Entity type",
+        "count": 14
+      },
+      {
+        "label": "Tactic",
+        "count": 10
+      },
+      {
+        "label": "Framework",
+        "count": 9
+      },
+      {
+        "label": "Platform",
+        "count": 9
+      },
+      {
+        "label": "Tool",
+        "count": 7
+      },
+      {
+        "label": "Attack Strategy",
+        "count": 7
+      },
+      {
+        "label": "Person",
+        "count": 6
+      },
+      {
+        "label": "System",
+        "count": 5
+      },
+      {
+        "label": "Feature",
+        "count": 5
+      },
+      {
+        "label": "Organization",
+        "count": 3
+      },
+      {
+        "label": "Product",
+        "count": 3
+      },
+      {
+        "label": "Failure Mode",
+        "count": 3
+      },
+      {
+        "label": "Conference",
+        "count": 3
+      },
+      {
+        "label": "Document",
+        "count": 3
+      },
+      {
+        "label": "Theory",
+        "count": 2
+      },
+      {
+        "label": "Benchmark",
+        "count": 2
+      },
+      {
+        "label": "PAPER",
+        "count": 2
+      },
+      {
+        "label": "Location",
+        "count": 2
+      },
+      {
+        "label": "person",
+        "count": 2
+      },
+      {
+        "label": "concept",
+        "count": 2
+      },
+      {
+        "label": "event",
+        "count": 2
+      },
+      {
+        "label": "Field",
+        "count": 2
+      },
+      {
+        "label": "Event",
+        "count": 1
+      },
+      {
+        "label": "Data Structure",
+        "count": 1
+      },
+      {
+        "label": "Project",
+        "count": 1
+      },
+      {
+        "label": "Book",
+        "count": 1
+      },
+      {
+        "label": "Process",
+        "count": 1
+      },
+      {
+        "label": "Principle",
+        "count": 1
+      },
+      {
+        "label": "DATASET",
+        "count": 1
+      },
+      {
+        "label": "METHOD",
+        "count": 1
+      },
+      {
+        "label": "Attack",
+        "count": 1
+      },
+      {
+        "label": "Team",
+        "count": 1
+      },
+      {
+        "label": "Role",
+        "count": 1
+      },
+      {
+        "label": "Objective",
+        "count": 1
+      },
+      {
+        "label": "Toolkit",
+        "count": 1
+      }
+    ]
+  },
+  "completeness": {
+    "entity_total": 11774,
+    "with_description": 11774,
+    "description_coverage": 1.0,
+    "orphan_entities": 2618,
+    "orphan_rate": 0.22235434007134364,
+    "chunk_total": 958,
+    "chunks_with_mentions": 928,
+    "mention_coverage": 0.9686847599164927
+  },
+  "connectivity": {
+    "avg_degree": 2.41,
+    "degree_p50": 1.0,
+    "degree_p95": 8.0,
+    "degree_max": 346,
+    "degree_zero_nodes": 2618,
+    "community_count": 0,
+    "entities_with_community": 0
+  },
+  "other_rel": {
+    "other_count": 285,
+    "total": 66132,
+    "other_ratio": 0.0043
+  },
+  "dup_suspects": {
+    "checked": 2000,
+    "threshold": 0.8,
+    "suspect_pairs": 64,
+    "samples": [
+      {
+        "a": "CONTEXT COMPRESSION MODEL",
+        "b": "CONTEXT COMPRESSION MODELS",
+        "jaccard": 0.958
+      },
+      {
+        "a": "CT enterography vision-language learning",
+        "b": "CT enterography vision-language learning论文",
+        "jaccard": 0.95
+      },
+      {
+        "a": "ATTENTION MECHANISM",
+        "b": "ATTENTION MECHANISMS",
+        "jaccard": 0.944
+      },
+      {
+        "a": "CONSOLIDATION CYCLES",
+        "b": "Consolidation cycle",
+        "jaccard": 0.944
+      },
+      {
+        "a": "ADVANCES IN NEURAL INFORMATION PROCESSING SYSTEMS 35",
+        "b": "Advances in Neural Information Processing Systems",
+        "jaccard": 0.938
+      },
+      {
+        "a": "Chen et al., 2024",
+        "b": "Chen et al., 2024a",
+        "jaccard": 0.938
+      },
+      {
+        "a": "Chen et al., 2024",
+        "b": "Chen et al., 2024b",
+        "jaccard": 0.938
+      },
+      {
+        "a": "Bai et al., 2025",
+        "b": "Bai et al., 2025a",
+        "jaccard": 0.933
+      },
+      {
+        "a": "Bai et al., 2025",
+        "b": "Bai et al., 2025b",
+        "jaccard": 0.933
+      },
+      {
+        "a": "Context Operator",
+        "b": "Context Operators",
+        "jaccard": 0.933
+      },
+      {
+        "a": "AUTOMATICALLY INFERRING TEACHERS' GEOMETRIC CONTENT KNOWLEDGE: A SKILLS BASED APPROACH",
+        "b": "AUTOMATICALLY INFERRING TEACHERS’ GEOMETRIC CONTENT KNOWLEDGE: A SKILLS BASED APPROACH",
+        "jaccard": 0.93
+      },
+      {
+        "a": "CxRI connector",
+        "b": "CxRI connectors",
+        "jaccard": 0.923
+      },
+      {
+        "a": "ALIGNED AGENT",
+        "b": "ALIGNED AGENTS",
+        "jaccard": 0.917
+      },
+      {
+        "a": "A. B. ABACH",
+        "b": "A. B. Abacha",
+        "jaccard": 0.9
+      },
+      {
+        "a": "CONTRADICTS",
+        "b": "CONTRADICTS边",
+        "jaccard": 0.9
+      },
+      {
+        "a": "BEIJING UNIVERSITY OF POST AND TELECOMMUNICATIONS",
+        "b": "BEIJING UNIVERSITY OF POSTS AND TELECOMMUNICATIONS",
+        "jaccard": 0.898
+      },
+      {
+        "a": "CONSTRAINT",
+        "b": "CONSTRAINTS",
+        "jaccard": 0.889
+      },
+      {
+        "a": "Chen et al., 2024a",
+        "b": "Chen et al., 2024b",
+        "jaccard": 0.882
+      },
+      {
+        "a": "Cheng et al., 2023",
+        "b": "Cheng et al., 2024",
+        "jaccard": 0.882
+      },
+      {
+        "a": "Bai et al., 2025a",
+        "b": "Bai et al., 2025b",
+        "jaccard": 0.875
+      }
+    ]
+  },
+  "precision": {
+    "sampled": 30,
+    "correct": 18,
+    "incorrect": 10,
+    "unclear": 2,
+    "precision_on_judged": 0.643,
+    "samples": [
+      {
+        "edge": "(THIS PAPER) -[COMPARES_WITH]-> (LLM WIKI V2)",
+        "verdict": "unclear"
+      },
+      {
+        "edge": "(Wei Dai) -[AUTHORED_BY]-> (CIRCUITSYNTH PAPER)",
+        "verdict": "incorrect"
+      },
+      {
+        "edge": "(伴侣记忆框架) -[USES]-> (DECAY)",
+        "verdict": "correct"
+      },
+      {
+        "edge": "(检索增强生成) -[EVALUATED_ON]-> (余弦相似度)",
+        "verdict": "correct"
+      },
+      {
+        "edge": "(PAYING ONLY THE INTEREST) -[LEADS_TO]-> (LOAN)",
+        "verdict": "correct"
+      }
+    ]
+  }
+}
