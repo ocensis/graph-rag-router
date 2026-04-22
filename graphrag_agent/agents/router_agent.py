@@ -38,11 +38,63 @@ logger = get_logger(__name__)
 # ==================== State ====================
 
 class RouterState(TypedDict, total=False):
-    query: str
+    query: str             # 原始 user query（记录用）
+    rewritten_query: str   # 经 history-aware rewriter 改写后的自包含 query，下游所有节点都吃这个
     session_id: str
     route: str       # "classic" | "graph" | "agentic"
     confidence: str  # "high" | "medium" | "low"
     answer: str
+
+
+# ==================== Rewriter Prompt ====================
+#
+# 多轮对话里用户经常省略主语 / 用指代词 / 只说增量：
+#   Turn 1: "What dataset does UniDoc-RL use?"
+#   Turn 2: "What about VISOR?"        ← 必须结合 Turn 1 才能理解
+#   Turn 3: "And their accuracy?"      ← 需要追溯到 Turn 1/2 的主题
+#
+# Rewriter 在 classify 之前把 Turn 2/3 改写成自包含形式，
+# 让下游 classifier / retrieval 看到的是完整问题。
+# 空 history → 直接透传（不浪费 LLM 调用）
+#
+# 1 次 LLM call 成本，~$0.0001，延迟 ~300-500ms。
+
+REWRITER_PROMPT = """You rewrite the user's latest question so it stands on its own without needing the chat history.
+
+## Rules
+- Resolve pronouns / references ("it", "that paper", "their accuracy") to the concrete entity they refer to
+- Fill in implicit subject / scope when the question is an elliptical follow-up ("And X?", "How about Y?")
+- Preserve the exact original intent; do NOT answer, explain, or expand scope
+- If the question is already self-contained, return it unchanged
+- Return ONLY the rewritten question, no preamble, no quotes
+
+## Examples
+
+History:
+- user: What dataset does UniDoc-RL evaluate on?
+Current: What about VISOR?
+Rewritten: What dataset does VISOR evaluate on?
+
+History:
+- user: What are the main RL training frameworks across these RAG papers?
+- user: Which one does MM-Doc-R1 use?
+Current: And its reward design?
+Rewritten: What is the reward design of the RL training framework that MM-Doc-R1 uses?
+
+History:
+- user: Compare UniDoc-RL and VISOR on retrieval accuracy.
+Current: What benchmarks did you use to compare them?
+Rewritten: What benchmarks are used to compare UniDoc-RL and VISOR on retrieval accuracy?
+
+History: (empty)
+Current: What is GRPO?
+Rewritten: What is GRPO?
+
+## Input
+
+{history_block}
+Current: {query}
+Rewritten:"""
 
 
 # ==================== Classifier Prompt ====================
@@ -98,8 +150,11 @@ Output:"""
 
 # ==================== Router ====================
 
+HISTORY_WINDOW = 5  # rewriter 看最近 N 轮；大了成本涨，小了丢长依赖上下文
+
+
 class RouterAgent:
-    """Classifier + 3-way dispatch router."""
+    """Classifier + 3-way dispatch router，带 history-aware query rewriter 支持多轮对话。"""
 
     def __init__(self):
         # 3 条 path
@@ -112,13 +167,46 @@ class RouterAgent:
             ChatPromptTemplate.from_messages([("human", CLASSIFIER_PROMPT)])
             | self.llm | StrOutputParser()
         )
+        self.rewriter_chain = (
+            ChatPromptTemplate.from_messages([("human", REWRITER_PROMPT)])
+            | self.llm | StrOutputParser()
+        )
 
         # 简单缓存（同一 query 分类结果复用）
         self._classify_cache: Dict[str, Dict] = {}
         self.cache_manager = self.classic.cache_manager
         self.route_counts = {"classic": 0, "graph": 0, "agentic": 0, "error": 0}
 
+        # session_id → [(user_query, answer), ...]  最新轮在末尾
+        # 进程内存即可；Redis 那种分布式 session 不是本项目范围
+        self._session_history: Dict[str, list] = {}
+
         self._graph = self._build_graph()
+
+    # ==================== Session history ====================
+
+    def _get_history_block(self, session_id: Optional[str]) -> str:
+        """把 session 的历史轮拼成一块给 rewriter 吃；空就返回 '(empty)'。"""
+        if not session_id:
+            return "History: (empty)"
+        hist = self._session_history.get(session_id, [])
+        if not hist:
+            return "History: (empty)"
+        # 只取最近 HISTORY_WINDOW 轮，每轮记一行 user query（答案不进 rewriter 上下文——
+        # rewriter 只需要知道"上文问过什么"来解析指代，答案细节反而会让它 over-rewrite）
+        recent = hist[-HISTORY_WINDOW:]
+        lines = ["History:"] + [f"- user: {q}" for q, _ in recent]
+        return "\n".join(lines)
+
+    def _append_history(self, session_id: Optional[str], query: str, answer: str):
+        if not session_id:
+            return
+        # 只保留答案前 200 字符，避免内存无上限增长
+        trimmed = (answer or "")[:200]
+        self._session_history.setdefault(session_id, []).append((query, trimmed))
+        # 硬上限防异常 session 撑爆
+        if len(self._session_history[session_id]) > HISTORY_WINDOW * 4:
+            self._session_history[session_id] = self._session_history[session_id][-HISTORY_WINDOW * 2:]
 
     # ==================== Helpers ====================
 
@@ -157,8 +245,48 @@ class RouterAgent:
 
     # ==================== Nodes ====================
 
+    def _node_rewrite(self, state: RouterState, config: Dict = None) -> RouterState:
+        """
+        History-aware query rewriter。
+        - 空 history → 直接透传（跳过 LLM call 省钱）
+        - 有 history → LLM 改写成自包含 query
+        - LLM 失败 → fallback 原 query（不让 rewriter 故障阻塞整条链路）
+        """
+        original = state["query"]
+        session_id = state.get("session_id")
+        history_block = self._get_history_block(session_id)
+
+        # 空 history: pass-through
+        if history_block == "History: (empty)":
+            logger.info(f"[rewrite] no history, passthrough | {original[:60]}")
+            return {"rewritten_query": original}
+
+        try:
+            rewritten = retry_sync(max_retries=2, base_delay=0.5)(
+                self.rewriter_chain.invoke
+            )(
+                {"history_block": history_block, "query": original},
+                config=self._scoped(config, "rewriter"),
+            )
+            rewritten = (rewritten or "").strip().strip('"').strip("'")
+            # 防御：LLM 输出为空或巨长（说明跑飞了）就回退原 query
+            if not rewritten or len(rewritten) > len(original) * 6:
+                logger.warning(f"[rewrite] bad output, fallback | {rewritten[:60]}")
+                rewritten = original
+            else:
+                logger.info(
+                    f"[rewrite] '{original[:40]}' -> '{rewritten[:60]}'",
+                    extra={"original": original, "rewritten": rewritten},
+                )
+        except Exception as e:
+            logger.error(f"[rewrite] failed: {e} → fallback original")
+            rewritten = original
+
+        return {"rewritten_query": rewritten}
+
     def _node_classify(self, state: RouterState, config: Dict = None) -> RouterState:
-        query = state["query"]
+        # classify 看的是改写后的 query（完整版本）
+        query = state.get("rewritten_query") or state["query"]
         if query in self._classify_cache:
             cached = self._classify_cache[query]
             return {"route": cached["route"], "confidence": cached["confidence"]}
@@ -190,9 +318,10 @@ class RouterAgent:
         return {"route": route, "confidence": confidence}
 
     def _node_classic(self, state: RouterState, config: Dict = None) -> RouterState:
+        q = state.get("rewritten_query") or state["query"]
         try:
             ans = self.classic.run(
-                state["query"],
+                q,
                 session_id=state.get("session_id"),
                 parent_config=self._scoped(config, "classic_path"),
             )
@@ -204,9 +333,10 @@ class RouterAgent:
         return {"answer": ans}
 
     def _node_graph(self, state: RouterState, config: Dict = None) -> RouterState:
+        q = state.get("rewritten_query") or state["query"]
         try:
             ans = self.graph.run(
-                state["query"],
+                q,
                 session_id=state.get("session_id"),
                 parent_config=self._scoped(config, "graph_path"),
             )
@@ -218,9 +348,10 @@ class RouterAgent:
         return {"answer": ans}
 
     def _node_agentic(self, state: RouterState, config: Dict = None) -> RouterState:
+        q = state.get("rewritten_query") or state["query"]
         try:
             ans = self.agentic.run(
-                state["query"],
+                q,
                 session_id=state.get("session_id"),
                 parent_config=self._scoped(config, "agentic_path"),
             )
@@ -240,12 +371,14 @@ class RouterAgent:
 
     def _build_graph(self):
         g = StateGraph(RouterState)
+        g.add_node("rewrite", self._node_rewrite)
         g.add_node("classify", self._node_classify)
         g.add_node("classic_path", self._node_classic)
         g.add_node("graph_path", self._node_graph)
         g.add_node("agentic_path", self._node_agentic)
 
-        g.set_entry_point("classify")
+        g.set_entry_point("rewrite")
+        g.add_edge("rewrite", "classify")
         g.add_conditional_edges(
             "classify",
             self._route_after_classify,
@@ -287,6 +420,10 @@ class RouterAgent:
                 extra={"route": route, "elapsed": elapsed},
             )
 
+            # 记录本轮到 session history（下一轮 rewriter 消费）
+            # 存原始 query 而不是改写后的——rewriter 的示例里 "History: - user: ..." 也是原 query 风格
+            self._append_history(session_id, query, answer)
+
             # 把 route 写进 Langfuse trace tag
             # 这样 Analytics 前端只需 1 次 fetch_traces API 就能拿到 route 分布，
             # 不用逐 trace 调 fetch_observations（那个慢 10-100x 且易 timeout）
@@ -324,23 +461,34 @@ class RouterAgent:
         session_id = thread_id or f"router_debug_{int(time.time())}_{uuid.uuid4().hex[:6]}"
         trace_steps = []
 
-        # Step 1: classifier
+        # Step 0: rewrite (history-aware)
+        t_rw = time.time()
+        rewrite_result = self._node_rewrite({"query": query, "session_id": session_id})
+        q_effective = rewrite_result.get("rewritten_query", query)
+        trace_steps.append({
+            "node": "rewriter",
+            "input": query[:120],
+            "output": q_effective[:120] if q_effective != query else "(unchanged, no history)",
+            "latency": round(time.time() - t_rw, 2),
+        })
+
+        # Step 1: classifier (吃改写后的 query)
         t0 = time.time()
-        classify_result = self._node_classify({"query": query})
+        classify_result = self._node_classify({"query": query, "rewritten_query": q_effective})
         route = classify_result.get("route", "classic")
         trace_steps.append({
             "node": "classifier",
-            "input": query[:120],
+            "input": q_effective[:120],
             "output": f"route={route}  confidence={classify_result.get('confidence', '?')}",
             "latency": round(time.time() - t0, 2),
         })
 
-        # Step 2: execute path
+        # Step 2: execute path (吃改写后的 query)
         t_path = time.time()
         answer = ""
         try:
             if route == "classic":
-                answer = self.classic.run(query, session_id=session_id)
+                answer = self.classic.run(q_effective, session_id=session_id)
                 trace_steps.append({
                     "node": "classic_path",
                     "input": query[:80],
@@ -370,11 +518,14 @@ class RouterAgent:
             logger.error(f"[ask_with_trace] path {route} failed: {e}")
             answer = f"Router path failed: {e}"
 
-        # Step 3: 构建 KG 可视化数据（从 query 抽实体 → graph_lookup 邻居）
-        kg_data = self._build_kg_for_query(query)
+        # Step 3: 构建 KG 可视化数据（从改写后的 query 抽实体——这样指代已解析）
+        kg_data = self._build_kg_for_query(q_effective)
 
         # Step 4: 从 answer 里解析 References（Classic / Graph 返回的答案带 ### References 块）
         reference = self._parse_references(answer)
+
+        # 记录到 session history，debug 面板多轮也能享受 rewriter
+        self._append_history(session_id, query, answer)
 
         return {
             "answer": answer,
