@@ -135,6 +135,17 @@ class GlobalSearchTool(BaseSearchTool):
 
     def search(self, query_input: Any, session_id: Optional[str] = None,
                parent_config: Optional[Dict] = None) -> str:
+        """
+        Community 检索 —— RAGFlow 模式重构版。
+
+        之前：map-reduce，每个社区一次 LLM (30+1 calls, ~30min)。
+        现在：Cypher 取 top-N 社区（按 weight + level 预计算字段，0 LLM call）
+              + 1 次 LLM synthesize（reduce，保留原有 prompt）。
+        总 LLM calls: 31 → 1 (降 97%)，延迟 min → sec。
+
+        保持 search(query, session_id, parent_config) -> str 接口不变，
+        下游 GraphAgent / hybrid_agent / deep_research_tool 无感知。
+        """
         overall_start = time.time()
 
         if isinstance(query_input, dict) and "query" in query_input:
@@ -147,7 +158,7 @@ class GlobalSearchTool(BaseSearchTool):
         if cached:
             return cached
 
-        # parent_config 优先（嵌套进 Router 的 trace），否则独立 trace
+        # parent_config 优先（嵌套进 Router/Agent 的 trace），否则独立 trace
         if parent_config:
             lf_config = dict(parent_config)
         else:
@@ -159,41 +170,31 @@ class GlobalSearchTool(BaseSearchTool):
                     "run_name": "global_search",
                     "metadata": {
                         "langfuse_session_id": session_id or "default",
-                        "langfuse_tags": ["global_search", "map_reduce"],
+                        "langfuse_tags": ["global_search", "cypher_retrieval"],
                     },
                 }
 
         try:
-            # 按 query 语义动态决定 level（宽域 query 用高 level 省调用）
+            # Step 1: 决定社区 level（宽域 query 用高 level 粗粒度）
             chosen_level = self._detect_level(query, default_level=self.community_level)
             communities = self._get_top_communities(level=chosen_level)
             logger.info(
-                f"[global] 取 {len(communities)} 个社区 (level={chosen_level}, "
+                f"[global] Cypher 取 {len(communities)} 个社区 (level={chosen_level}, "
                 f"default was {self.community_level})",
                 extra={"component": "global_search", "level": chosen_level},
             )
             if not communities:
                 return "未找到任何社区数据。"
 
-            # Map 阶段并行
-            map_start = time.time()
-            with concurrent.futures.ThreadPoolExecutor(max_workers=self.map_workers) as exe:
-                intermediate = list(exe.map(
-                    lambda c: self._map_one(query, c, lf_config),
-                    communities,
-                ))
-            map_time = time.time() - map_start
-
-            useful = [r for r in intermediate if r["response"] and len(r["response"]) > 20]
-            if not useful:
-                return "所有社区都未能提供相关信息。"
-
-            # Reduce 阶段
-            reduce_start = time.time()
+            # Step 2: 直接拼社区 content（0 LLM）。每条取前 4000 字符避免单社区过长挤压预算
+            retrieve_time = time.time() - overall_start
             report_data = "\n\n---\n\n".join(
-                f"[Community {r['community_id']}]\n{r['response']}"
-                for r in useful[:20]
+                f"[Community {c['community_id']}]\n{(c.get('content') or '')[:4000]}"
+                for c in communities[:20]  # 只给 reduce 看前 20 个，避免 context 爆
             )
+
+            # Step 3: 单次 LLM synthesize（reduce prompt 复用，不改语义）
+            reduce_start = time.time()
             answer = retry_sync(max_retries=2, base_delay=1.0)(
                 self.reduce_chain.invoke
             )(
@@ -203,7 +204,8 @@ class GlobalSearchTool(BaseSearchTool):
             reduce_time = time.time() - reduce_start
             total_time = time.time() - overall_start
             logger.info(
-                f"[global] 完成 Map {map_time:.1f}s + Reduce {reduce_time:.1f}s, 有效社区 {len(useful)}/{len(communities)}",
+                f"[global] 完成 Cypher {retrieve_time:.2f}s + Reduce {reduce_time:.1f}s, "
+                f"使用 {len(communities[:20])}/{len(communities)} 社区",
                 extra={"component": "global_search", "elapsed": round(total_time, 2)},
             )
 
