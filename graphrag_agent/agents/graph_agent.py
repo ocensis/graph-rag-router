@@ -38,10 +38,14 @@ class GraphAgent(BaseAgent):
         super().__init__(cache_dir=self.cache_dir)
 
     def _setup_tools(self) -> List:
-        """设置工具"""
+        """设置工具。
+        注意：两者都用 get_tool() 返回带正确 name 的 BaseTool，
+        否则 _grade_documents 里 `name == "global_retriever"` 的判断永远 false，
+        ReAct 即使选了 global 也走不到 reduce 分支。
+        """
         return [
             self.local_tool.get_tool(),
-            self.global_tool.search,
+            self.global_tool.get_tool(),
         ]
     
     def _add_retrieval_edges(self, workflow):
@@ -518,7 +522,11 @@ class GraphAgent(BaseAgent):
             }
     
     def ask(self, query: str, thread_id: str = "default", recursion_limit=None, skip_cache: bool = False):
-        """使用增强版图检索"""
+        """使用增强版图检索。
+        用 @observe 装饰一个内部函数：Langfuse 建立 active context，
+        内部 get_langfuse_handler() 返回 context-bound handler（带 parent_run_id），
+        所有子 invoke（chain / 直接 llm）自动 nest 进同一 trace。
+        """
         safe_query = query.strip()
 
         if not skip_cache:
@@ -526,21 +534,41 @@ class GraphAgent(BaseAgent):
             if cached:
                 return cached
 
+        # lazy init enhanced search
+        if not hasattr(self, '_enhanced_search'):
+            from graphrag_agent.search.tool.enhanced_graph_search import EnhancedGraphSearchTool
+            self._enhanced_search = EnhancedGraphSearchTool()
+
+        # 用 @observe 建立 parent trace context
         try:
-            # 优先用增强版图检索
-            if not hasattr(self, '_enhanced_search'):
-                from graphrag_agent.search.tool.enhanced_graph_search import EnhancedGraphSearchTool
-                self._enhanced_search = EnhancedGraphSearchTool()
+            from langfuse.decorators import observe, langfuse_context
 
-            answer = self._enhanced_search.search(safe_query)
+            @observe(name="graph_agent")
+            def _run(q: str, tid: str):
+                langfuse_context.update_current_trace(
+                    session_id=tid,
+                    tags=["graph_agent", "enhanced_graph_search"],
+                )
+                # 在 @observe 激活的 context 里，get_langfuse_handler() 返回
+                # context-bound handler；enhanced_search 内部 invoke 自动 nest
+                handler = langfuse_context.get_current_langchain_handler()
+                parent_cfg = {"callbacks": [handler]} if handler else None
+                return self._enhanced_search.search(
+                    q, session_id=tid, parent_config=parent_cfg,
+                )
 
-            if answer and len(str(answer)) > 10:
-                self.cache_manager.set(safe_query, str(answer), thread_id=thread_id)
-                self.global_cache_manager.set(safe_query, str(answer))
-
-            return answer
+            answer = _run(safe_query, thread_id)
+        except ImportError:
+            # 没装 langfuse 或 decorator 不可用 → 直接跑，不 trace
+            answer = self._enhanced_search.search(safe_query, session_id=thread_id)
         except Exception as e:
             return f"Error: {e}"
+
+        if answer and len(str(answer)) > 10:
+            self.cache_manager.set(safe_query, str(answer), thread_id=thread_id)
+            self.global_cache_manager.set(safe_query, str(answer))
+
+        return answer
 
     async def _agent_node_async(self, state):
         """Agent 节点的异步版本"""

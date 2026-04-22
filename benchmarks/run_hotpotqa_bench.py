@@ -288,6 +288,14 @@ Response:"""
         json.dump(output, f, ensure_ascii=False, indent=2)
     print(f"\n结果已保存: {output_file}")
 
+    # Langfuse callback 是 async buffered——process 退出前必须 flush，否则 trace 全丢
+    try:
+        from graphrag_agent.utils.langfuse_client import flush_langfuse
+        flush_langfuse()
+        print("Langfuse trace 已 flush")
+    except Exception as e:
+        print(f"Langfuse flush 失败（不影响 bench 结果）: {e}")
+
 
 if __name__ == '__main__':
     main()

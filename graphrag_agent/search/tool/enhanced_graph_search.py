@@ -25,6 +25,7 @@ from graphrag_agent.search.utils import VectorUtils
 from graphrag_agent.utils.logger import get_logger
 from graphrag_agent.utils.resilience import retry_sync, retry_async, async_timeout
 from graphrag_agent.utils.llm_output_schemas import SufficiencyCheck
+from graphrag_agent.utils.langfuse_client import get_langfuse_handler
 
 logger = get_logger(__name__)
 
@@ -46,6 +47,15 @@ class EnhancedGraphSearchTool(BaseSearchTool):
             ("human", LOCAL_SEARCH_CONTEXT_PROMPT),
         ])
         self.query_chain = self.query_prompt | self.llm | StrOutputParser()
+
+        # Sufficiency check 也走 chain 模式，不要直接 llm.invoke——
+        # 直接 invoke 从普通 Python 里调是 root run，跟 @observe context 联动不上，
+        # 结果变成独立 trace（ThinkingCompatChatOpenAI）。chain.invoke 通过
+        # RunnableConfig 系统传播 parent_run_id，能正确 nest。
+        self.sufficiency_prompt_template = ChatPromptTemplate.from_messages([
+            ("human", self._sufficiency_prompt),
+        ])
+        self.sufficiency_chain = self.sufficiency_prompt_template | self.llm | StrOutputParser()
 
     def _bm25_score(self, query: str, documents: List[Dict]) -> List[Dict]:
         """轻量 BM25 打分"""
@@ -158,19 +168,25 @@ SUFFICIENT: yes or no
 MISSING: what information is still needed (if not sufficient)
 SUBQUERY: a search query to find the missing information (if not sufficient)"""
 
-    def _check_sufficiency(self, query: str, info_summary: str) -> Dict:
-        """LLM 判断当前信息是否足够回答问题（Pydantic 校验输出）"""
-        prompt = self._sufficiency_prompt.format(query=query, info_summary=info_summary)
+    def _check_sufficiency(self, query: str, info_summary: str, lf_config: dict = None) -> Dict:
+        """LLM 判断当前信息是否足够回答问题（Pydantic 校验输出）。
+        走 sufficiency_chain（RunnableSequence）而不是 self.llm.invoke，
+        让 callback 和 @observe context 正确 nest。"""
         try:
-            result = retry_sync(max_retries=2, base_delay=1.0)(self.llm.invoke)(prompt)
-            content = result.content if hasattr(result, 'content') else str(result)
+            content = retry_sync(max_retries=2, base_delay=1.0)(
+                self.sufficiency_chain.invoke
+            )(
+                {"query": query, "info_summary": info_summary},
+                config=lf_config if lf_config else None,
+            )
             parsed = SufficiencyCheck.parse_llm_output(content)
             return parsed.model_dump()
         except Exception as e:
             logger.warning("充分性判断失败，默认 sufficient", extra={"error": str(e)})
             return {"sufficient": True, "missing": "", "subquery": ""}
 
-    def search(self, query_input: Any) -> str:
+    def search(self, query_input: Any, session_id: str = None,
+               parent_config: dict = None) -> str:
         overall_start = time.time()
 
         if isinstance(query_input, dict) and "query" in query_input:
@@ -184,6 +200,22 @@ SUBQUERY: a search query to find the missing information (if not sufficient)"""
         if cached:
             return cached
 
+        # Langfuse config: parent_config 优先（嵌套进上游 trace），否则独立 trace
+        if parent_config:
+            lf_config = dict(parent_config)
+        else:
+            lf_config = {}
+            handler = get_langfuse_handler()
+            if handler is not None:
+                lf_config = {
+                    "callbacks": [handler],
+                    "run_name": "enhanced_graph_search",
+                    "metadata": {
+                        "langfuse_session_id": session_id or "default",
+                        "langfuse_tags": ["enhanced_graph_search"],
+                    },
+                }
+
         try:
             max_rounds = 3
             all_context_chunks = []
@@ -196,7 +228,7 @@ SUBQUERY: a search query to find the missing information (if not sufficient)"""
                     search_query = query
                 else:
                     # 用 LLM 判断缺什么信息，生成子查询
-                    check = self._check_sufficiency(query, info_summary)
+                    check = self._check_sufficiency(query, info_summary, lf_config=lf_config)
                     if check["sufficient"]:
                         break
                     search_query = check["subquery"] if check["subquery"] else query
@@ -219,7 +251,7 @@ SUBQUERY: a search query to find the missing information (if not sufficient)"""
 
                 # 第一轮后检查充分性
                 if round_num == 0:
-                    check = self._check_sufficiency(query, info_summary)
+                    check = self._check_sufficiency(query, info_summary, lf_config=lf_config)
                     if check["sufficient"]:
                         break
 
@@ -237,7 +269,7 @@ SUBQUERY: a search query to find the missing information (if not sufficient)"""
                     scored_entities = []
 
                 context = self._build_context(query, scored_entities, all_context_chunks)
-                answer = self._generate_answer(query, context)
+                answer = self._generate_answer(query, context, lf_config=lf_config)
             else:
                 answer = "未找到相关信息。"
 
@@ -275,10 +307,13 @@ SUBQUERY: a search query to find the missing information (if not sufficient)"""
 
         return "\n\n".join(parts)
 
-    def _generate_answer(self, query: str, context: str) -> str:
+    def _generate_answer(self, query: str, context: str, lf_config: dict = None) -> str:
         return retry_sync(max_retries=2, base_delay=1.0)(
             self.query_chain.invoke
-        )({"context": context, "input": query, "response_type": response_type})
+        )(
+            {"context": context, "input": query, "response_type": response_type},
+            config=lf_config if lf_config else None,
+        )
 
     # ==================== 异步版本 ====================
 

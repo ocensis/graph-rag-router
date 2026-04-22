@@ -19,6 +19,7 @@ from graphrag_agent.config.settings import lc_description
 from graphrag_agent.search.tool.base import BaseSearchTool
 from graphrag_agent.search.local_search import LocalSearch
 from graphrag_agent.search.retrieval_adapter import results_from_documents, results_to_payload
+from graphrag_agent.utils.langfuse_client import get_langfuse_handler
 
 
 class LocalSearchTool(BaseSearchTool):
@@ -152,12 +153,15 @@ class LocalSearchTool(BaseSearchTool):
         return {"query": query, "keywords": keywords}
 
     @traceable
-    def search(self, query_input: Any) -> str:
+    def search(self, query_input: Any, session_id: str = None,
+               parent_config: dict = None) -> str:
         """兼容旧接口，返回纯文本答案。"""
-        structured = self.structured_search(query_input)
+        structured = self.structured_search(query_input, session_id=session_id,
+                                            parent_config=parent_config)
         return structured.get("answer", "未找到相关信息")
 
-    def structured_search(self, query_input: Any) -> Dict[str, Any]:
+    def structured_search(self, query_input: Any, session_id: str = None,
+                          parent_config: dict = None) -> Dict[str, Any]:
         """
         执行本地搜索并返回结构化结果，包含标准化的RetrievalResult。
         """
@@ -178,13 +182,30 @@ class LocalSearchTool(BaseSearchTool):
 
         cached_answer = self.cache_manager.get(cache_key)
 
+        # Langfuse config (parent_config 优先，否则独立 trace)
+        if parent_config:
+            lf_config = dict(parent_config)
+        else:
+            lf_config = {}
+            handler = get_langfuse_handler()
+            if handler is not None:
+                lf_config = {
+                    "callbacks": [handler],
+                    "run_name": "local_search",
+                    "metadata": {
+                        "langfuse_session_id": session_id or "default",
+                        "langfuse_tags": ["local_search"],
+                    },
+                }
+
         try:
             chain_output = self.rag_chain.invoke(
                 {
                     "input": query,
                     "response_type": "多个段落",
                     "chat_history": self.chat_history,
-                }
+                },
+                config=lf_config if lf_config else None,
             )
 
             answer = chain_output.get("answer") or "抱歉，我无法回答这个问题。"

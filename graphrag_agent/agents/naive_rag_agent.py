@@ -165,7 +165,8 @@ class NaiveRagAgent(BaseAgent):
             yield f"**处理查询时出错**: {str(e)}"
     
     def ask(self, query: str, thread_id: str = "default", recursion_limit=None, skip_cache: bool = False):
-        """直接调搜索工具，绕过 LangGraph 的 tool_call 流程"""
+        """直接调搜索工具。用 @observe 把本次 ask 变成 parent trace，
+        search_tool 里的 chain invoke 自动 nest。"""
         safe_query = query.strip()
 
         if not skip_cache:
@@ -174,17 +175,31 @@ class NaiveRagAgent(BaseAgent):
                 return cached
 
         try:
-            # 直接调用搜索工具
-            answer = self.search_tool.search(safe_query)
+            from langfuse.decorators import observe, langfuse_context
 
-            # 缓存
-            if answer and len(answer) > 10:
-                self.cache_manager.set(safe_query, answer, thread_id=thread_id)
-                self.global_cache_manager.set(safe_query, answer)
+            @observe(name="naive_rag_agent")
+            def _run(q: str, tid: str):
+                langfuse_context.update_current_trace(
+                    session_id=tid,
+                    tags=["naive_rag_agent"],
+                )
+                handler = langfuse_context.get_current_langchain_handler()
+                parent_cfg = {"callbacks": [handler]} if handler else None
+                return self.search_tool.search(
+                    q, session_id=tid, parent_config=parent_cfg,
+                )
 
-            return answer
+            answer = _run(safe_query, thread_id)
+        except ImportError:
+            answer = self.search_tool.search(safe_query, session_id=thread_id)
         except Exception as e:
             return f"Error: {e}"
+
+        if answer and len(answer) > 10:
+            self.cache_manager.set(safe_query, answer, thread_id=thread_id)
+            self.global_cache_manager.set(safe_query, answer)
+
+        return answer
 
     def close(self):
         """关闭资源"""

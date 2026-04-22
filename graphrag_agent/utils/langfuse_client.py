@@ -18,6 +18,15 @@ from graphrag_agent.utils.logger import get_logger
 
 logger = get_logger(__name__)
 
+
+# ⚠ Langfuse SDK 的 @observe 装饰器读 LANGFUSE_HOST 而不是 LANGFUSE_BASE_URL，
+# 项目 .env 里只有 LANGFUSE_BASE_URL，这导致 @observe 的 trace 偷偷往 cloud.langfuse.com
+# 发，然后被 reject（key 不匹配云端项目），UI 看不到任何 trace——排查了好久才发现。
+# 在这里把 BASE_URL alias 到 HOST，让 @observe 和 CallbackHandler 看到同一个 host。
+_base = os.getenv("LANGFUSE_BASE_URL")
+if _base and not os.getenv("LANGFUSE_HOST"):
+    os.environ["LANGFUSE_HOST"] = _base
+
 _handler = None
 _initialized = False
 
@@ -139,11 +148,32 @@ def build_callback_config(trace_name: str,
 
 
 def flush_langfuse():
-    """强制 flush 所有待上报的 trace（脚本退出前调用）"""
+    """强制 flush 所有待上报的 trace（脚本退出前调用）。
+
+    注意：@observe 装饰器用的是 langfuse_context 的独立 buffer，
+    和 CallbackHandler 的 buffer 不是一套。两个都要刷，否则 @observe 的 trace
+    会留在 buffer 里等进程退出——但 bench 跑完立刻退出，trace 就丢了。
+    """
+    # CallbackHandler buffer
     global _handler
     if _handler is not None:
         try:
             _handler.flush()
         except Exception as e:
-            logger.warning(f"Langfuse flush 失败: {e}",
+            logger.warning(f"Langfuse handler flush 失败: {e}",
                            extra={"component": "langfuse", "error": str(e)})
+
+    # langfuse_context buffer（@observe 用的）
+    try:
+        from langfuse.decorators import langfuse_context
+        langfuse_context.flush()
+    except Exception as e:
+        logger.debug(f"langfuse_context flush 失败（可能没用 @observe）: {e}")
+
+    # SDK client buffer（直接用 Langfuse() 的）
+    global _langfuse_client
+    if _langfuse_client is not None:
+        try:
+            _langfuse_client.flush()
+        except Exception as e:
+            logger.debug(f"Langfuse client flush 失败: {e}")
